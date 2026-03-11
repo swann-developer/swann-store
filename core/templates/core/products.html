@@ -1,0 +1,573 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      />
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+         crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+      <title>Swann</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img
+                  src="{% static 'images/logo.png' %}"
+                  alt="Logo"
+                  class="img-fluid logo-image"
+               />
+            </a>
+            <div
+               class="d-flex align-items-center nav-right ms-auto order-lg-3 nav-icons"
+            >
+               <a href="#" class="search d-inline-flex me-lg-4 me-3"
+                  ><i class="bi bi-search"></i
+               ></a>
+               <a href="#" class="search d-inline-flex me-lg-4 me-3">
+                  <i class="bi bi-instagram"></i>
+               </a>
+               <div class="d-inline-flex position-relative me-lg-4 me-3">
+                  <a href="cart.html" class="cart"><i class="bi bi-bag"></i></a>
+                  <span
+                     class="d-flex align-items-center justify-content-center notification"
+                     >0</span
+                  >
+               </div>
+            </div>
+            <button
+               class="navbar-toggler order-lg-2"
+               type="button"
+               data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+            >
+               <span class="navbar-toggler-icon"
+                  ><i class="bi bi-bar-chart"></i
+               ></span>
+            </button>
+            <div
+               class="collapse navbar-collapse order-lg-1"
+               id="navbarSupportedContent"
+            >
+               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="index.html"
+                        >Home</a
+                     >
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">EID COLLECTION</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                     >
+                        Categories
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                           <a class="dropdown-item" href="#">Category One</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">Category Two</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">Category Three</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- carousel -->
+      <!-- <div
+         id="carouselExampleIndicators"
+         class="carousel slide"
+         data-bs-ride="carousel"
+      >
+         <div class="carousel-indicators">
+            <button
+               type="button"
+               data-bs-target="#carouselExampleIndicators"
+               data-bs-slide-to="0"
+               class="active"
+               aria-current="true"
+               aria-label="Slide 1"
+            ></button>
+            <button
+               type="button"
+               data-bs-target="#carouselExampleIndicators"
+               data-bs-slide-to="1"
+               aria-label="Slide 2"
+            ></button>
+            <button
+               type="button"
+               data-bs-target="#carouselExampleIndicators"
+               data-bs-slide-to="2"
+               aria-label="Slide 3"
+            ></button>
+         </div>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img
+                  src="images/banner-1.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="Fashion"
+               />
+            </div>
+            <div class="carousel-item">
+               <img
+                  src="images/banner-2.jpg"
+                  class="d-block w-100 img-fluid"
+                  alt="Fashion"
+               />
+            </div>
+         </div>
+         <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+         >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+         >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
+      </div> -->
+
+
+      <main>
+   <div class="container py-5 featured-products">
+      <div class="row">
+         <div class="col-12">
+            <div class="head-section"></div>
+
+            <section class="category-menu shadow-sm category-wrapper">
+               <button class="nav-arrow left" id="prevBtn">
+                  <i class="bi bi-chevron-left"></i>
+               </button>
+
+               <div
+                  class="d-flex align-items-center justify-content-between category-scroll"
+                  id="categoryScroll"
+               >
+                  <ul class="list-inline mb-0 d-flex">
+
+                     <!-- ALL -->
+                     <li class="list-inline-item {% if not current_category %}active{% endif %}">
+                        <span class="icon-holder">
+                           <img
+                              src="{% static 'images/icons/discount.png' %}"
+                              alt="All"
+                              class="img-fluid"
+                           />
+                        </span>
+                        <a href="{% url 'product_list' %}">ALL</a>
+                     </li>
+
+                     <!-- Dynamic Categories -->
+                     {% for category in categories %}
+                     <li class="list-inline-item {% if current_category == category.slug %}active{% endif %}">
+                        <span class="icon-holder">
+                           {% if category.icon %}
+                              <img
+                                 src="{{ category.icon.url }}"
+                                 alt="{{ category.name }}"
+                                 class="img-fluid"
+                              />
+                           {% else %}
+                              <img
+                                 src="{% static 'images/icons/saree.png' %}"
+                                 alt="{{ category.name }}"
+                                 class="img-fluid"
+                              />
+                           {% endif %}
+                        </span>
+                        <a href="{% url 'product_list_by_category' category.slug %}">
+                           {{ category.name }}
+                        </a>
+                     </li>
+                     {% endfor %}
+                  </ul>
+               </div>
+
+               <button class="nav-arrow right" id="nextBtn">
+                  <i class="bi bi-chevron-right"></i>
+               </button>
+            </section>
+
+            <div class="filetr-selection d-flex justify-content-between mt-4 align-items center">
+               <div class="col-lg-3 d-flex align-items-center">
+                  <div class="results-count">
+                     <p class="mb-0 text-muted">
+                        Showing {{ page_obj.start_index }}–{{ page_obj.end_index }} of {{ total_count }} results
+                     </p>
+                  </div>
+               </div>
+
+               <div class="col-lg-2 filter-menu">
+                  <select
+                     class="form-select shadow-none"
+                     onchange="window.location.href=this.value"
+                  >
+                     <option
+                        value="?sort=latest{% if current_category %}&category={{ current_category }}{% endif %}"
+                        {% if current_sort == "latest" or not current_sort %}selected{% endif %}
+                     >
+                        Sort by Latest
+                     </option>
+
+                     <option
+                        value="?sort=price_low{% if current_category %}&category={{ current_category }}{% endif %}"
+                        {% if current_sort == "price_low" %}selected{% endif %}
+                     >
+                        Price: Low to High
+                     </option>
+
+                     <option
+                        value="?sort=price_high{% if current_category %}&category={{ current_category }}{% endif %}"
+                        {% if current_sort == "price_high" %}selected{% endif %}
+                     >
+                        Price: High to Low
+                     </option>
+                  </select>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="row mt-5">
+         {% for product in page_obj %}
+         <div class="col-lg-3 col-6">
+            <div class="product-card shadow-sm">
+               <a href="{% url 'product_detail' product.category.slug product.slug %}">
+                  <div class="image-wrapper">
+                     {% with product.images.first as primary_image %}
+                        {% if primary_image %}
+                           <img
+src="{% if primary_image.thumbnail %}{{ primary_image.thumbnail.url }}{% else %}{{ primary_image.image.url }}{% endif %}"
+srcset="
+{% if primary_image.thumbnail %}{{ primary_image.thumbnail.url }}{% else %}{{ primary_image.image.url }}{% endif %} 600w,
+{{ primary_image.image.url }} 1200w
+"
+sizes="(max-width:768px) 50vw, 25vw"
+class="product-img default-img img-fluid"
+alt="{{ product.title }}"
+loading="lazy"
+/>
+                        {% else %}
+                           <img
+                              src="{% static 'images/product-placeholder.jpg' %}"
+                              class="product-img default-img img-fluid"
+                              alt="{{ product.title }}"
+                           />
+                        {% endif %}
+                     {% endwith %}
+
+                     <!-- TOP badges -->
+                     {% for tag in product.tags.all %}
+                        {% if tag.slug == "new" %}
+                           <div class="tag-card new shadow-sm">New</div>
+                        {% elif tag.slug == "trending" %}
+                           <div class="tag-card trending shadow-sm">Trending</div>
+                        {% endif %}
+                     {% endfor %}
+
+                     <!-- BOTTOM badges -->
+                     <div class="tag-bottom p-3 pt-0 text-start">
+                        {% for tag in product.tags.all %}
+                           {% if tag.slug == "instagram-popular" %}
+                              <span class="popular-tag instagram">
+                                 <i class="bi bi-instagram"></i>
+                                 Popular on Instagram
+                              </span>
+                           {% elif tag.slug == "loved-on-swann" %}
+                              <span class="popular-tag swann">
+                                 <i class="bi bi-heart-fill"></i>
+                                 Loved on swann
+                              </span>
+                           {% endif %}
+                        {% endfor %}
+                     </div>
+                  </div>
+
+                  <div class="product-info p-3">
+                     <p class="text-ellipsis">{{ product.title|truncatechars:25 }}</p>
+
+                     <div class="pricing d-flex flex-column">
+                        <span class="new-price">
+                           <i class="bi bi-currency-rupee"></i>{{ product.final_price }}
+                        </span>
+
+                        {% if product.discount_price %}
+                        <span class="old-price">
+                           <i class="bi bi-currency-rupee"></i>{{ product.price }}
+                        </span>
+                        {% endif %}
+                     </div>
+
+                     <button class="btn add-to-cart-btn mt-3">
+                        Add to Cart
+                     </button>
+                  </div>
+
+               </a>
+            </div>
+         </div>
+         {% empty %}
+         <div class="col-12 text-center py-5">
+            <p class="text-muted mb-0">No products available.</p>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+
+   <div class="container">
+      <nav aria-label="Page navigation example">
+         <ul class="pagination justify-content-center">
+
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+               <a class="page-link"
+                  href="?page={{ page_obj.previous_page_number }}{% if current_category %}&category={{ current_category }}{% endif %}{% if current_sort %}&sort={{ current_sort }}{% endif %}">
+                  <small>Previous</small>
+               </a>
+            </li>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+            <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+               <a class="page-link"
+                  href="?page={{ num }}{% if current_category %}&category={{ current_category }}{% endif %}{% if current_sort %}&sort={{ current_sort }}{% endif %}">
+                  {{ num }}
+               </a>
+            </li>
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+            <li class="page-item">
+               <a class="page-link"
+                  href="?page={{ page_obj.next_page_number }}{% if current_category %}&category={{ current_category }}{% endif %}{% if current_sort %}&sort={{ current_sort }}{% endif %}">
+                  <small>Next</small>
+               </a>
+            </li>
+            {% endif %}
+
+         </ul>
+      </nav>
+   </div>
+</main>
+      <footer class="footer pt-lg-5">
+         <div class="container footer-bottom-line">
+            <div class="row footer-inner">
+               <div class="col-lg-4 pe-lg-5">
+                  <div class="footer-about pt-lg-5 text-center">
+                     <div class="footer-logo">
+                        <img
+                           src="{% static 'images/logo.png' %}"
+                           alt="Logo"
+                           class="footerlogo img-fluid"
+                        />
+                     </div>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Curabitur dui ante, molestie vitae nisi eu, dictum
+                        interdum mi. Aenean congue porta posuere. Phasellus
+                        rutrum non lorem ut faucibus. Mauris vel lacinia nibh.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-6">
+                  <div class="footer-menu pt-5">
+                     <h5 class="mb-3">Quick Links</h5>
+                     <ul class="list-unstyled">
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="index.html">Home</a>
+                        </li>
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="services.html">EID COLLECTION</a>
+                        </li>
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="career.html">Categories</a>
+                        </li>
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="contactus.html">Contact Us</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-6">
+                  <div class="footer-menu pt-5">
+                     <h5 class="mb-3">Products</h5>
+                     <ul class="list-unstyled">
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="index.html">Home</a>
+                        </li>
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="aboutus.html">About Us</a>
+                        </li>
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="services.html">EID COLLECTION</a>
+                        </li>
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="career.html">Categories</a>
+                        </li>
+                        <li>
+                           <span
+                              ><i class="bi bi-chevron-double-right"></i></span
+                           ><a href="contactus.html">Contact Us</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-3">
+                  <div class="footer-menu social-list pt-5">
+                     <h5 class="mb-3">Follow Us</h5>
+                     <span class="flex-center"
+                        ><a href="#"><i class="bi bi-facebook"></i></a
+                     ></span>
+                     <span class="flex-center"
+                        ><a href="#"><i class="bi bi-instagram"></i></a
+                     ></span>
+                     <span class="flex-center"
+                        ><a href="#"><i class="bi bi-twitter-x"></i></a
+                     ></span>
+                     <span class="flex-center"
+                        ><a href="#"><i class="bi bi-linkedin"></i></a
+                     ></span>
+                     <span class="flex-center"
+                        ><a href="#"><i class="bi bi-youtube"></i></a
+                     ></span>
+                  </div>
+               </div>
+            </div>
+            <div class="container py-5">
+               <div class="row">
+                  <div class="col-lg-4">
+                     <div class="footer-box">
+                        <div class="d-flex flex-column align-items-center">
+                           <div
+                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
+                           >
+                              <i class="bi bi-truck"></i>
+                           </div>
+                           <h5>Fast Delivery</h5>
+                           <p class="text-muted mb-0">
+                              Deliver Products On Time
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="footer-box">
+                        <div class="d-flex flex-column align-items-center">
+                           <div
+                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
+                           >
+                              <i class="bi bi-headset"></i>
+                           </div>
+                           <h5>24/7 Support</h5>
+                           <p class="text-muted mb-0">Get help anytime</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="footer-box">
+                        <div class="d-flex flex-column align-items-center">
+                           <div
+                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
+                           >
+                              <i class="bi bi-patch-check-fill"></i>
+                           </div>
+                           <h5>100% Authentic</h5>
+                           <p class="text-muted mb-0">
+                              Guaranteed genuine products
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="col-12">
+               <div class="copy-right py-3">
+                  <small>© Copyrights reserved, 2026</small>
+               </div>
+            </div>
+         </div>
+         <div class="whatsapp">
+            <img
+               src="{% static 'images/icons/whatsapp.svg' %}"
+               alt="whatsapp"
+               class="img-fluid"
+            />
+         </div>
+      </footer>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"
+      ></script>
+      <script src="{% static 'js/main.js' %}"></script>
+      <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+   </body>
+</html>
