@@ -33,7 +33,9 @@ from twilio.rest import Client
 from django.conf import settings
 from django.db.models import Q
 from django.core import signing
-from django.http import Http404
+from django.http import FileResponse, Http404
+from django.conf import settings
+import os
 
 
 
@@ -674,3 +676,12 @@ def search_suggestions(request):
         })
 
     return JsonResponse({"results": results})
+
+
+def serve_media(request, path):
+    file_path = os.path.join(settings.MEDIA_ROOT, path)
+
+    if not os.path.exists(file_path):
+        raise Http404()
+
+    return FileResponse(open(file_path, "rb"))
