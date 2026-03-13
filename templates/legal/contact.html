@@ -1,0 +1,101 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+      <main class="main py-5 bg-light">
+         <section class="py-5">
+            <div class="container">
+               <div class="col-12 text-center mb-5">
+                  <h1 class="product-title main-head">contact us</h1>
+                  <div class="head-border-line"></div>
+               </div>
+
+               <div class="row g-4">
+                  <div class="col-lg-6">
+                     <div
+                        class="form-card card shadow-sm border-0 p-4 rounded-3 h-100 py-5"
+                     >
+                        <h4 class="fw-semibold mb-4">Send us a message</h4>
+
+<div id="contactAlert"></div>
+                        <form id="contactForm" method="POST" action="{% url 'contact' %}">
+    {% csrf_token %}
+      <input type="text" name="website" style="display:none">
+
+    <div class="mb-3">
+        <input type="text" name="name" class="form-control form-control-lg" placeholder="Your Name" required>
+    </div>
+
+    <div class="mb-3">
+        <input type="email" name="email" class="form-control form-control-lg" placeholder="Your Email" required>
+    </div>
+
+    <div class="mb-3">
+        <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Your Phone">
+    </div>
+
+    <div class="mb-3">
+        <textarea name="message" class="form-control form-control-lg" rows="5" placeholder="Your Query" required></textarea>
+    </div>
+
+    <button type="submit" class="btn theme-bg w-100 py-3 rounded-3">
+        Send Message
+    </button>
+</form>
+                     </div>
+                  </div>
+
+                  <!-- RIGHT COLUMN -->
+                  <div class="col-lg-6">
+                     <div
+                        class="card shadow-sm border-0 p-4 rounded-3 h-100 py-5"
+                     >
+                        <h4 class="fw-semibold mb-4">Swann Designs</h4>
+
+                        <div class="mb-4 d-flex align-items-start">
+                           <div class="me-3 text-muted fs-4">
+                              <i class="bi bi-telephone-fill"></i>
+                           </div>
+                           <div>
+                              <strong>Phone</strong><br />
+                              +971 555432188 <br />
+                           </div>
+                        </div>
+
+                        <div class="mb-4 d-flex align-items-start">
+                           <div class="me-3 text-muted fs-4">
+                              <i class="bi bi-envelope-fill"></i>
+                           </div>
+                           <div>
+                              <strong>Email</strong><br />
+                              support@swannbyswapna.com
+                           </div>
+                        </div>
+
+                        <div class="mb-4 d-flex align-items-start">
+                           <div class="me-3 text-muted fs-4">
+                              <i class="bi bi-geo-alt-fill"></i>
+                           </div>
+                           <div>
+                              <strong>Location</strong><br />
+                              United Arab Emirates
+                           </div>
+                        </div>
+
+                        <div class="d-flex align-items-start">
+                           <div class="me-3 text-muted fs-4">
+                              <i class="bi bi-clock-fill"></i>
+                           </div>
+                           <div>
+                              <strong>Business Hours</strong><br />
+                              Monday - Saturday: 10AM - 5PM<br />
+                              Sunday: Closed
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+{% endblock %}

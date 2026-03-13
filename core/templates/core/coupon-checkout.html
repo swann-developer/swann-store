@@ -1,0 +1,30 @@
+<div class="coupon-section">
+<label>Have a coupon?</label>
+
+<div class="coupon-box">
+
+<input
+type="text"
+id="couponInput"
+placeholder="Enter coupon code here">
+
+<button
+type="button"
+id="applyCouponBtn"
+class="apply-btn">
+
+Apply
+
+</button>
+
+</div>
+</form>
+
+</div>
+
+
+{% if applied_coupon %}
+<div class="alert alert-success mt-2">
+Coupon {{ applied_coupon.code }} applied
+</div>
+{% endif %}

@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h2>Order placed successfully 🎉</h2>
+
+<p>
+Thank you for your order.
+Our team will contact you shortly.
+</p>
+<a
+href="{% url 'download_invoice' order.id %}?token={{ request.GET.token }}"
+class="btn btn-outline-dark mt-3">
+
+Download Invoice
+
+</a>
+
+<a href="/">Continue Shopping</a>
+
+{% endblock %}

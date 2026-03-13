@@ -1,0 +1,226 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+      <main>
+   <div class="container py-5 featured-products">
+      <div class="row">
+         <div class="col-12">
+            <div class="head-section"></div>
+
+            <section class="category-menu shadow-sm category-wrapper">
+               <button class="nav-arrow left" id="prevBtn">
+                  <i class="bi bi-chevron-left"></i>
+               </button>
+
+               <div
+                  class="d-flex align-items-center justify-content-between category-scroll"
+                  id="categoryScroll"
+               >
+                  <ul class="list-inline mb-0 d-flex">
+
+                     <!-- ALL -->
+                     <li class="list-inline-item {% if not current_category %}active{% endif %}">
+                        <span class="icon-holder">
+                           <img
+                              src="{% static 'images/icons/discount.png' %}"
+                              alt="All"
+                              class="img-fluid"
+                           />
+                        </span>
+                        <a href="{% url 'product_list' %}">ALL</a>
+                     </li>
+
+                     <!-- Dynamic Categories -->
+                     {% for category in categories %}
+                     <li class="list-inline-item {% if current_category == category.slug %}active{% endif %}">
+                        <span class="icon-holder">
+                           {% if category.icon %}
+                              <img
+                                 src="{{ category.icon.url }}"
+                                 alt="{{ category.name }}"
+                                 class="img-fluid"
+                              />
+                           {% else %}
+                              <img
+                                 src="{% static 'images/icons/saree.png' %}"
+                                 alt="{{ category.name }}"
+                                 class="img-fluid"
+                              />
+                           {% endif %}
+                        </span>
+                        <a href="{% url 'product_list_by_category' category.slug %}">
+                           {{ category.name }}
+                        </a>
+                     </li>
+                     {% endfor %}
+                  </ul>
+               </div>
+
+               <button class="nav-arrow right" id="nextBtn">
+                  <i class="bi bi-chevron-right"></i>
+               </button>
+            </section>
+
+            <div class="filetr-selection d-flex justify-content-between mt-4 align-items center">
+               <div class="col-lg-3 d-flex align-items-center">
+                  <div class="results-count">
+                     <p class="mb-0 text-muted">
+                        Showing {{ page_obj.start_index }}–{{ page_obj.end_index }} of {{ total_count }} results
+                     </p>
+                  </div>
+               </div>
+
+               <div class="col-lg-2 filter-menu">
+                  <select
+                     class="form-select shadow-none"
+                     onchange="window.location.href=this.value"
+                  >
+                     <option
+                        value="?sort=latest{% if current_category %}&category={{ current_category }}{% endif %}"
+                        {% if current_sort == "latest" or not current_sort %}selected{% endif %}
+                     >
+                        Sort by Latest
+                     </option>
+
+                     <option
+                        value="?sort=price_low{% if current_category %}&category={{ current_category }}{% endif %}"
+                        {% if current_sort == "price_low" %}selected{% endif %}
+                     >
+                        Price: Low to High
+                     </option>
+
+                     <option
+                        value="?sort=price_high{% if current_category %}&category={{ current_category }}{% endif %}"
+                        {% if current_sort == "price_high" %}selected{% endif %}
+                     >
+                        Price: High to Low
+                     </option>
+                  </select>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="row mt-5">
+         {% for product in page_obj %}
+         <div class="col-lg-3 col-6">
+            <div class="product-card shadow-sm">
+               <a href="{% url 'product_detail' product.category.slug product.slug %}">
+                  <div class="image-wrapper">
+                     {% with product.images.first as primary_image %}
+                        {% if primary_image %}
+                           <img
+src="{% if primary_image.thumbnail %}{{ primary_image.thumbnail.url }}{% else %}{{ primary_image.image.url }}{% endif %}"
+srcset="
+{% if primary_image.thumbnail %}{{ primary_image.thumbnail.url }}{% else %}{{ primary_image.image.url }}{% endif %} 600w,
+{{ primary_image.image.url }} 1200w
+"
+sizes="(max-width:768px) 50vw, 25vw"
+class="product-img default-img img-fluid"
+alt="{{ product.title }}"
+loading="lazy"
+/>
+                        {% else %}
+                           <img
+                              src="{% static 'images/product-placeholder.jpg' %}"
+                              class="product-img default-img img-fluid"
+                              alt="{{ product.title }}"
+                           />
+                        {% endif %}
+                     {% endwith %}
+
+                     <!-- TOP badges -->
+                     {% for tag in product.tags.all %}
+                        {% if tag.slug == "new" %}
+                           <div class="tag-card new shadow-sm">New</div>
+                        {% elif tag.slug == "trending" %}
+                           <div class="tag-card trending shadow-sm">Trending</div>
+                        {% endif %}
+                     {% endfor %}
+
+                     <!-- BOTTOM badges -->
+                     <div class="tag-bottom p-3 pt-0 text-start">
+                        {% for tag in product.tags.all %}
+                           {% if tag.slug == "instagram-popular" %}
+                              <span class="popular-tag instagram">
+                                 <i class="bi bi-instagram"></i>
+                                 Popular on Instagram
+                              </span>
+                           {% elif tag.slug == "loved-on-swann" %}
+                              <span class="popular-tag swann">
+                                 <i class="bi bi-heart-fill"></i>
+                                 Loved on swann
+                              </span>
+                           {% endif %}
+                        {% endfor %}
+                     </div>
+                  </div>
+
+                  <div class="product-info p-3">
+                     <p class="text-ellipsis">{{ product.title|truncatechars:25 }}</p>
+
+                     <div class="pricing d-flex flex-column">
+                        <span class="new-price">
+                           <i class="bi bi-currency-rupee"></i>{{ product.final_price }}
+                        </span>
+
+                        {% if product.discount_price %}
+                        <span class="old-price">
+                           <i class="bi bi-currency-rupee"></i>{{ product.price }}
+                        </span>
+                        {% endif %}
+                     </div>
+
+                     <button class="btn add-to-cart-btn mt-3">
+                        Add to Cart
+                     </button>
+                  </div>
+
+               </a>
+            </div>
+         </div>
+         {% empty %}
+         <div class="col-12 text-center py-5">
+            <p class="text-muted mb-0">No products available.</p>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+
+   <div class="container">
+      <nav aria-label="Page navigation example">
+         <ul class="pagination justify-content-center">
+
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+               <a class="page-link"
+                  href="?page={{ page_obj.previous_page_number }}{% if current_category %}&category={{ current_category }}{% endif %}{% if current_sort %}&sort={{ current_sort }}{% endif %}">
+                  <small>Previous</small>
+               </a>
+            </li>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+            <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+               <a class="page-link"
+                  href="?page={{ num }}{% if current_category %}&category={{ current_category }}{% endif %}{% if current_sort %}&sort={{ current_sort }}{% endif %}">
+                  {{ num }}
+               </a>
+            </li>
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+            <li class="page-item">
+               <a class="page-link"
+                  href="?page={{ page_obj.next_page_number }}{% if current_category %}&category={{ current_category }}{% endif %}{% if current_sort %}&sort={{ current_sort }}{% endif %}">
+                  <small>Next</small>
+               </a>
+            </li>
+            {% endif %}
+
+         </ul>
+      </nav>
+   </div>
+</main>
+{% endblock %}

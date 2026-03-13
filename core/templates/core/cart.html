@@ -1,0 +1,131 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+      <main class="main py-5">
+         <div class="container">
+            <div class="row g-lg-5 g-5">
+               <div class="col-lg-7">
+                  {% for item in items %}
+                  <div class="cart-card p-3 mb-3" data-item-id="{{ item.id }}">
+                     <div class="row">
+                        <div class="col-lg-3">
+                           <div class="item-container">
+                              <img
+                                 src="{% if item.variant.product.primary_image %}{{ item.variant.product.primary_image.image.url }}{% else %}{% static 'images/product-placeholder.jpg' %}{% endif %}"
+                                 alt="{{ item.variant.product.title }}"
+                                 alt="cart image"
+                                 class="img-fluid rounded-3"
+                              />
+                           </div>
+                        </div>
+
+                        <div class="col-lg-6 py-lg-0 py-3">
+                           <div class="item-cart-detail">
+                              <h2 class="text-uppercase">
+                                 {{ item.variant.product.title }}
+                              </h2>
+                              <p class="text-uppercase text-muted">
+                                 <small>Size: {{ item.variant.size }}</small>
+                              </p>
+                           </div>
+
+                           <!-- ✅ FIXED QTY CONTROL -->
+                           <div
+                             class="qty-wrapper"
+                             data-price="{{ item.variant.product.final_price }}"
+                             data-final-price="{{ item.variant.product.final_price }}"
+                             data-mrp-price="{{ item.variant.product.price }}"
+                           >
+                              <button class="qty-btn qty-minus">−</button>
+                              <span class="qty-value">{{ item.quantity }}</span>
+                              <button class="qty-btn qty-plus">+</button>
+                           </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                           <div class="cart-price">
+                              <p>
+                                 <span class="item-cart-price">
+                                    <i class="bi bi-currency-rupee"></i>{{ item.line_total }}
+                                 </span>
+                              </p>
+
+                              <!-- ✅ remove button -->
+                              <form method="post" action="{% url 'remove_from_cart' item.id %}">
+                                {% csrf_token %}
+                                <button class="delete-btn mb-0 border-0 bg-transparent">
+                                  <span><i class="bi bi-trash pe-1"></i></span>
+                                  <small>Remove</small>
+                                </button>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  {% empty %}
+                    <p>Your cart is empty.</p>
+                  {% endfor %}
+               </div>
+               <div class="col-lg-5">
+                  <div class="order-card order-summary">
+                     <h3 class="card-title">Order Summary</h3>
+
+                     <div class="row-line">
+                        <span>Subtotal ({{ items|length }} item{{ items|length|pluralize }}):</span>
+                        <strong id="cartSubtotal">AED: {{ subtotal_mrp }}</strong>
+                     </div>
+
+                     <div class="row-line discount">
+                        <span>Product Discounts:</span>
+                        <strong id="cartDiscount">-AED {{ total_discount }}</strong>
+                     </div>
+
+                     <div class="cashback">
+                        You saved <strong id="cartSavedPercent">{{ discount_percent }}</strong>% in this order
+                     </div>
+
+                     <div class="row-line total">
+                        <span>Order Total:</span>
+                        <strong id="cartTotal">AED: {{ final_total }}</strong>
+                     </div>
+<!--
+                     <div class="coupon-section">
+                        <label>Have a coupon?</label>
+                        <div class="coupon-box">
+                           <input
+                              type="text"
+                              placeholder="Enter or select a coupon"
+                           />
+                           <button class="apply-btn">Apply</button>
+                        </div>
+
+                        <div class="coupon-empty">No coupons available</div>
+                     </div> -->
+
+                     <p class="shipping-note">
+                        <br />
+                        Delivery Charge @ FLAT AED 7.50
+                     </p>
+
+                     {% if items %}
+<a href="{% url 'checkout' %}" class="btn btn-dark buy-btn">
+Proceed to Checkout
+</a>
+{% else %}
+<button class="btn btn-dark buy-btn" disabled>
+Cart Empty
+</button>
+{% endif %}
+
+                     <p class="terms mt-2">
+                        By proceeding, you agree to our
+                        <a href="/terms-and-conditions/">Terms of Service</a> and
+                        <a href="/privacy-policy/">Privacy Policy</a>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+{% endblock %}

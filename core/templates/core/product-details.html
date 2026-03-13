@@ -1,0 +1,323 @@
+{% extends "core/base.html" %}
+{% load static %}
+<head>
+
+<title>{{ product.title }} | Swann</title>
+<link rel="canonical" href="{{ product_url }}">
+
+<meta name="description" content="{{ product.title }} available at Swann by Swapna.">
+
+</head>
+{% block content %}
+      <main class="main py-5">
+         <div class="container">
+            <div class="row g-lg-5">
+               <div class="col-lg-6">
+                  <div class="image-section">
+                     <!-- MAIN IMAGE -->
+                     <div class="main-image">
+                        <img
+                           id="mainImage"
+                           {% if product.primary_image %}
+                           src="{{ product.primary_image.image.url }}"
+                           srcset="
+                           {% if product.primary_image.thumbnail %}
+                           {{ product.primary_image.thumbnail.url }} 600w,
+                           {% endif %}
+                           {{ product.primary_image.image.url }} 1200w"
+                           sizes="(max-width:768px) 100vw, 600px"
+                           data-zoom-image="{{ product.primary_image.image.url }}"
+                           {% else %}
+                           src="{% static 'images/product-placeholder.jpg' %}"
+                           {% endif %}
+                           class="img-fluid"
+                           loading="lazy"
+                           />
+                     </div>
+
+                     <!-- THUMBNAILS -->
+                     <div class="thumbs">
+                        <button class="thumb-nav" id="thumbPrev">‹</button>
+
+                        <div class="thumb-list" id="thumbList">
+                              {% for image in product.images.all %}
+                           <img
+                             src="{% if image.thumbnail %}{{ image.thumbnail.url }}{% else %}{{ image.image.url }}{% endif %}" alt="{{ product.title }}" loading="lazy"
+                             data-image="{{ image.image.url }}"
+                             data-zoom-image="{{ image.image.url }}"
+                             class="thumb img-fluid {% if forloop.first %}active{% endif %}"
+                           />
+                           {% endfor %}
+                           </div>
+
+                        <button class="thumb-nav" id="thumbNext">›</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="product-summary">
+                     <h1 class="product-title main-head text-uppercase">
+                        {{ product.title }}
+                     </h1>
+
+                     {% if default_variant %}
+                     <span class="fw-bold new-price">
+                           SKU: {{ default_variant.sku }}
+                           </span>
+                     {% endif %}
+                     <br><br>
+                     <div class="brand py-2">
+                        <p class="text-uppercase fw-bold mb-2">
+                           Fabric: <span class="text-secondary">{{ product.fabric }}</span>
+                        </p>
+                        <p class="text-uppercase fw-bold mb-2">
+                           Length:
+                           <span class="text-secondary">{{ product.length }}</span>
+                        </p>
+                        <p class="text-uppercase fw-bold mb-2">
+                           Style:
+                           <span class="text-secondary">{{ product.style }}</span>
+                        </p>
+                        <p class="text-uppercase fw-bold mb-2">
+                           Color:
+                           <span class="text-secondary">{{ product.color }}</span>
+                        </p>
+                     </div>
+                     <div class="sizes d-flex gap-3 align-items-center mb-3">
+                        <p class="fw-bold mb-0">Size</p>
+                        <select
+                           class="form-select"
+                           style="max-width: 9rem"
+                           aria-label="Select size"
+                           id="sizeSelect"
+                        >
+                           <option value="">Select Size</option>
+
+                           {% for variant in product.variants.all %}
+                              {% if variant.is_active %}
+                              <option value="{{ variant.id }}"
+                                      data-stock="{{ variant.stock_qty }}">
+                                {{ variant.size }}
+                                {% if variant.stock_qty == 0 %}
+                                   (Out of stock)
+                                {% endif %}
+                              </option>
+                              {% endif %}
+                           {% endfor %}
+                        </select>
+                     </div>
+                     <div class="price-info">
+                        <p class="lead text-uppercase">
+                           <span class="fw-bold new-price">
+                           <i class="bi bi-currency-rupee"></i>{{ product.final_price }}
+                           </span>
+
+                        {% if product.discount_price %}
+                           <span class="old-price">
+                           <i class="bi bi-currency-rupee"></i>{{ product.price }}
+                           </span>
+                           <span class="tag-card new position-relative fw-bold"
+                              >{{ product.discount_percent }}% off</span
+                           >
+                        {% endif %}
+                        </p>
+                     </div>
+
+                     <div class="product-btn d-flex gap-3 align-items-center">
+                        <form method="post" action="{% url 'add_to_cart' %}" class="w-100">
+                        {% csrf_token %}
+
+                        <input type="hidden" name="variant_id" id="variantInput">
+                        <input type="hidden" name="quantity" value="1">
+
+                        <div class="product-btn d-flex gap-3 align-items-center">
+                           <div id="cartActionWrapper" class="w-100">
+                             <button
+                               type="submit"
+                               id="addToCartBtn"
+                               class="btn theme-btn theme-bg btn-lg mt-3 w-50"
+                             >
+                               Add to Cart
+                             </button>
+
+                             <a
+                               href="{% url 'cart_detail' %}"
+                               id="viewCartBtn"
+                               class="btn btn-dark btn-lg mt-3 w-50 d-none"
+                             >
+                               View Cart
+                             </a>
+
+                             <small id="variantError" class="text-danger d-none">
+                               Please select size.
+                             </small>
+                           </div>
+
+                           <a
+                             href="https://wa.me/?text={{ product.title|urlencode }}%20-%20₹{{ product.final_price }}%20{{ product_url|urlencode }}"
+                             target="_blank"
+                             rel="noopener"
+                             class="btn btn-whatsapp btn-lg mt-3"
+                           >
+                             <i class="bi bi-whatsapp"></i>
+                           </a>
+                        </div>
+                     </form>
+
+
+                     </div>
+                     <div class="d-grid gap-2">
+                        <button id="buyNowBtn" class="btn btn-lg btn-dark mt-4">
+Buy Now
+</button>
+                     </div>
+                     <div class="delivery-features mt-3">
+                        <p class="text-dark d-flex gap-lg-4 gap-2">
+                           <span
+                              ><i class="bi bi-truck pe-3"></i
+                              ><small class="text-muted"
+                                 >Fast Delivery</small
+                              ></span
+                           >
+                           <span
+                              ><i class="bi bi-check-circle pe-3"></i
+                              ><small class="text-muted"
+                                 >Quality Approved</small
+                              ></span
+                           >
+                           <span
+                              ><i class="bi bi-person-standing-dress"></i
+                              ><small class="text-muted"
+                                 >Premium Materials</small
+                              ></span
+                           >
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 zoom-result" id="zoomResult"></div>
+
+               <div class="col-lg-12 mt-3">
+                  <div class="pro-desc-tab">
+                     <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                           <button
+                              class="nav-link active"
+                              id="f-tab1"
+                              data-bs-toggle="tab"
+                              data-bs-target="#tab1"
+                              type="button"
+                              role="tab"
+                              aria-controls="home"
+                              aria-selected="true"
+                           >
+                              Description
+                           </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                           <button
+                              class="nav-link"
+                              id="f-tab3"
+                              data-bs-toggle="tab"
+                              data-bs-target="#tab3"
+                              type="button"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                           >
+                              Wash Care
+                           </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                           <button
+                              class="nav-link"
+                              id="f-tab4"
+                              data-bs-toggle="tab"
+                              data-bs-target="#tab4"
+                              type="button"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                           >
+                              Return Rules
+                           </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                           <button
+                              class="nav-link"
+                              id="f-tab5"
+                              data-bs-toggle="tab"
+                              data-bs-target="#tab5"
+                              type="button"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                           >
+                              Additional Information
+                           </button>
+                        </li>
+                     </ul>
+                     <div class="tab-content" id="myTabContent">
+                        <div
+                           class="tab-pane fade show active"
+                           id="tab1"
+                           role="tabpanel"
+                           aria-labelledby="f-tab1"
+                        >
+                           <div class="p-3 my-4">
+                              {{ product.description|linebreaks }}
+                           </div>
+                        </div>
+                        <div
+                           class="tab-pane fade"
+                           id="tab2"
+                           role="tabpanel"
+                           aria-labelledby="f-tab2"
+                        >
+
+                        </div>
+                        <div
+                           class="tab-pane fade"
+                           id="tab3"
+                           role="tabpanel"
+                           aria-labelledby="f-tab3"
+                        >
+                           <div class="p-3 my-4">
+                              <p><div class="p-3 my-4">
+  {{ product.wash_care|linebreaks }}
+</div></p>
+                           </div>
+                        </div>
+                        <div
+                           class="tab-pane fade"
+                           id="tab4"
+                           role="tabpanel"
+                           aria-labelledby="f-tab4"
+                        >
+                           <div class="p-3 my-4">
+                              <p>
+                                 {{ product.return_rules|linebreaks }}
+                              </p>
+                           </div>
+                        </div>
+                        <div
+                           class="tab-pane fade"
+                           id="tab5"
+                           role="tabpanel"
+                           aria-labelledby="f-tab5"
+                        >
+                           <div class="p-3 my-4">
+                              <p>
+                                 <span class="fw-bold"><div class="p-3 my-4">
+                             {{ product.additional_information|linebreaks }}
+                              </div></span>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+{% endblock %}
