@@ -27,7 +27,7 @@ from django.db.models import F
 from django.utils.dateparse import parse_datetime
 from django.db import transaction
 from django.template.loader import render_to_string
-from xhtml2pdf import pisa
+from reportlab.pdfgen import canvas
 from django.http import HttpResponse
 from twilio.rest import Client
 from django.conf import settings
@@ -574,30 +574,34 @@ def order_success(request, order_id):
 
 def download_invoice(request, order_id):
 
-    token = request.GET.get("token")
-
-    if not token:
-        raise Http404()
-
-    try:
-        data = signing.loads(token, max_age=3600)
-    except signing.BadSignature:
-        raise Http404()
-
-    if data.get("order_id") != order_id:
-        raise Http404()
-
     order = get_object_or_404(Order, id=order_id)
-
-    template = render_to_string(
-        "core/invoice.html",
-        {"order": order}
-    )
 
     response = HttpResponse(content_type="application/pdf")
     response["Content-Disposition"] = f'attachment; filename="invoice_{order.id}.pdf"'
 
-    pisa.CreatePDF(template, dest=response)
+    p = canvas.Canvas(response)
+
+    y = 800
+    p.drawString(50, y, f"Invoice #{order.id}")
+    y -= 30
+
+    p.drawString(50, y, f"Customer: {order.first_name} {order.last_name}")
+    y -= 20
+    p.drawString(50, y, f"Phone: {order.phone}")
+    y -= 40
+
+    p.drawString(50, y, "Items:")
+
+    y -= 20
+    for item in order.items.all():
+        p.drawString(60, y, f"{item.product_title} x {item.quantity} - {item.line_total}")
+        y -= 20
+
+    y -= 20
+    p.drawString(50, y, f"Total: {order.total}")
+
+    p.showPage()
+    p.save()
 
     return response
 
