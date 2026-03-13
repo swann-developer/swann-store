@@ -10,7 +10,7 @@ Thank you for your order.
 Our team will contact you shortly.
 </p>
 <a
-href="{% url 'download_invoice' order.id %}"
+href="{% url 'download_invoice' order.id %}?token={{ request.GET.token }}"
 class="btn btn-outline-dark mt-3">
 
 Download Invoice

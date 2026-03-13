@@ -32,6 +32,8 @@ from django.http import HttpResponse
 from twilio.rest import Client
 from django.conf import settings
 from django.db.models import Q
+from django.core import signing
+from django.http import Http404
 
 
 
@@ -256,7 +258,7 @@ def update_cart_quantity(request, item_id):
 
     return JsonResponse({"status": "updated"})
 
-    
+
 def checkout_view(request):
     request.session.setdefault("otp_verified", False)
     cart = get_or_create_cart(request)
@@ -538,11 +540,27 @@ def place_order(request):
     items.delete()
 
     request.session.pop("applied_coupon", None)
+    token = signing.dumps({"order_id": order.id})
 
-    return redirect("order_success", order_id=order.id)
+    success_url = reverse("order_success", args=[order.id])
+
+    return redirect(f"{success_url}?token={token}")
 
 @never_cache
 def order_success(request, order_id):
+
+    token = request.GET.get("token")
+
+    if not token:
+        raise Http404()
+
+    try:
+        data = signing.loads(token, max_age=3600)  # token valid for 1 hour
+    except signing.BadSignature:
+        raise Http404()
+
+    if data.get("order_id") != order_id:
+        raise Http404()
 
     order = get_object_or_404(Order, id=order_id)
 
@@ -555,6 +573,19 @@ def order_success(request, order_id):
     )
 
 def download_invoice(request, order_id):
+
+    token = request.GET.get("token")
+
+    if not token:
+        raise Http404()
+
+    try:
+        data = signing.loads(token, max_age=3600)
+    except signing.BadSignature:
+        raise Http404()
+
+    if data.get("order_id") != order_id:
+        raise Http404()
 
     order = get_object_or_404(Order, id=order_id)
 
@@ -569,7 +600,6 @@ def download_invoice(request, order_id):
     pisa.CreatePDF(template, dest=response)
 
     return response
-
 
 def contact(request):
 
