@@ -263,7 +263,21 @@ document.addEventListener("DOMContentLoaded", function () {
       if (qty > MIN) {
         qty--;
         qtyEl.textContent = qty;
-        recalcCart();
+
+const itemId = card.dataset.itemId;
+
+fetch(`/cart/update/${itemId}/`,{
+method:"POST",
+headers:{
+"Content-Type":"application/json",
+"X-CSRFToken":document.querySelector("[name=csrfmiddlewaretoken]").value
+},
+body:JSON.stringify({
+quantity: qty
+})
+});
+
+recalcCart();
       }
     });
 
@@ -271,7 +285,21 @@ document.addEventListener("DOMContentLoaded", function () {
       if (qty < MAX) {
         qty++;
         qtyEl.textContent = qty;
-        recalcCart();
+
+const itemId = card.dataset.itemId;
+
+fetch(`/cart/update/${itemId}/`,{
+method:"POST",
+headers:{
+"Content-Type":"application/json",
+"X-CSRFToken":document.querySelector("[name=csrfmiddlewaretoken]").value
+},
+body:JSON.stringify({
+quantity: qty
+})
+});
+
+recalcCart();
       }
     });
   });
@@ -483,3 +511,87 @@ otpMessage.innerHTML =
 
 }
 
+// ===============================
+// NAVBAR SEARCH
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const toggle = document.getElementById("searchToggle");
+const box = document.getElementById("searchBox");
+const input = document.getElementById("searchInput");
+const suggestions = document.getElementById("searchSuggestions");
+
+if(!toggle || !box || !input || !suggestions) return;
+
+
+// toggle search box
+toggle.addEventListener("click", function(e){
+e.preventDefault();
+box.classList.toggle("d-none");
+input.focus();
+});
+
+
+// autosuggestions
+input.addEventListener("keyup", function(){
+
+const query = this.value.trim();
+
+if(query.length < 1){
+suggestions.innerHTML="";
+return;
+}
+
+fetch(`/search-suggestions/?q=${encodeURIComponent(query)}`)
+.then(res => res.json())
+.then(data => {
+
+suggestions.innerHTML="";
+
+data.results.forEach(item => {
+
+const el = document.createElement("a");
+
+el.href = item.url;
+
+el.innerHTML = `
+<img src="${item.image}">
+<span>${item.title}</span>
+`;
+
+suggestions.appendChild(el);
+
+});
+
+});
+
+});
+
+
+// close if clicking outside
+document.addEventListener("click", function(e){
+
+if(!box.contains(e.target) && !toggle.contains(e.target)){
+box.classList.add("d-none");
+suggestions.innerHTML="";
+}
+
+});
+
+// enter key search
+input.addEventListener("keypress", function(e){
+
+if(e.key === "Enter"){
+
+const q = input.value.trim();
+
+if(q){
+window.location = `/products/?search=${encodeURIComponent(q)}`;
+}
+
+}
+
+});
+
+});

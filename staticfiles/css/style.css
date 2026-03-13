@@ -989,3 +989,51 @@ h6 {
       object-fit: cover;
    }
 }
+
+
+.search-suggestions{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:#fff;
+    border:1px solid #eee;
+    z-index:999;
+    max-height:300px;
+    overflow-y:auto;
+}
+
+.search-suggestions a{
+    display:flex;
+    align-items:center;
+    padding:8px;
+    text-decoration:none;
+    color:#000;
+}
+
+.search-suggestions a:hover{
+    background:#f7f7f7;
+}
+
+.search-suggestions img{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    margin-right:10px;
+}
+
+.search-box{
+    position:absolute;
+    top:40px;
+    right:0;
+    width:260px;
+    background:#fff;
+    padding:10px;
+    border:1px solid #eee;
+    border-radius:6px;
+    z-index:999;
+}
+
+.search-box input{
+    width:100%;
+}

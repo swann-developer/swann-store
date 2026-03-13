@@ -31,6 +31,7 @@ from xhtml2pdf import pisa
 from django.http import HttpResponse
 from twilio.rest import Client
 from django.conf import settings
+from django.db.models import Q
 
 
 
@@ -38,12 +39,20 @@ from django.conf import settings
 
 def product_list(request, category_slug=None):
     products = (
-        Product.objects
-        .filter(is_active=True)
-        .select_related("category")
-        .prefetch_related("images", "tags")
-        .distinct()
+    Product.objects
+    .filter(is_active=True)
+    .select_related("category")
+    .prefetch_related("images", "tags")
+    .distinct()
     )
+
+    search_query = request.GET.get("search")
+
+    if search_query:
+        products = products.filter(
+            Q(title__icontains=search_query) |
+            Q(category__name__icontains=search_query)
+        )
 
     categories = Category.objects.filter(is_active=True)
 
@@ -226,7 +235,28 @@ def remove_from_cart(request, item_id):
     return redirect("cart_detail")
 
 
+@require_POST
+def update_cart_quantity(request, item_id):
 
+    cart = get_or_create_cart(request)
+
+    item = get_object_or_404(CartItem, id=item_id, cart=cart)
+
+    data = json.loads(request.body)
+    quantity = int(data.get("quantity", 1))
+
+    if quantity < 1:
+        quantity = 1
+
+    if quantity > 10:
+        quantity = 10
+
+    item.quantity = quantity
+    item.save()
+
+    return JsonResponse({"status": "updated"})
+
+    
 def checkout_view(request):
     request.session.setdefault("otp_verified", False)
     cart = get_or_create_cart(request)
@@ -416,7 +446,7 @@ def verify_otp(request):
     except Exception as e:
         print("Twilio error:", e)
         return JsonResponse({"status": "error"})
-            
+
 @require_POST
 @transaction.atomic
 def place_order(request):
@@ -567,3 +597,46 @@ def contact(request):
     )
 
     return JsonResponse({"status": "success"})
+
+def search_suggestions(request):
+
+    query = request.GET.get("q", "").strip()
+
+    if not query:
+        return JsonResponse({"results": []})
+
+    products = (
+        Product.objects
+        .filter(is_active=True)
+        .filter(
+            Q(title__icontains=query) |
+            Q(category__name__icontains=query)
+        )
+        .select_related("category")
+        .prefetch_related("images")
+        [:6]
+    )
+
+    results = []
+
+    for product in products:
+
+        image = None
+        first_image = product.images.first()
+
+        if first_image:
+            image = first_image.image.url
+
+        results.append({
+            "title": product.title,
+            "url": reverse(
+                "product_detail",
+                kwargs={
+                    "category_slug": product.category.slug,
+                    "product_slug": product.slug
+                }
+            ),
+            "image": image
+        })
+
+    return JsonResponse({"results": results})
