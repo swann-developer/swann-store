@@ -1037,3 +1037,20 @@ h6 {
 .search-box input{
     width:100%;
 }
+
+/* ================================
+INVOICE
+================================ */
+
+.table td,
+.table th{
+font-size:14px;
+}
+
+.card{
+border-radius:12px;
+}
+
+.badge{
+font-size:0.75rem;
+}

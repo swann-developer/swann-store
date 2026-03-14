@@ -290,13 +290,14 @@ class Order(models.Model):
     order_status = models.CharField(max_length=20, choices=ORDER_STATUS, default="pending")
     payment_method = models.CharField(max_length=20, choices=PAYMENT_METHOD)
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS, default="pending")
+    transaction_id = models.CharField(max_length=120, blank=True, null=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
 
         if not self.order_number:
-            self.order_number = "ORD" + uuid.uuid4().hex[:8].upper()
+            self.order_number = "SWN-INV-" + str(uuid.uuid4().hex[:6]).upper()
 
         super().save(*args, **kwargs)
 

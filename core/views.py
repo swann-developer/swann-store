@@ -27,7 +27,8 @@ from django.db.models import F
 from django.utils.dateparse import parse_datetime
 from django.db import transaction
 from django.template.loader import render_to_string
-from reportlab.pdfgen import canvas
+from xhtml2pdf import pisa
+from io import BytesIO
 from django.http import HttpResponse
 from twilio.rest import Client
 from django.conf import settings
@@ -568,42 +569,52 @@ def order_success(request, order_id):
 
     request.session["otp_verified"] = False
 
+    items = order.items.select_related("product")
+
     return render(
         request,
         "core/order-success.html",
-        {"order": order}
+        {
+            "order": order,
+            "items": items,
+        }
     )
-
 def download_invoice(request, order_id):
+
+    token = request.GET.get("token")
+
+    if not token:
+        raise Http404()
+
+    try:
+        data = signing.loads(token, max_age=3600)
+    except signing.BadSignature:
+        raise Http404()
+
+    if data.get("order_id") != order_id:
+        raise Http404()
 
     order = get_object_or_404(Order, id=order_id)
 
+    html = render_to_string(
+        "core/invoice.html",
+        {
+            "order": order,
+            "items": order.items.all(),
+            "request": request
+        }
+    )
+
     response = HttpResponse(content_type="application/pdf")
-    response["Content-Disposition"] = f'attachment; filename="invoice_{order.id}.pdf"'
+    response["Content-Disposition"] = f'attachment; filename="invoice_{order.order_number}.pdf"'
 
-    p = canvas.Canvas(response)
+    pisa_status = pisa.CreatePDF(
+        html,
+        dest=response
+    )
 
-    y = 800
-    p.drawString(50, y, f"Invoice #{order.id}")
-    y -= 30
-
-    p.drawString(50, y, f"Customer: {order.first_name} {order.last_name}")
-    y -= 20
-    p.drawString(50, y, f"Phone: {order.phone}")
-    y -= 40
-
-    p.drawString(50, y, "Items:")
-
-    y -= 20
-    for item in order.items.all():
-        p.drawString(60, y, f"{item.product_title} x {item.quantity} - {item.line_total}")
-        y -= 20
-
-    y -= 20
-    p.drawString(50, y, f"Total: {order.total}")
-
-    p.showPage()
-    p.save()
+    if pisa_status.err:
+        return HttpResponse("Error generating PDF", status=500)
 
     return response
 

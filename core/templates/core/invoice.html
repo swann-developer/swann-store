@@ -30,17 +30,26 @@ font-weight:bold;
 
 </style>
 </head>
-
 <body>
+
+<img src="https://swann-store.onrender.com/static/images/logo.png" width="120">
 
 <h2>Invoice</h2>
 
-<p><strong>Order ID:</strong> {{ order.id }}</p>
-<p><strong>Name:</strong> {{ order.first_name }} {{ order.last_name }}</p>
-<p><strong>Email:</strong> {{ order.email }}</p>
-<p><strong>Phone:</strong> {{ order.phone }}</p>
+<p>
+<strong>Invoice Number:</strong> {{ order.order_number }}<br>
+<strong>Date:</strong> {{ order.created_at|date:"d M Y" }}
+</p>
 
 <hr>
+
+<h3>Customer</h3>
+
+<p>
+{{ order.first_name }} {{ order.last_name }}<br>
+{{ order.phone }}<br>
+{{ order.email }}
+</p>
 
 <table>
 
@@ -52,14 +61,14 @@ font-weight:bold;
 <th>Total</th>
 </tr>
 
-{% for item in order.items.all %}
+{% for item in items %}
 
 <tr>
 <td>{{ item.product_title }}</td>
 <td>{{ item.size }}</td>
 <td>{{ item.quantity }}</td>
-<td>{{ item.price }}</td>
-<td>{{ item.line_total }}</td>
+<td>AED {{ item.price }}</td>
+<td>AED {{ item.line_total }}</td>
 </tr>
 
 {% endfor %}
@@ -68,13 +77,70 @@ font-weight:bold;
 
 <br>
 
-<p>Subtotal: AED {{ order.subtotal }}</p>
-<p>Discount: AED {{ order.product_discount }}</p>
-<p>Coupon: AED {{ order.coupon_discount }}</p>
-<p>VAT: AED {{ order.vat_amount }}</p>
-<p>Shipping: AED {{ order.shipping_cost }}</p>
+<table>
 
-<h3>Total: AED {{ order.total }}</h3>
+<tr>
+<td>Subtotal</td>
+<td>AED {{ order.subtotal }}</td>
+</tr>
+
+<tr>
+<td>Discount</td>
+<td>AED {{ order.product_discount }}</td>
+</tr>
+
+<tr>
+<td>Coupon</td>
+<td>AED {{ order.coupon_discount }}</td>
+</tr>
+
+<tr>
+<td>VAT</td>
+<td>AED {{ order.vat_amount }}</td>
+</tr>
+
+<tr>
+<td>Shipping</td>
+<td>AED {{ order.shipping_cost }}</td>
+</tr>
+
+<tr class="total">
+<td>Total</td>
+<td>AED {{ order.total }}</td>
+</tr>
+
+</table>
+<br>
+
+<h3>Payment Information</h3>
+
+<table>
+
+<tr>
+<td><strong>Payment Method</strong></td>
+<td>{{ order.payment_method|title }}</td>
+</tr>
+
+<tr>
+<td><strong>Payment Status</strong></td>
+<td>{{ order.payment_status|title }}</td>
+</tr>
+
+{% if order.transaction_id %}
+<tr>
+<td><strong>Transaction ID</strong></td>
+<td>{{ order.transaction_id }}</td>
+</tr>
+{% endif %}
+
+</table>
+
+<br>
+
+<p style="font-size:12px;color:#555;">
+Thank you for shopping with Swann.<br>
+Returns accepted within 7 days with unboxing video proof.<br>
+For support: support@swannbyswapna.com
+</p>
 
 </body>
-</html>
