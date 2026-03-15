@@ -359,16 +359,24 @@ def send_otp(request):
     data = json.loads(request.body)
     phone = data.get("phone", "").strip()
 
-    # normalize phone format
-    phone = phone.replace(" ", "")
-    if not phone.startswith("+"):
-        phone = "+" + phone
-    print("Sending OTP to:", phone)
-
     if not phone:
         return JsonResponse({"status": "error"})
 
-    # ---- RATE LIMIT (30 seconds) ----
+    # normalize phone
+    phone = phone.replace(" ", "")
+    if not phone.startswith("+"):
+        phone = "+" + phone
+
+    ip = request.META.get("REMOTE_ADDR")
+
+    # ---- MAX 5 OTP REQUESTS PER IP ----
+    key = f"otp_attempts_{ip}"
+    attempts = request.session.get(key, 0)
+
+    if attempts >= 5:
+        return JsonResponse({"status": "blocked"})
+
+    # ---- 30 SECOND COOLDOWN ----
     last_sent = request.session.get("otp_last_sent")
 
     if last_sent:
@@ -391,8 +399,12 @@ def send_otp(request):
             channel="sms"
         )
 
-        request.session["otp_phone"] = phone.strip()
+        # store phone + timestamps
+        request.session["otp_phone"] = phone
         request.session["otp_last_sent"] = timezone.now().isoformat()
+
+        # increase attempt counter
+        request.session[key] = attempts + 1
 
         return JsonResponse({"status": "sent"})
 
@@ -404,19 +416,18 @@ def send_otp(request):
 
 @require_POST
 def verify_otp(request):
-    data = json.loads(request.body)
 
+    data = json.loads(request.body)
     otp = data.get("otp", "").strip()
 
     phone = request.session.get("otp_phone")
 
-    print("OTP entered:", otp)
-    print("VERIFYING PHONE FROM SESSION:", phone)
     if not phone:
         return JsonResponse({"status": "error"})
 
-    attempts = request.session.get("otp_attempts", 0)
+    attempts = request.session.get("otp_verify_attempts", 0)
 
+    # block brute force attempts
     if attempts >= 5:
         return JsonResponse({"status": "blocked"})
 
@@ -426,6 +437,7 @@ def verify_otp(request):
     )
 
     try:
+
         verification_check = client.verify.v2.services(
             settings.TWILIO_VERIFY_SERVICE_SID
         ).verification_checks.create(
@@ -433,25 +445,28 @@ def verify_otp(request):
             code=otp
         )
 
-        print("TWILIO CHECK STATUS:", verification_check.status)
-        print("TWILIO VALID:", verification_check.valid)
-        print("TWILIO SID:", verification_check.sid)
-
         if verification_check.status == "approved" or verification_check.valid:
 
             request.session["otp_verified"] = True
-            request.session["otp_attempts"] = 0
+
+            # reset counters
+            request.session["otp_verify_attempts"] = 0
+
+            ip = request.META.get("REMOTE_ADDR")
+            request.session[f"otp_attempts_{ip}"] = 0
 
             return JsonResponse({"status": "verified"})
 
-        request.session["otp_attempts"] = attempts + 1
+        request.session["otp_verify_attempts"] = attempts + 1
 
         return JsonResponse({"status": "invalid"})
 
     except Exception as e:
-        print("Twilio error:", e)
-        return JsonResponse({"status": "error"})
 
+        print("Twilio error:", e)
+
+        return JsonResponse({"status": "error"})
+        
 @require_POST
 @transaction.atomic
 def place_order(request):
@@ -549,6 +564,7 @@ def place_order(request):
 
     return redirect(f"{success_url}?token={token}")
 
+
 @never_cache
 def order_success(request, order_id):
 
@@ -568,6 +584,7 @@ def order_success(request, order_id):
     order = get_object_or_404(Order, id=order_id)
 
     request.session["otp_verified"] = False
+    request.session.pop("otp_phone", None)
 
     items = order.items.select_related("product")
 
@@ -579,22 +596,22 @@ def order_success(request, order_id):
             "items": items,
         }
     )
-def download_invoice(request, order_id):
+from django.core import signing
+from django.http import Http404
+from django.shortcuts import get_object_or_404
 
-    token = request.GET.get("token")
-
-    if not token:
-        raise Http404()
+def download_invoice(request, token):
 
     try:
-        data = signing.loads(token, max_age=3600)
+        data = signing.loads(token, max_age=3600)  # valid for 1 hour
+        order_id = data["order_id"]
     except signing.BadSignature:
         raise Http404()
 
-    if data.get("order_id") != order_id:
-        raise Http404()
-
-    order = get_object_or_404(Order, id=order_id)
+    order = get_object_or_404(
+    Order.objects.prefetch_related("items"),
+    id=order_id
+    )
 
     html = render_to_string(
         "core/invoice.html",
@@ -608,13 +625,7 @@ def download_invoice(request, order_id):
     response = HttpResponse(content_type="application/pdf")
     response["Content-Disposition"] = f'attachment; filename="invoice_{order.order_number}.pdf"'
 
-    pisa_status = pisa.CreatePDF(
-        html,
-        dest=response
-    )
-
-    if pisa_status.err:
-        return HttpResponse("Error generating PDF", status=500)
+    pisa.CreatePDF(html, dest=response)
 
     return response
 

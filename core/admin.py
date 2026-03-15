@@ -24,7 +24,7 @@ class ProductResource(resources.ModelResource):
         attribute="category",
         widget=ForeignKeyWidget(Category, "name"),
     )
-    
+
     def before_import_row(self, row, **kwargs):
         # --- ensure safe text fields ---
         if not row.get("description"):
@@ -80,6 +80,7 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     list_display = ("name", "icon_preview", "is_active")
     list_filter = ("is_active",)
+    search_fields = ("name", "slug")
 
     def icon_preview(self, obj):
         if obj.icon:
@@ -98,7 +99,17 @@ class ProductAdmin(ImportExportModelAdmin):
     inlines = [ProductImageInline, ProductVariantInline]
 
     list_display = ("title", "category", "price", "is_active")
+
     list_filter = ("category", "tags", "is_active")
+
+    search_fields = (
+    "title",
+    "slug",
+    "description",
+    "category__name",
+    "variants__sku",
+    )
+
     filter_horizontal = ("tags",)
 
 
@@ -106,6 +117,7 @@ class ProductAdmin(ImportExportModelAdmin):
 class ProductTagAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     list_display = ("name", "is_active")
+    search_fields = ("name", "slug")
 
 @admin.register(ProductVariant)
 class ProductVariantAdmin(admin.ModelAdmin):
@@ -139,7 +151,12 @@ class OrderAdmin(admin.ModelAdmin):
         "created_at",
     )
 
-    search_fields = ("order_number", "phone", "email")
+    search_fields = (
+    "order_number",
+    "phone",
+    "email",
+    "first_name",
+)
 
     inlines = [OrderItemInline]
 
@@ -160,3 +177,7 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ("name", "email", "created_at", "is_read")
     list_filter = ("is_read", "created_at")
     search_fields = ("name", "email")
+
+admin.site.site_header = "Swann Admin"
+admin.site.site_title = "Swann Control"
+admin.site.index_title = "Swann Store Management"
