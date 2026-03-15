@@ -19,7 +19,7 @@ update_cart_quantity,
 )
 urlpatterns = [
     # product listing
-    path("products/", product_list, name="product_list"),
+    path("", product_list, name="product_list"),
     path("products/<slug:category_slug>/", product_list, name="product_list_by_category"),
 
     # product detail (SEO friendly)
