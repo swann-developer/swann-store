@@ -35,7 +35,6 @@ from django.conf import settings
 from django.db.models import Q
 from django.core import signing
 from django.http import FileResponse, Http404
-from django.conf import settings
 import os
 
 
@@ -466,7 +465,7 @@ def verify_otp(request):
         print("Twilio error:", e)
 
         return JsonResponse({"status": "error"})
-        
+
 @require_POST
 @transaction.atomic
 def place_order(request):
@@ -594,6 +593,7 @@ def order_success(request, order_id):
         {
             "order": order,
             "items": items,
+            "token": token,
         }
     )
 from django.core import signing
@@ -603,14 +603,14 @@ from django.shortcuts import get_object_or_404
 def download_invoice(request, token):
 
     try:
-        data = signing.loads(token, max_age=3600)  # valid for 1 hour
+        data = signing.loads(token, max_age=3600)
         order_id = data["order_id"]
     except signing.BadSignature:
         raise Http404()
 
     order = get_object_or_404(
-    Order.objects.prefetch_related("items"),
-    id=order_id
+        Order.objects.prefetch_related("items"),
+        id=order_id
     )
 
     html = render_to_string(
@@ -622,10 +622,20 @@ def download_invoice(request, token):
         }
     )
 
-    response = HttpResponse(content_type="application/pdf")
-    response["Content-Disposition"] = f'attachment; filename="invoice_{order.order_number}.pdf"'
+    buffer = BytesIO()
 
-    pisa.CreatePDF(html, dest=response)
+    pisa_status = pisa.CreatePDF(
+        html,
+        dest=buffer
+    )
+
+    if pisa_status.err:
+        return HttpResponse("Error generating PDF", status=500)
+
+    buffer.seek(0)
+
+    response = HttpResponse(buffer.read(), content_type="application/pdf")
+    response["Content-Disposition"] = f'attachment; filename="invoice_{order.order_number}.pdf"'
 
     return response
 
