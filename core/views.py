@@ -35,6 +35,7 @@ from django.conf import settings
 from django.db.models import Q
 from django.core import signing
 from django.http import FileResponse, Http404
+from django.core.cache import cache
 import os
 
 
@@ -255,6 +256,10 @@ def update_cart_quantity(request, item_id):
     if quantity > 10:
         quantity = 10
 
+    stock = item.variant.stock_qty
+    if quantity > stock:
+        quantity = stock
+
     item.quantity = quantity
     item.save()
 
@@ -370,10 +375,12 @@ def send_otp(request):
 
     # ---- MAX 5 OTP REQUESTS PER IP ----
     key = f"otp_attempts_{ip}"
-    attempts = request.session.get(key, 0)
+    attempts = cache.get(key, 0)
 
     if attempts >= 5:
         return JsonResponse({"status": "blocked"})
+        if attempts >= 5:
+            return JsonResponse({"status": "blocked"})
 
     # ---- 30 SECOND COOLDOWN ----
     last_sent = request.session.get("otp_last_sent")
@@ -403,7 +410,7 @@ def send_otp(request):
         request.session["otp_last_sent"] = timezone.now().isoformat()
 
         # increase attempt counter
-        request.session[key] = attempts + 1
+        cache.set(key, attempts + 1, timeout=3600)
 
         return JsonResponse({"status": "sent"})
 
@@ -452,7 +459,7 @@ def verify_otp(request):
             request.session["otp_verify_attempts"] = 0
 
             ip = request.META.get("REMOTE_ADDR")
-            request.session[f"otp_attempts_{ip}"] = 0
+            cache.delete(f"otp_attempts_{ip}")
 
             return JsonResponse({"status": "verified"})
 

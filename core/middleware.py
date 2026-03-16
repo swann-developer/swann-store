@@ -1,4 +1,5 @@
 from django.http import Http404
+from django.conf import settings
 
 class HideAdminMiddleware:
 
@@ -6,8 +7,7 @@ class HideAdminMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-
-        if request.path.startswith("/swann-control-panel-7491/"):
+        if request.path.startswith(f"/{settings.ADMIN_URL}"):
             if not request.user.is_authenticated:
                 raise Http404()
 
@@ -23,7 +23,7 @@ class BlockAdminBotsMiddleware:
 
     def __call__(self, request):
 
-        if request.path.startswith("/admin"):
+        if request.path.startswith(f"/{settings.ADMIN_URL}"):
             ua = request.META.get("HTTP_USER_AGENT", "").lower()
 
             bad_bots = ["bot", "crawler", "spider", "scan"]
