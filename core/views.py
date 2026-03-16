@@ -655,14 +655,16 @@ def contact(request):
     if request.POST.get("website"):
         return JsonResponse({"status": "blocked"})
 
-    name = request.POST.get("name", "").strip()
-    email = request.POST.get("email", "").strip()
-    phone = request.POST.get("phone", "").strip()
-    message = request.POST.get("message", "").strip()
-    print(name, email, message)
+    # RATE LIMIT (max 5 messages per hour per IP)
+    ip = request.META.get("REMOTE_ADDR")
 
-    if not name or not email or not message:
-        return JsonResponse({"status": "error"})
+    key = f"contact_attempts_{ip}"
+    attempts = cache.get(key, 0)
+
+    if attempts >= 5:
+        return JsonResponse({"status": "blocked"})
+
+    cache.set(key, attempts + 1, timeout=3600)
 
     ContactMessage.objects.create(
         name=name,
