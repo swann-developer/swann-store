@@ -27,12 +27,13 @@ load_dotenv(BASE_DIR / ".env")
 SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False") == "True"
-
 ALLOWED_HOSTS = [
     "swann-store.onrender.com",
     "swannbyswapna.com",
     "www.swannbyswapna.com",
 ]
+# DEBUG = "False"
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -165,7 +166,7 @@ TWILIO_VERIFY_SERVICE_SID = os.getenv("TWILIO_VERIFY_SERVICE_SID")
 ADMIN_URL = os.getenv("ADMIN_URL", "swann-control-panel-72910/")
 
 
-# SECURITY
+# SECURITY PRODUCTION
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT = True
