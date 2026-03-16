@@ -667,6 +667,14 @@ def contact(request):
 
     cache.set(key, attempts + 1, timeout=3600)
 
+    name = request.POST.get("name", "").strip()
+    email = request.POST.get("email", "").strip()
+    phone = request.POST.get("phone", "").strip()
+    message = request.POST.get("message", "").strip()
+
+    if not name or not email or not message:
+        return JsonResponse({"status": "error"})
+
     ContactMessage.objects.create(
         name=name,
         email=email,
@@ -676,6 +684,7 @@ def contact(request):
 
     return JsonResponse({"status": "success"})
 
+    
 def search_suggestions(request):
 
     query = request.GET.get("q", "").strip()
