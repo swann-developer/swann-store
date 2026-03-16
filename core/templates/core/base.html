@@ -9,10 +9,14 @@
       {% block meta %}
       <meta name="description" content="Swann UAE offers elegant women's fashion blending modern trends with timeless style. Discover curated dresses and outfits designed for comfort, confidence, and everyday sophistication.">
       {% endblock %}
-      <meta property="og:title" content="Swann by Swapna">
+      {% block og %}
+      <meta property="og:title" content="Swann | Elegant Women's Fashion UAE">
+      <meta property="og:description" content="Shop premium women's fashion at Swann UAE.">
       <meta property="og:type" content="website">
       <meta property="og:image" content="/static/images/logo.png">
-      <meta property="og:description" content="Elegant women's fashion boutique.">
+      <meta property="og:url" content="{{ request.build_absolute_uri }}">
+      {% endblock %}
+
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />

@@ -9,6 +9,15 @@
 <link rel="canonical" href="{{ product_url }}">
 <meta name="description" content="{{ product.title }} available at Swann by Swapna.">
 {% endblock %}
+{% block og %}
+<meta property="og:title" content="Swann | {{ product.title }}">
+<meta property="og:description" content="{{ product.title }} available at Swann UAE.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="{{ product_url }}">
+{% if product.images.first %}
+<meta property="og:image" content="{{ product.images.first.image.url }}">
+{% endif %}
+{% endblock %}
 
 {% block content %}
       <main class="main py-5">

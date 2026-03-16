@@ -655,7 +655,13 @@ def contact(request):
         return JsonResponse({"status": "blocked"})
 
     # RATE LIMIT (max 5 messages per hour per IP)
-    ip = request.META.get("REMOTE_ADDR")
+
+    x_forwarded_for = request.META.get("HTTP_X_FORWARDED_FOR")
+
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(",")[0]
+    else:
+        ip = request.META.get("REMOTE_ADDR")
 
     key = f"contact_attempts_{ip}"
     attempts = cache.get(key, 0)
