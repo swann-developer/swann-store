@@ -1,13 +1,17 @@
 {% extends "core/base.html" %}
 {% load static %}
-<head>
+{% extends "core/base.html" %}
+{% load static %}
 
-<title>{{ product.title }} | Swann</title>
+{% block title %}
+{{ product.title }} | Swann UAE
+{% endblock %}
+
+{% block meta %}
 <link rel="canonical" href="{{ product_url }}">
-
 <meta name="description" content="{{ product.title }} available at Swann by Swapna.">
+{% endblock %}
 
-</head>
 {% block content %}
       <main class="main py-5">
          <div class="container">

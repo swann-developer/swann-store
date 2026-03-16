@@ -595,3 +595,56 @@ window.location = `/products/?search=${encodeURIComponent(q)}`;
 });
 
 });
+
+// ===============================
+// CONTACT FORM AJAX
+// ===============================
+document.addEventListener("DOMContentLoaded", function () {
+
+const form = document.getElementById("contactForm");
+const alertBox = document.getElementById("contactAlert");
+
+if(!form || !alertBox) return;
+
+form.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const formData = new FormData(form);
+
+const response = await fetch("/contact/",{
+method:"POST",
+headers:{
+"X-CSRFToken":document.querySelector("[name=csrfmiddlewaretoken]").value
+},
+body:formData
+});
+
+const data = await response.json();
+
+if(data.status === "success"){
+
+alertBox.innerHTML =
+"<div class='alert alert-success'>Message sent successfully.</div>";
+
+form.reset();
+
+}
+
+else if(data.status === "blocked"){
+
+alertBox.innerHTML =
+"<div class='alert alert-danger'>Too many messages. Please try again later.</div>";
+
+}
+
+else{
+
+alertBox.innerHTML =
+"<div class='alert alert-danger'>Please fill all required fields.</div>";
+
+}
+
+});
+
+});

@@ -380,8 +380,6 @@ def send_otp(request):
 
     if attempts >= 5:
         return JsonResponse({"status": "blocked"})
-        if attempts >= 5:
-            return JsonResponse({"status": "blocked"})
 
     # ---- 30 SECOND COOLDOWN ----
     last_sent = request.session.get("otp_last_sent")
@@ -684,7 +682,7 @@ def contact(request):
 
     return JsonResponse({"status": "success"})
 
-    
+
 def search_suggestions(request):
 
     query = request.GET.get("q", "").strip()
