@@ -36,6 +36,7 @@ from django.db.models import Q
 from django.core import signing
 from django.http import FileResponse, Http404
 from django.core.cache import cache
+from django.utils._os import safe_join
 import os
 
 
@@ -720,7 +721,10 @@ def search_suggestions(request):
 
 
 def serve_media(request, path):
-    file_path = os.path.join(settings.MEDIA_ROOT, path)
+    try:
+        file_path = safe_join(settings.MEDIA_ROOT, path)
+    except ValueError:
+        raise Http404()
 
     if not os.path.exists(file_path):
         raise Http404()
