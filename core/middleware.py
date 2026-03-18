@@ -13,8 +13,8 @@ class HideAdminMiddleware:
 
         if request.path.startswith(admin_path):
 
-            # allow login page
-            if request.path == admin_path + "login/":
+            # allow login + static admin paths
+            if request.path.startswith(admin_path + "login") or request.path == admin_path:
                 return self.get_response(request)
 
             if not request.user.is_authenticated:
