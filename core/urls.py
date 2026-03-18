@@ -17,6 +17,7 @@ contact,
 search_suggestions,
 update_cart_quantity,
 )
+from .views import stripe_webhook, run_retry_payments, payment_cancel
 urlpatterns = [
     # product listing
     path("", product_list, name="product_list"),
@@ -45,4 +46,7 @@ urlpatterns = [
     path("shipping-policy/", TemplateView.as_view(template_name="legal/shipping.html")),
     path("contact/", contact, name="contact"),
     path("search-suggestions/", search_suggestions, name="search_suggestions"),
+    path("stripe/webhook/", stripe_webhook, name="stripe_webhook"),
+    path("cron/retry-payments/", run_retry_payments),
+    path("payment-cancel/<int:order_id>/", payment_cancel, name="payment_cancel"),
 ]

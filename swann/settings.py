@@ -26,14 +26,14 @@ load_dotenv(BASE_DIR / ".env")
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
-ALLOWED_HOSTS = [
-    "swann-store.onrender.com",
-    "swannbyswapna.com",
-    "www.swannbyswapna.com",
-]
-# DEBUG = "False"
-# ALLOWED_HOSTS = ['*']
+# DEBUG = os.getenv("DEBUG", "False") == "True"
+# ALLOWED_HOSTS = [
+#     "swann-store.onrender.com",
+#     "swannbyswapna.com",
+#     "www.swannbyswapna.com",
+# ]
+DEBUG = "False"
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -89,20 +89,20 @@ WSGI_APPLICATION = 'swann.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 # local:
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# production
 DATABASES = {
-    "default": dj_database_url.config(
-        default=os.getenv("DATABASE_URL"),
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# # production
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default=os.getenv("DATABASE_URL"),
+#         conn_max_age=600
+#     )
+# }
 
 CACHES = {
     "default": {
@@ -170,14 +170,30 @@ TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
 TWILIO_VERIFY_SERVICE_SID = os.getenv("TWILIO_VERIFY_SERVICE_SID")
 ADMIN_URL = os.getenv("ADMIN_URL", "swann-control-panel-72910/")
 
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET")
+STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
+
+# EMAIL CONFIG (basic)
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+EMAIL_HOST = "smtp.zoho.in"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = "orders@swannbyswapna.com"
+EMAIL_HOST_PASSWORD = os.getenv("ZOHO_APP_PASSWORD")
+
+DEFAULT_FROM_EMAIL = "orders@swannbyswapna.com"
+
 
 # SECURITY PRODUCTION
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-X_FRAME_OPTIONS = "DENY"
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
+# SECURE_BROWSER_XSS_FILTER = True
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# X_FRAME_OPTIONS = "DENY"
 
 AUTHENTICATION_BACKENDS = [
     'axes.backends.AxesStandaloneBackend',

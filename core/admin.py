@@ -7,6 +7,8 @@ from import_export.widgets import ForeignKeyWidget
 from django.core.exceptions import ValidationError
 from django.utils.text import slugify
 from .models import Order, OrderItem, Coupon, ContactMessage
+from django.contrib import admin
+
 
 class ProductImageInline(admin.TabularInline):
     model = ProductImage
@@ -131,6 +133,15 @@ class OrderItemInline(admin.TabularInline):
     extra = 0
 
 
+
+@admin.action(description="Mark selected orders as PAID")
+def mark_as_paid(modeladmin, request, queryset):
+    updated = queryset.update(
+        payment_status="paid",
+        order_status="confirmed"
+    )
+    modeladmin.message_user(request, f"{updated} orders marked as PAID")
+
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
 
@@ -152,13 +163,15 @@ class OrderAdmin(admin.ModelAdmin):
     )
 
     search_fields = (
-    "order_number",
-    "phone",
-    "email",
-    "first_name",
-)
+        "order_number",
+        "phone",
+        "email",
+        "first_name",
+    )
 
     inlines = [OrderItemInline]
+
+    actions = [mark_as_paid]
 
 
 @admin.register(Coupon)

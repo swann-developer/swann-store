@@ -123,7 +123,13 @@ font-weight:bold;
 
 <tr>
 <td><strong>Payment Status</strong></td>
-<td>{{ order.payment_status|title }}</td>
+<td>
+{% if order.payment_status == "paid" %}
+<strong style="color:green;">PAID</strong>
+{% else %}
+{{ order.payment_status|title }}
+{% endif %}
+</td>
 </tr>
 
 {% if order.transaction_id %}

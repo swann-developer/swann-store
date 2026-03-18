@@ -27,6 +27,7 @@ from django.db.models import F
 from django.utils.dateparse import parse_datetime
 from django.db import transaction
 from django.template.loader import render_to_string
+from django.core.mail import send_mail
 from xhtml2pdf import pisa
 from io import BytesIO
 from django.http import HttpResponse
@@ -38,7 +39,9 @@ from django.http import FileResponse, Http404
 from django.core.cache import cache
 from django.utils._os import safe_join
 import os
-
+import stripe
+from django.views.decorators.csrf import csrf_exempt
+from django.core.mail import EmailMessage
 
 
 
@@ -476,6 +479,10 @@ def verify_otp(request):
 @transaction.atomic
 def place_order(request):
 
+    if not request.POST.get("phone") or len(request.POST.get("phone")) < 8:
+        messages.error(request, "Invalid phone number")
+        return redirect("checkout")
+
     if request.session.get("otp_verified") != True:
         messages.error(request, "Please verify your phone number first.")
         return redirect("checkout")
@@ -535,8 +542,9 @@ def place_order(request):
     total=grand_total,
 
     coupon_code=coupon_code,
-    payment_method="cod"
-)
+    payment_method=request.POST.get("payment_method", "cod"),
+    payment_status="pending",
+    )
 
     for item in items:
 
@@ -557,18 +565,98 @@ def place_order(request):
             line_total=item.line_total
         )
 
+        # reserve stock → mark but don't deduct yet
         item.variant.stock_qty = F("stock_qty") - item.quantity
         item.variant.save()
-        item.variant.refresh_from_db()
-    items.delete()
-
+# items will be deleted AFTER successful payment (webhook)
     request.session.pop("applied_coupon", None)
     token = signing.dumps({"order_id": order.id})
 
-    success_url = reverse("order_success", args=[order.id])
+    stripe.api_key = settings.STRIPE_SECRET_KEY
 
-    return redirect(f"{success_url}?token={token}")
+    payment_method = order.payment_method
+    print("PAYMENT METHOD:", payment_method)
 
+    # =========================
+    # COD FLOW (UNCHANGED)
+    # =========================
+    if payment_method == "cod":
+
+        # clear cart immediately
+        CartItem.objects.filter(cart=cart).delete()
+
+        success_url = reverse("order_success", args=[order.id])
+        return redirect(f"{success_url}?token={token}")
+
+    # =========================
+    # STRIPE FLOW
+    # =========================
+
+    # prevent duplicate session
+    if order.stripe_session_id:
+        return redirect("checkout")
+
+
+    print("ITEM COUNT:", items.count())
+    line_items = []
+
+    order_items = OrderItem.objects.filter(order=order)
+
+    for item in order_items:
+        price = item.price
+        quantity = item.quantity or 0
+
+        if not price or price <= 0:
+            continue
+
+        if quantity < 1:
+            continue
+
+        unit_amount = int(float(price) * 100)
+
+        if unit_amount < 1:
+            continue
+
+        line_items.append({
+            "price_data": {
+                "currency": "aed",
+                "product_data": {
+                    "name": item.variant.product.title,
+                },
+                "unit_amount": unit_amount,
+            },
+            "quantity": quantity,
+        })
+
+    if not line_items:
+        print("❌ EMPTY LINE ITEMS → DEBUG ORDER ITEMS:", list(order_items.values()))
+        messages.error(request, "Unable to process payment.")
+        return redirect("checkout")
+
+    print("LINE ITEMS:", line_items)
+
+    for oi in order_items:
+        print("ORDER ITEM:", oi.quantity, oi.price)
+
+    session = stripe.checkout.Session.create(
+        payment_method_types=["card"],
+        line_items=line_items,
+        mode="payment",
+        success_url=request.build_absolute_uri(
+            reverse("order_success", args=[order.id])
+        ) + f"?token={token}",
+        cancel_url=request.build_absolute_uri(
+            reverse("payment_cancel", args=[order.id])
+        ),
+        metadata={
+            "order_id": order.id
+        }
+    )
+
+    order.stripe_session_id = session.id
+    order.save()
+
+    return redirect(session.url)
 
 @never_cache
 def order_success(request, order_id):
@@ -588,8 +676,31 @@ def order_success(request, order_id):
 
     order = get_object_or_404(Order, id=order_id)
 
+    # ✅ FIX: ensure payment status is updated (fallback if webhook is slow)
+    if order.payment_method == "online" and order.payment_status != "paid" and order.stripe_session_id:
+        try:
+            stripe.api_key = settings.STRIPE_SECRET_KEY
+
+            session = stripe.checkout.Session.retrieve(order.stripe_session_id)
+
+            if session.payment_status == "paid":
+
+                # idempotency
+                if order.payment_status != "paid":
+                    order.payment_status = "paid"
+                    order.transaction_id = session.payment_intent
+                    order.order_status = "confirmed"
+                    order.save()
+
+        except Exception as e:
+            print("Stripe verify error:", e)
+
     request.session["otp_verified"] = False
     request.session.pop("otp_phone", None)
+
+    # ✅ clear cart after success (correct place)
+    cart = get_or_create_cart(request)
+    CartItem.objects.filter(cart=cart).delete()
 
     items = order.items.select_related("product")
 
@@ -743,3 +854,140 @@ def serve_media(request, path):
         raise Http404()
 
     return FileResponse(open(file_path, "rb"))
+
+
+@csrf_exempt
+def stripe_webhook(request):
+    payload = request.body
+    sig_header = request.META.get("HTTP_STRIPE_SIGNATURE")
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload,
+            sig_header,
+            settings.STRIPE_WEBHOOK_SECRET
+        )
+    except Exception:
+        return HttpResponse(status=400)
+
+    # ✅ PAYMENT SUCCESS
+    if event["type"] == "checkout.session.completed":
+
+        session = event["data"]["object"]
+
+        order_id = session["metadata"]["order_id"]
+
+        try:
+            order = Order.objects.get(id=order_id)
+        except Order.DoesNotExist:
+            return HttpResponse(status=200)
+
+        # 🔒 idempotency (avoid duplicate webhook)
+        if order.payment_status == "paid":
+            return HttpResponse(status=200)
+# 🔒 safety: prevent double stock deduction issues
+
+        order.payment_status = "paid"
+        order.transaction_id = session.get("payment_intent")
+        order.order_status = "confirmed"
+        order.save()
+
+        # ✅ clear cart AFTER payment success
+        # ✅ clear only current user's cart
+        cart = None
+
+        # try to find cart via session (if available)
+        session_key = request.session.session_key
+
+        if session_key:
+            from core.models import Cart
+            cart = Cart.objects.filter(session_key=session_key).first()
+
+        if cart:
+            CartItem.objects.filter(cart=cart).delete()
+        # ✅ SEND EMAIL
+        subject = f"Order Confirmed - {order.order_number}"
+
+        message = f"""
+        Hi {order.first_name},
+
+        Your payment was successful.
+
+        Order ID: {order.order_number}
+        Amount Paid: AED {order.total}
+
+        Thank you for shopping with Swann ❤️
+        """
+
+        html = render_to_string(
+            "core/invoice.html",
+            {
+                "order": order,
+                "items": order.items.all(),
+            }
+        )
+
+        buffer = BytesIO()
+        pisa.CreatePDF(html, dest=buffer)
+        buffer.seek(0)
+
+        email = EmailMessage(
+            subject,
+            message,
+            settings.DEFAULT_FROM_EMAIL,
+            [order.email],
+        )
+
+        email.attach(
+            f"invoice_{order.order_number}.pdf",
+            buffer.read(),
+            "application/pdf"
+        )
+
+        email.send(fail_silently=False)
+    # ❌ PAYMENT FAILED / EXPIRED
+    if event["type"] == "checkout.session.expired":
+
+        session = event["data"]["object"]
+        order_id = session["metadata"]["order_id"]
+
+        order = Order.objects.filter(id=order_id).first()
+
+        if order:
+            order.payment_status = "failed"
+            order.save()
+
+            # ✅ RESTORE STOCK
+            for item in order.orderitem_set.all():
+                item.variant.stock_qty = F("stock_qty") + item.quantity
+                item.variant.save()
+
+    return HttpResponse(status=200)
+
+def run_retry_payments(request):
+
+    # 🔒 protect endpoint
+    secret = request.GET.get("key")
+    if secret != os.getenv("CRON_SECRET"):
+        return HttpResponse("Unauthorized", status=403)
+
+    from django.core.management import call_command
+    call_command("retry_payments")
+
+    return HttpResponse("OK")
+
+def payment_cancel(request, order_id):
+
+    order = get_object_or_404(Order, id=order_id)
+
+    # restore stock
+    for item in order.items.all():
+        item.variant.stock_qty = F("stock_qty") + item.quantity
+        item.variant.save()
+
+    order.payment_status = "failed"
+    order.save()
+
+    messages.error(request, "Payment cancelled")
+
+    return redirect("checkout")

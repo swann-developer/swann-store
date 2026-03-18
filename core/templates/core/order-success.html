@@ -54,9 +54,13 @@ support@swannbyswapna.com<br>
 
 <p class="mb-0">
 <strong>Payment Status:</strong>
+{% if order.payment_status == "paid" %}
+<span class="badge bg-success">PAID</span>
+{% else %}
 <span class="badge bg-warning text-dark">
 {{ order.payment_status }}
 </span>
+{% endif %}
 </p>
 
 </div>
