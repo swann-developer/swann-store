@@ -14,9 +14,13 @@
 <meta property="og:description" content="{{ product.title }} available at Swann UAE.">
 <meta property="og:type" content="product">
 <meta property="og:url" content="{{ product_url }}">
-{% if product.images.first %}
-<meta property="og:image" content="{{ product.images.first.image.url }}">
+
+{% if product.main_image %}
+<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ product.main_image.url }}">
+{% elif product.images.first %}
+<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ product.images.first.image.url }}">
 {% endif %}
+
 {% endblock %}
 
 {% block content %}
@@ -165,12 +169,12 @@
                            </div>
 
                            <a
-                             href="https://api.whatsapp.com/send?text={{ product.title|urlencode }}%20-%20AED%20{{ product.final_price }}%20{{ product_url|urlencode }}"
-                             target="_blank"
-                             rel="noopener"
-                             class="btn btn-whatsapp btn-lg mt-3"
+                           href="https://api.whatsapp.com/send?text={{ product_url|urlencode }}"
+                           target="_blank"
+                           rel="noopener"
+                           class="btn btn-whatsapp btn-lg mt-3"
                            >
-                             <i class="bi bi-whatsapp"></i>
+                           <i class="bi bi-whatsapp"></i>
                            </a>
                         </div>
                      </form>

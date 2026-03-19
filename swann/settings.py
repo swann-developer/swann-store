@@ -26,14 +26,14 @@ load_dotenv(BASE_DIR / ".env")
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
-ALLOWED_HOSTS = [
-    "swann-store.onrender.com",
-    "swannbyswapna.com",
-    "www.swannbyswapna.com",
-]
-# DEBUG = "False"
-# ALLOWED_HOSTS = ['*']
+# DEBUG = os.getenv("DEBUG", "False") == "True"
+# ALLOWED_HOSTS = [
+#     "swann-store.onrender.com",
+#     "swannbyswapna.com",
+#     "www.swannbyswapna.com",
+# ]
+DEBUG = "False"
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -89,20 +89,20 @@ WSGI_APPLICATION = 'swann.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 # local:
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # # production
-DATABASES = {
-    "default": dj_database_url.config(
-        default=os.getenv("DATABASE_URL"),
-        conn_max_age=600
-    )
-}
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default=os.getenv("DATABASE_URL"),
+#         conn_max_age=600
+#     )
+# }
 
 CACHES = {
     "default": {
@@ -188,12 +188,12 @@ DEFAULT_FROM_EMAIL = "orders@swannbyswapna.com"
 
 
 # SECURITY PRODUCTION
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-X_FRAME_OPTIONS = "DENY"
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
+# SECURE_BROWSER_XSS_FILTER = True
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# X_FRAME_OPTIONS = "DENY"
 
 AUTHENTICATION_BACKENDS = [
     'axes.backends.AxesStandaloneBackend',
