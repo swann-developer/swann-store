@@ -65,7 +65,68 @@ required>
 
 </div>
 
+<div class="row">
 
+<div class="col-lg-6 mb-3">
+
+<label class="form-label">
+Area <span class="text-danger">*</span>
+</label>
+
+<input
+type="text"
+name="area"
+class="form-control"
+required>
+
+</div>
+
+
+<div class="col-lg-6 mb-3">
+
+<label class="form-label">
+Nearby Landmark
+</label>
+
+<input
+type="text"
+name="landmark"
+class="form-control">
+
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div class="col-lg-6 mb-3">
+
+<label class="form-label">
+P.O. Box No
+</label>
+
+<input
+type="text"
+name="po_box"
+class="form-control">
+
+</div>
+
+
+<div class="col-lg-6 mb-3">
+
+<label class="form-label">
+Emirate <span class="text-danger">*</span>
+</label>
+
+<input
+type="text"
+name="emirate"
+class="form-control"
+required>
+
+</div>
 <div class="mb-3">
 
 <label class="form-label">
@@ -149,70 +210,6 @@ data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI">
 
 </div>
 
-
-<div class="row">
-
-<div class="col-lg-6 mb-3">
-
-<label class="form-label">
-Area <span class="text-danger">*</span>
-</label>
-
-<input
-type="text"
-name="area"
-class="form-control"
-required>
-
-</div>
-
-
-<div class="col-lg-6 mb-3">
-
-<label class="form-label">
-Nearby Landmark
-</label>
-
-<input
-type="text"
-name="landmark"
-class="form-control">
-
-</div>
-
-</div>
-
-
-<div class="row">
-
-<div class="col-lg-6 mb-3">
-
-<label class="form-label">
-P.O. Box No
-</label>
-
-<input
-type="text"
-name="po_box"
-class="form-control">
-
-</div>
-
-
-<div class="col-lg-6 mb-3">
-
-<label class="form-label">
-Emirate <span class="text-danger">*</span>
-</label>
-
-<input
-type="text"
-name="emirate"
-class="form-control"
-required>
-
-</div>
-
 </div>
 
 </div>
@@ -248,7 +245,7 @@ required>
 </div>
 <div class="row-line discount">
 <span>Product Discounts</span>
-<strong>-AED {{ product_discount|floatformat:2 }}</strong>
+<strong>AED {{ product_discount|floatformat:2 }}</strong>
 </div>
 <div class="row-line">
 <span>Subtotal</span>
@@ -329,15 +326,17 @@ Your data is encrypted and securely processed.
    By proceeding, you agree to our
    <a href="/terms-and-conditions/">Terms of Service, </a>
    <a href="/refund-policy/">Return and Refund Policy, </a>
-   <a href="/shipping-policy/">Shipping Policy, </a> and 
+   <a href="/shipping-policy/">Shipping Policy, </a> and
    <a href="/privacy-policy/">Privacy Policy</a>
 </p>
-
+<div id="otpWarning" class="text-danger mb-2 d-none" style="font-size:14px;">
+Please click on "Verify OTP" to place your order
+</div>
 <button
 type="submit"
-id="placeOrderBtn"
+id="placeOrderBtn"data-disabled="true"
 class="btn btn-dark buy-btn mt-3"
-disabled>
+>
 Place Order
 </button>
 

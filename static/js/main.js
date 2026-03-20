@@ -226,8 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     finalTotal += lineFinal;
     totalDiscount += lineDiscount;
 
-    priceEl.innerHTML =
-      '<i class="bi bi-currency-rupee"></i>' + lineFinal.toFixed(2);
+    priceEl.textContent = "AED " + lineFinal.toFixed(2);
   });
 
   const subtotalEl = document.getElementById("cartSubtotal");
@@ -235,9 +234,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const discountEl = document.getElementById("cartDiscount");
   const savedPercentEl = document.getElementById("cartSavedPercent");
 
-  if (subtotalEl) subtotalEl.textContent = "AED: " + subtotalMRP.toFixed(2);
-  if (totalEl) totalEl.textContent = "AED: " + finalTotal.toFixed(2);
-  if (discountEl) discountEl.textContent = "-AED " + totalDiscount.toFixed(2);
+  if (subtotalEl) subtotalEl.textContent = "AED " + subtotalMRP.toFixed(2);
+  if (totalEl) totalEl.textContent = "AED " + finalTotal.toFixed(2);
+  if (discountEl) discountEl.textContent = "AED " + totalDiscount.toFixed(2);
 
   let percent = 0;
   if (subtotalMRP > 0) {
@@ -494,6 +493,7 @@ otpMessage.innerHTML =
 "<div class='text-success'>Phone verified successfully</div>";
 
 placeOrderBtn.disabled = false;
+placeOrderBtn.dataset.disabled = "false";
 
 verifyOtpBtn.disabled = true;
 verifyOtpBtn.innerText = "Verified";
@@ -510,6 +510,30 @@ otpMessage.innerHTML =
 });
 
 }
+document.addEventListener("DOMContentLoaded", function () {
+
+  const placeOrderBtn = document.getElementById("placeOrderBtn");
+  const otpWarning = document.getElementById("otpWarning");
+
+  if (!placeOrderBtn || !otpWarning) return;
+
+  placeOrderBtn.addEventListener("click", function (e) {
+
+    // if still not verified
+    if (placeOrderBtn.dataset.disabled === "true") {
+      e.preventDefault();
+
+      otpWarning.classList.remove("d-none");
+
+      // auto hide after 3 sec
+      setTimeout(() => {
+        otpWarning.classList.add("d-none");
+      }, 3000);
+    }
+
+  });
+
+});
 
 // ===============================
 // NAVBAR SEARCH

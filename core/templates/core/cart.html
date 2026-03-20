@@ -49,7 +49,7 @@ Shopping Cart | Swann UAE
                            <div class="cart-price">
                               <p>
                                  <span class="item-cart-price">
-                                    <i>AED:</i>  {{ item.line_total }}
+                                    <i>AED</i>  {{ item.line_total }}
                                  </span>
                               </p>
 
@@ -75,7 +75,7 @@ Shopping Cart | Swann UAE
 
                      <div class="row-line">
                         <span>Subtotal ({{ items|length }} item{{ items|length|pluralize }}):</span>
-                        <strong id="cartSubtotal">AED: {{ subtotal_mrp }}</strong>
+                        <strong id="cartSubtotal">AED {{ subtotal_mrp }}</strong>
                      </div>
 
                      <div class="row-line discount">
@@ -89,7 +89,7 @@ Shopping Cart | Swann UAE
 
                      <div class="row-line total">
                         <span>Order Total:</span>
-                        <strong id="cartTotal">AED: {{ final_total }}</strong>
+                        <strong id="cartTotal">AED {{ final_total }}</strong>
                      </div>
 <!--
                      <div class="coupon-section">
@@ -107,7 +107,7 @@ Shopping Cart | Swann UAE
 
                      <p class="shipping-note">
                         <br />
-                        Delivery Charge @ FLAT AED: 7.50
+                        Delivery Charge @ FLAT AED 7.50
                      </p>
 
                      {% if items %}
