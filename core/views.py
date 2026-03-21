@@ -317,13 +317,12 @@ def checkout_view(request):
 
     taxable_amount = max(cart_total - coupon_discount, Decimal("0"))
 
-    # VAT
-    vat = taxable_amount * Decimal("0.05")
-
-    # SHIPPING
     shipping = Decimal("7.50")
 
-    grand_total = taxable_amount + vat + shipping
+    # ✅ VAT AFTER SHIPPING
+    vat = (taxable_amount + shipping) * Decimal("0.05")
+
+    grand_total = taxable_amount + shipping + vat
 
     return render(
         request,
@@ -519,11 +518,13 @@ def place_order(request):
             else:
                 coupon_discount = coupon.discount_value
     taxable = cart_total - coupon_discount
-    vat = taxable * Decimal("0.05")
+
     shipping = Decimal("7.50")
 
-    grand_total = taxable + vat + shipping
+    # ✅ VAT AFTER SHIPPING
+    vat = (taxable + shipping) * Decimal("0.05")
 
+    grand_total = taxable + shipping + vat
     order = Order.objects.create(
     first_name=request.POST.get("first_name"),
     last_name=request.POST.get("last_name"),
@@ -562,7 +563,7 @@ def place_order(request):
             size=item.variant.size,
             price=item.variant.product.final_price,
             quantity=item.quantity,
-            line_total=item.line_total
+            line_total = item.variant.product.final_price * item.quantity,
         )
 
         # reserve stock → mark but don't deduct yet
@@ -612,7 +613,7 @@ def place_order(request):
         if quantity < 1:
             continue
 
-        unit_amount = int(float(price) * 100)
+        unit_amount = int(price * 100)
 
         if unit_amount < 1:
             continue
@@ -626,6 +627,32 @@ def place_order(request):
                 "unit_amount": unit_amount,
             },
             "quantity": quantity,
+        })
+
+    # ✅ ADD SHIPPING AS LINE ITEM
+    if shipping > 0:
+        line_items.append({
+            "price_data": {
+                "currency": "aed",
+                "product_data": {
+                    "name": "Shipping",
+                },
+                "unit_amount": int(float(shipping) * 100),
+            },
+            "quantity": 1,
+        })
+
+    # ✅ ADD VAT AS LINE ITEM
+    if vat > 0:
+        line_items.append({
+            "price_data": {
+                "currency": "aed",
+                "product_data": {
+                    "name": "VAT (5%)",
+                },
+                "unit_amount": int(float(vat) * 100),
+            },
+            "quantity": 1,
         })
 
     if not line_items:

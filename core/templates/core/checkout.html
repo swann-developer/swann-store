@@ -260,14 +260,15 @@ data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI">
 {% endif %}
 
 <div class="row-line">
+<span>Shipping</span>
+<strong>AED {{ shipping }}</strong>
+</div>
+
+<div class="row-line">
 <span>VAT (5%)</span>
 <strong>AED {{ vat|floatformat:2 }}</strong>
 </div>
 
-<div class="row-line">
-<span>Shipping</span>
-<strong>AED {{ shipping }}</strong>
-</div>
 
 <hr>
 
@@ -330,7 +331,7 @@ Your data is encrypted and securely processed.
    <a href="/privacy-policy/">Privacy Policy</a>
 </p>
 <div id="otpWarning" class="text-danger mb-2 d-none" style="font-size:14px;">
-Please click on "Verify OTP" to place your order
+Please click on "Verify Phone OTP" before placing your order
 </div>
 <button
 type="submit"

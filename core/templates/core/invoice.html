@@ -54,11 +54,12 @@ font-weight:bold;
 <table>
 
 <tr>
-<th>Product</th>
-<th>Size</th>
-<th>Qty</th>
-<th>Price</th>
-<th>Total</th>
+  <th>Product</th>
+  <th>Size</th>
+  <th>Qty</th>
+  <th>Price</th>
+  <th>Discount Price</th>
+  <th>Total</th>
 </tr>
 
 {% for item in items %}
@@ -67,6 +68,7 @@ font-weight:bold;
 <td>{{ item.product_title }}</td>
 <td>{{ item.size }}</td>
 <td>{{ item.quantity }}</td>
+<td>AED {{ item.product.price }}</td>
 <td>AED {{ item.price }}</td>
 <td>AED {{ item.line_total }}</td>
 </tr>
@@ -79,30 +81,31 @@ font-weight:bold;
 
 <table>
 
-<tr>
-<td>Subtotal</td>
-<td>AED {{ order.subtotal }}</td>
-</tr>
+  <tr>
+  <td>Subtotal (MRP)</td>
+  <td>AED {{ order.subtotal }}</td>
+  </tr>
 
-<tr>
-<td>Discount</td>
-<td>AED {{ order.product_discount }}</td>
-</tr>
+  <tr>
+  <td>Product Discount</td>
+  <td> AED {{ order.product_discount }}</td>
+  </tr>
 
-<tr>
-<td>Coupon</td>
-<td>AED {{ order.coupon_discount }}</td>
-</tr>
+  <tr>
+  <td>Coupon Discount</td>
+  <td> AED {{ order.coupon_discount }}</td>
+  </tr>
 
-<tr>
-<td>VAT</td>
-<td>AED {{ order.vat_amount }}</td>
-</tr>
+  <tr>
+  <td>Shipping</td>
+  <td>AED {{ order.shipping_cost }}</td>
+  </tr>
 
-<tr>
-<td>Shipping</td>
-<td>AED {{ order.shipping_cost }}</td>
-</tr>
+  <tr>
+  <td>VAT (5%)</td>
+  <td>AED {{ order.vat_amount }}</td>
+  </tr>
+
 
 <tr class="total">
 <td>Total</td>
