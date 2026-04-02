@@ -22,6 +22,7 @@ from core.views import serve_media
 
 
 urlpatterns = [
+    # path("admin/", admin.site.urls),
     path(settings.ADMIN_URL, admin.site.urls),
     path("", include("core.urls")),
     path("media/<path:path>", serve_media),

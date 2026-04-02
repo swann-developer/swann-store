@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, ProductImage, Category, ProductTag, ProductVariant
+from .models import Product, ProductImage, Category, ProductTag, ProductVariant, CProduct, AnnouncementBar, HeroBanner
 from django.utils.html import format_html
 from import_export import resources, fields
 from import_export.admin import ImportExportModelAdmin
@@ -194,3 +194,18 @@ class ContactAdmin(admin.ModelAdmin):
 admin.site.site_header = "Swann Admin"
 admin.site.site_title = "Swann Control"
 admin.site.index_title = "Swann Store Management"
+
+@admin.register(HeroBanner)
+class HeroBannerAdmin(admin.ModelAdmin):
+    list_display = ("title", "is_active", "order")
+    list_editable = ("is_active", "order")
+
+@admin.register(CProduct)
+class CProductAdmin(admin.ModelAdmin):
+    list_display = ("product", "is_active", "order")
+    list_editable = ("is_active", "order")
+    search_fields = ("product__title",)
+
+@admin.register(AnnouncementBar)
+class AnnouncementBasrAdmin(admin.ModelAdmin):
+    list_display = ("text", "is_active")

@@ -672,3 +672,14 @@ alertBox.innerHTML =
 });
 
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('#carouselExampleCaptions');
+    if (carousel) {
+        new bootstrap.Carousel(carousel, {
+            interval: 3000,
+            ride: 'carousel'
+        });
+    }
+});

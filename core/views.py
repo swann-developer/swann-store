@@ -11,6 +11,9 @@ from .models import (
     Order,
     OrderItem,
     ContactMessage,
+    CProduct,
+    AnnouncementBar,
+    HeroBanner,
 )
 from django.urls import reverse
 from .cart import get_or_create_cart
@@ -1018,3 +1021,17 @@ def payment_cancel(request, order_id):
     messages.error(request, "Payment cancelled")
 
     return redirect("checkout")
+
+
+def home(request):
+    banners = HeroBanner.objects.filter(is_active=True)
+    categories = Category.objects.filter(is_active=True)[:8]
+    announcement = AnnouncementBar.objects.filter(is_active=True).first()
+    collections = CProduct.objects.filter(is_active=True).select_related("product__category").prefetch_related("product__images")
+
+    return render(request, "core/home.html", {
+        "banners": banners,
+        "categories": categories,
+        "announcement": announcement,
+        "collections": collections,
+    })

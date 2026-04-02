@@ -106,7 +106,9 @@ Shop Women's Fashion Online | Swann UAE
          {% for product in page_obj %}
          <div class="col-lg-3 col-6">
             <div class="product-card shadow-sm">
-               <a href="{% url 'product_detail' product.category.slug product.slug %}">
+               {% if product.category %}
+<a href="{% url 'product_detail' product.category.slug product.slug %}">
+{% endif %}
                   <div class="image-wrapper">
                      {% with product.images.first as primary_image %}
                         {% if primary_image %}

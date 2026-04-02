@@ -16,11 +16,13 @@ download_invoice,
 contact,
 search_suggestions,
 update_cart_quantity,
+home,
 )
 from .views import stripe_webhook, run_retry_payments, payment_cancel
 urlpatterns = [
     # product listing
-    path("", product_list, name="product_list"),
+    path("home-2/", home, name="home"),
+    path("shop/", product_list, name="product_list"),
     path("products/<slug:category_slug>/", product_list, name="product_list_by_category"),
 
     # product detail (SEO friendly)
