@@ -1,5 +1,6 @@
 {% extends "core/base.html" %}
 {% load static %}
+{% load cloudinary %}
 
 {% block title %}
 {{ product.title }} | Swann UAE
@@ -31,20 +32,11 @@
                   <div class="image-section">
                      <!-- MAIN IMAGE -->
                      <div class="main-image">
-                        <img
-                           id="mainImage"
-                           {% if product.primary_image %}
-                           src="{{ product.primary_image.image.url }}?w=800&h=800&c=fit&q=auto&f=auto"
-                           srcset="
-                           {{ product.primary_image.image.url }} 1200w"
-                           sizes="(max-width:768px) 100vw, 600px"
-                           data-zoom-image="{{ product.primary_image.image.url }}"
-                           {% else %}
-                           src="{% static 'images/product-placeholder.jpg' %}"
-                           {% endif %}
-                           class="img-fluid"
-                           loading="lazy"
-                           />
+                        {% if product.primary_image %}
+  {% cloudinary product.primary_image.image width=800 height=800 crop="fit" quality="auto" fetch_format="auto" class="img-fluid" %}
+{% else %}
+  <img src="{% static 'images/product-placeholder.jpg' %}" class="img-fluid" />
+{% endif %}
                      </div>
 
                      <!-- THUMBNAILS -->
@@ -53,11 +45,7 @@
 
                         <div class="thumb-list" id="thumbList">
                               {% for image in product.images.all %}
-                           <img
-                             src="{{ image.image.url }}?w=150&h=150&c=fill&q=auto&f=auto"
-                             data-image="{{ image.image.url }}"
-                             class="thumb img-fluid"
-                           />
+                           {% cloudinary image.image width=150 height=150 crop="fill" quality="auto" fetch_format="auto" class="thumb img-fluid" %}
                            {% endfor %}
                            </div>
 

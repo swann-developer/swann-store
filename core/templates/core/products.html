@@ -112,12 +112,7 @@ Shop Women's Fashion Online | Swann UAE
                   <div class="image-wrapper">
                      {% with product.primary_image as primary_image %}
                         {% if primary_image %}
-                           <img
-  src="{{ primary_image.image.url }}?w=500&h=500&c=fill&q=auto&f=auto"
-  class="product-img default-img img-fluid"
-  alt="{{ product.title }}"
-  loading="lazy"
-/>
+                          {% cloudinary primary_image.image width=500 height=500 crop="fill" quality="auto" fetch_format="auto" class="product-img default-img img-fluid" alt=product.title %}
                         {% else %}
                            <img
                               src="{% static 'images/product-placeholder.jpg' %}"

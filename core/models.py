@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 import uuid
 from django.utils import timezone
-
+from cloudinary.models import CloudinaryField
 
 
 
@@ -121,7 +121,7 @@ class ProductImage(models.Model):
         on_delete=models.CASCADE
     )
 
-    image = models.ImageField(upload_to="products/")
+    image = CloudinaryField("image")
     is_primary = models.BooleanField(default=False)
 
     def __str__(self):
