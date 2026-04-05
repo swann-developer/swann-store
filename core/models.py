@@ -140,7 +140,7 @@ class ProductImage(models.Model):
 
 
     def save(self, *args, **kwargs):
-        if self.image and not self.image.name.lower().endswith(".webp"):
+        if self.image:
 
             img = Image.open(self.image)
             img = ImageOps.exif_transpose(img)
@@ -153,7 +153,6 @@ class ProductImage(models.Model):
             buffer = BytesIO()
             img.save(buffer, format="WEBP", quality=80)
 
-            # ✅ build SEO filename
             product_slug = slugify(self.product.slug or self.product.title)
             unique_id = uuid.uuid4().hex[:6]
 
@@ -167,7 +166,7 @@ class ProductImage(models.Model):
 
         super().save(*args, **kwargs)
 
-    
+
 class ProductVariant(models.Model):
     product = models.ForeignKey(
         Product,
