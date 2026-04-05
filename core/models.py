@@ -140,8 +140,9 @@ class ProductImage(models.Model):
 
 
     def save(self, *args, **kwargs):
-        if self.image:
+        is_new = self.pk is None
 
+        if self.image:
             img = Image.open(self.image)
             img = ImageOps.exif_transpose(img)
 
@@ -165,6 +166,17 @@ class ProductImage(models.Model):
             )
 
         super().save(*args, **kwargs)
+
+        # ✅ PRIMARY IMAGE LOGIC
+
+        # Case 1: first image → auto primary
+        if is_new and not self.product.images.filter(is_primary=True).exists():
+            self.is_primary = True
+            super().save(update_fields=["is_primary"])
+
+        # Case 2: admin manually sets primary → unset others
+        elif self.is_primary:
+            self.product.images.exclude(id=self.id).update(is_primary=False)
 
 
 class ProductVariant(models.Model):
