@@ -32,11 +32,16 @@
                   <div class="image-section">
                      <!-- MAIN IMAGE -->
                      <div class="main-image">
-                        {% if product.primary_image %}
-  {% cloudinary product.primary_image.image width=800 height=800 crop="fit" quality="auto" fetch_format="auto"  alt=product.title class="img-fluid" %}
-{% else %}
-  <img src="{% static 'images/product-placeholder.jpg' %}" class="img-fluid" />
-{% endif %}
+                     {% if product.primary_image %}
+                       <img
+                         id="mainImage"
+                         src="{{ product.primary_image.image.url }}"
+                         class="img-fluid"
+                         alt="{{ product.title }}"
+                       />
+                     {% else %}
+                       <img src="{% static 'images/product-placeholder.jpg' %}" class="img-fluid" />
+                     {% endif %}
                      </div>
 
                      <!-- THUMBNAILS -->
@@ -44,9 +49,15 @@
                         <button class="thumb-nav" id="thumbPrev">‹</button>
 
                         <div class="thumb-list" id="thumbList">
-                              {% for image in product.images.all %}
-                           {% cloudinary image.image width=150 height=150 crop="fill" quality="auto" fetch_format="auto" class="thumb img-fluid" %}
-                           {% endfor %}
+                        {% for image in product.images.all %}
+                          <img
+                            src="{{ image.image.url }}"
+                            class="thumb img-fluid"
+                            data-image="{{ image.image.url }}"
+                            data-zoom-image="{{ image.image.url }}"
+                            alt="{{ product.title }}"
+                          />
+                        {% endfor %}
                            </div>
 
                         <button class="thumb-nav" id="thumbNext">›</button>

@@ -16,6 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
    }
 
+   // ✅ AUTO SCROLL TO ACTIVE CATEGORY
+   const activeItem = document.querySelector(".category-scroll .active");
+
+   if (activeItem && scrollContainer) {
+      const containerRect = scrollContainer.getBoundingClientRect();
+      const itemRect = activeItem.getBoundingClientRect();
+
+      const offset = itemRect.left - containerRect.left;
+
+      scrollContainer.scrollLeft += offset - (scrollContainer.clientWidth / 2) + (activeItem.clientWidth / 2);
+   }
+
    // ADD TO CART QTY
    const minusBtn = document.getElementById('minus');
    const plusBtn = document.getElementById('plus');
