@@ -21,8 +21,19 @@ h6 {
    box-shadow: none;
 }
 
+.btn {
+   letter-spacing: 1px;
+   border-radius: 6px;
+   font-size: 0.875rem;
+   line-height: 1.25rem;
+   font-weight: 600;
+   padding: 1rem 1.2rem;
+}
+
+
+
 .carousel-inner {
-   height: 40vh;
+   height: 90vh;
 }
 
 .carousel-item {
@@ -32,6 +43,31 @@ h6 {
 .carousel-item img {
    height: 100%;
    object-fit: cover;
+   object-position: top;
+}
+
+.carousel-caption h1 {
+   font-family: 'Delius', cursive;
+   font-size: 5.8rem;
+   text-shadow:
+      -1px -1px 1px rgba(255, 255, 255, 0.1),
+      1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption {
+   padding: 0 1.25rem;
+   top: 0;
+   bottom: 0;
+   transform: translate(10px, 35%);
+}
+
+.carousel-caption .caption-text {
+   text-align: left;
+   font-family: 'Delius', cursive;
+}
+
+.caption-text p {
+   font-size: 1.5rem;
 }
 
 .cart {
@@ -44,6 +80,10 @@ h6 {
 
 .theme-bg {
    background-color: #788312;
+}
+
+.themetext {
+   color: #788312;
 }
 
 .theme-btn {
