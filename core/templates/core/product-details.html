@@ -17,9 +17,9 @@
 <meta property="og:url" content="{{ product_url }}">
 
 {% if product.primary_image %}
-<meta property="og:image" content="{{ product.primary_image.image.url|cut:'http://'|add:'https://' }}">
+<meta property="og:image" content="{{ product.primary_image.image.url }}">
 {% elif product.images.first %}
-<meta property="og:image" content="{{ product.images.first.image.url|cut:'http://'|add:'https://' }}">
+<meta property="og:image" content="{{ product.images.first.image.url }}">
 {% endif %}
 
 {% endblock %}
@@ -35,7 +35,7 @@
                      {% if product.primary_image %}
                        <img
                          id="mainImage"
-                         src="{{ product.primary_image.image.url|cut:'http://'|add:'https://' }}"
+                         src="{{ product.primary_image.image.url }}"
                          class="img-fluid"
                          alt="{{ product.title }}"
                        />
@@ -51,10 +51,10 @@
                         <div class="thumb-list" id="thumbList">
                         {% for image in product.images.all %}
                           <img
-                            src="{{ image.image.url|cut:"http://"|add:"https://" }}"
+                            src="{{ image.image.url }}"
                             class="thumb img-fluid"
-                            data-image="{{ image.image.url|cut:"http://"|add:"https://" }}"
-                            data-zoom-image="{{ image.image.url|cut:"http://"|add:"https://" }}"
+                            data-image="{{ image.image.url }}"
+                            data-zoom-image="{{ image.image.url }}"
                             alt="{{ product.title }}"
                           />
                         {% endfor %}
