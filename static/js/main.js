@@ -76,25 +76,7 @@ if (checkbox && section) {
   });
 }
 
-// ===============================
-// PRODUCT IMAGE SWITCHER
-// ===============================
-document.addEventListener("click", function (e) {
-  const thumb = e.target.closest(".thumb");
-  if (!thumb) return;
 
-  const mainImage = document.getElementById("mainImage");
-  if (!mainImage) return;
-
-  const newSrc = thumb.getAttribute("data-image");
-  if (!newSrc) return;
-
-  mainImage.src = newSrc;
-  mainImage.srcset = newSrc;
-
-  document.querySelectorAll(".thumb").forEach(t => t.classList.remove("active"));
-  thumb.classList.add("active");
-});
 
 // ===============================
 // IMAGE HOVER ZOOM
@@ -128,15 +110,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // 🔥 keep zoom synced when thumbnail changes
-  document.querySelectorAll(".thumb").forEach((thumb) => {
-    thumb.addEventListener("click", function () {
-      const zoomSrc =
-        this.getAttribute("data-zoom-image") ||
-        this.getAttribute("data-image");
 
-      activateZoom(zoomSrc);
-    });
-  });
+document.addEventListener("click", function (e) {
+  const thumb = e.target.closest(".thumb");
+  if (!thumb) return;
+
+  const mainImage = document.getElementById("mainImage");
+  const zoomResult = document.getElementById("zoomResult");
+
+  if (!mainImage) return;
+
+  const newSrc = thumb.getAttribute("data-image");
+  if (!newSrc) return;
+
+  // update main image
+  mainImage.src = newSrc;
+
+  // update zoom
+  if (zoomResult) {
+    zoomResult.style.backgroundImage = `url('${newSrc}')`;
+  }
+
+  // active state
+  document.querySelectorAll(".thumb").forEach(t => t.classList.remove("active"));
+  thumb.classList.add("active");
+});
 });
 
 // ===============================
