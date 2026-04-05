@@ -34,11 +34,8 @@
                         <img
                            id="mainImage"
                            {% if product.primary_image %}
-                           src="{{ product.primary_image.image.url }}"
+                           src="{{ product.primary_image.image.url }}?w=800&h=800&c=fit&q=auto&f=auto"
                            srcset="
-                           {% if product.primary_image.thumbnail %}
-                           {{ product.primary_image.thumbnail.url }} 600w,
-                           {% endif %}
                            {{ product.primary_image.image.url }} 1200w"
                            sizes="(max-width:768px) 100vw, 600px"
                            data-zoom-image="{{ product.primary_image.image.url }}"
@@ -57,10 +54,9 @@
                         <div class="thumb-list" id="thumbList">
                               {% for image in product.images.all %}
                            <img
-                             src="{% if image.thumbnail %}{{ image.thumbnail.url }}{% else %}{{ image.image.url }}{% endif %}" alt="{{ product.title }}" loading="lazy"
+                             src="{{ image.image.url }}?w=150&h=150&c=fill&q=auto&f=auto"
                              data-image="{{ image.image.url }}"
-                             data-zoom-image="{{ image.image.url }}"
-                             class="thumb img-fluid {% if forloop.first %}active{% endif %}"
+                             class="thumb img-fluid"
                            />
                            {% endfor %}
                            </div>
