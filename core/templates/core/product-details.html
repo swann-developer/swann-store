@@ -16,10 +16,10 @@
 <meta property="og:type" content="product">
 <meta property="og:url" content="{{ product_url }}">
 
-{% if product.primary_image and product.primary_image.image %}
-<meta property="og:image" content="https://{{ request.get_host }}{{ product.primary_image.image.url }}">
+{% if product.primary_image %}
+<meta property="og:image" content="{{ product.primary_image.image.url|cut:'http://'|add:'https://' }}">
 {% elif product.images.first %}
-<meta property="og:image" content="https://{{ request.get_host }}{{ product.images.first.image.url }}">
+<meta property="og:image" content="{{ product.images.first.image.url|cut:'http://'|add:'https://' }}">
 {% endif %}
 
 {% endblock %}
@@ -35,7 +35,7 @@
                      {% if product.primary_image %}
                        <img
                          id="mainImage"
-                         src="{{ product.primary_image.image.url }}"
+                         src="{{ product.primary_image.image.url|cut:'http://'|add:'https://' }}"
                          class="img-fluid"
                          alt="{{ product.title }}"
                        />
