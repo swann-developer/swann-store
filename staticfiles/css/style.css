@@ -32,7 +32,30 @@ h6 {
 .carousel-item img {
    height: 100%;
    object-fit: cover;
+   object-position: top;
 }
+.carousel-caption h1 {
+   font-family: 'Delius', cursive;
+   font-size: 5.8rem;
+   text-shadow:
+      -1px -1px 1px rgba(255, 255, 255, 0.1),
+      1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption {
+   padding: 0 1.25rem;
+   top: 0;
+   bottom: 0;
+   transform: translate(10px, 35%);
+}
+
+.carousel-caption .caption-text {
+   text-align: left;
+   font-family: 'Delius', cursive;
+}
+
+.caption-text p {
+   font-size: 1.5rem;
 
 .cart {
    font-size: 1.5rem;
@@ -44,6 +67,10 @@ h6 {
 
 .theme-bg {
    background-color: #788312;
+}
+
+.themetext {
+   color: #788312;
 }
 
 .theme-btn {
@@ -58,6 +85,7 @@ h6 {
 .navbar {
    background-color: white;
    border-bottom: 2px solid #dbe1dd;
+   padding: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -184,6 +212,20 @@ h6 {
 
 .product-card:hover {
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.product-card .off-price {
+   background-color: #fff;
+   padding: 0.3rem 0.5rem;
+   font-size: 0.8rem;
+   font-weight: 800;
+   border-radius: 10px;
+   letter-spacing: normal;
+}
+
+.product-card .shop-card-price {
+   letter-spacing: normal;
+   font-weight: 700;
+   font-size: 1.6rem;
 }
 
 .image-wrapper {
@@ -524,8 +566,25 @@ h6 {
    line-height: 2.5rem;
    letter-spacing: 0.025em;
    font-weight: 400;
+   text-transform: uppercase;
+   position: relative;
 }
 
+.head-border-line {
+   position: relative;
+}
+
+.head-border-line::after {
+   content: '';
+   background: #788312;
+   width: 10%;
+   height: 2px;
+   position: absolute;
+   top: 3px;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+}
 .pro-desc-tab .nav-link {
    color: #555;
    text-transform: uppercase;
@@ -854,6 +913,9 @@ h6 {
    font-weight: 700;
    border-radius: 0.5rem;
    cursor: pointer;
+}
+.buy-btn:hover {
+   background-color: #788312;
 }
 
 .terms {
