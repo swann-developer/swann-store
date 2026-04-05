@@ -2,11 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 import uuid
 from django.utils import timezone
-from PIL import Image
-from io import BytesIO
-from django.core.files.base import ContentFile
-import os
-from PIL import ImageOps
+
 
 
 
@@ -126,58 +122,31 @@ class ProductImage(models.Model):
     )
 
     image = models.ImageField(upload_to="products/")
-    thumbnail = models.ImageField(upload_to="products/thumbs/", blank=True, null=True)
     is_primary = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.product.title} Image"
-    @property
-    def image_url(self):
-        from django.conf import settings
-        if settings.MEDIA_CDN_URL:
-            return settings.MEDIA_CDN_URL + self.image.url
-        return self.image.url
-
 
     def save(self, *args, **kwargs):
         is_new = self.pk is None
 
-        if self.image:
-            img = Image.open(self.image)
-            img = ImageOps.exif_transpose(img)
-
-            if img.mode in ("RGBA", "P"):
-                img = img.convert("RGB")
-
-            img.thumbnail((1000, 1000))
-
-            buffer = BytesIO()
-            img.save(buffer, format="WEBP", quality=80)
-
-            product_slug = slugify(self.product.slug or self.product.title)
-            unique_id = uuid.uuid4().hex[:6]
-
-            filename = f"{product_slug}-{unique_id}.webp"
-
-            self.image.save(
-                filename,
-                ContentFile(buffer.getvalue()),
-                save=False
-            )
-
         super().save(*args, **kwargs)
 
-        # ✅ PRIMARY IMAGE LOGIC
+        if is_new:
+            if not self.product.images.filter(is_primary=True).exists():
+                ProductImage.objects.filter(pk=self.pk).update(is_primary=True)
 
-        # Case 1: first image → auto primary
-        if is_new and not self.product.images.filter(is_primary=True).exists():
-            self.is_primary = True
-            super().save(update_fields=["is_primary"])
-
-        # Case 2: admin manually sets primary → unset others
         elif self.is_primary:
-            self.product.images.exclude(id=self.id).update(is_primary=False)
+            self.product.images.exclude(pk=self.pk).update(is_primary=False)
 
+    class Meta:   # ✅ NOW CORRECT
+        constraints = [
+            models.UniqueConstraint(
+                fields=["product"],
+                condition=models.Q(is_primary=True),
+                name="unique_primary_per_product"
+            )
+        ]
 
 class ProductVariant(models.Model):
     product = models.ForeignKey(
