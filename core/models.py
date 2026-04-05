@@ -137,62 +137,37 @@ class ProductImage(models.Model):
         if settings.MEDIA_CDN_URL:
             return settings.MEDIA_CDN_URL + self.image.url
         return self.image.url
-    def save(self, *args, **kwargs):
 
+
+    def save(self, *args, **kwargs):
         if self.image and not self.image.name.lower().endswith(".webp"):
 
             img = Image.open(self.image)
-            # convert to RGB (required for webp)
             img = ImageOps.exif_transpose(img)
 
             if img.mode in ("RGBA", "P"):
                 img = img.convert("RGB")
 
-            # resize (product page uses ~624x600)
-            MAX_SIZE = (1200, 1200)
-            img.thumbnail(MAX_SIZE, Image.LANCZOS)
-            # create thumbnail copy
-            thumb_img = img.copy()
-            thumb_img.thumbnail((600, 600), Image.LANCZOS)
-
-            thumb_buffer = BytesIO()
-
-            thumb_img.save(
-                thumb_buffer,
-                format="WEBP",
-                quality=85,
-                method=6
-            )
-
-            # SEO filename
-            base_slug = slugify(self.product.slug)[:20]  # prevent long filename
-            unique_id = uuid.uuid4().hex[:6]
-
-            filename = f"{base_slug}-{unique_id}.webp"
+            img.thumbnail((1000, 1000))
 
             buffer = BytesIO()
+            img.save(buffer, format="WEBP", quality=80)
 
-            img.save(
-                buffer,
-                format="WEBP",
-                quality=90,
-                method=6
-            )
+            # ✅ build SEO filename
+            product_slug = slugify(self.product.slug or self.product.title)
+            unique_id = uuid.uuid4().hex[:6]
+
+            filename = f"{product_slug}-{unique_id}.webp"
 
             self.image.save(
                 filename,
                 ContentFile(buffer.getvalue()),
                 save=False
             )
-            thumb_filename = f"{base_slug}-{unique_id}-t.webp"
-
-            self.thumbnail.save(
-                thumb_filename,
-                ContentFile(thumb_buffer.getvalue()),
-                save=False
-            )
 
         super().save(*args, **kwargs)
+
+    
 class ProductVariant(models.Model):
     product = models.ForeignKey(
         Product,
