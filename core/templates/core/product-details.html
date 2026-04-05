@@ -33,7 +33,7 @@
                      <!-- MAIN IMAGE -->
                      <div class="main-image">
                         {% if product.primary_image %}
-  {% cloudinary product.primary_image.image width=800 height=800 crop="fit" quality="auto" fetch_format="auto" class="img-fluid" %}
+  {% cloudinary product.primary_image.image width=800 height=800 crop="fit" quality="auto" fetch_format="auto"  alt=product.title class="img-fluid" %}
 {% else %}
   <img src="{% static 'images/product-placeholder.jpg' %}" class="img-fluid" />
 {% endif %}
