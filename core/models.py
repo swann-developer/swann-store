@@ -46,12 +46,11 @@ class ProductTag(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(
-        Category,
-        related_name="products",
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-    )
+    Category,
+    on_delete=models.PROTECT,
+    null=False,
+    blank=False,
+)
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
     description = models.TextField(blank=True, null=True)

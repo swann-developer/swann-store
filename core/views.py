@@ -52,7 +52,7 @@ from django.core.mail import EmailMessage
 def product_list(request, category_slug=None):
     products = (
     Product.objects
-    .filter(is_active=True)
+    .filter(is_active=True, category__isnull=False)
     .select_related("category")
     .prefetch_related("images", "tags")
     .distinct()
