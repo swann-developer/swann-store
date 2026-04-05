@@ -16,8 +16,8 @@
 <meta property="og:type" content="product">
 <meta property="og:url" content="{{ product_url }}">
 
-{% if product.main_image %}
-<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ product.main_image.url }}">
+{% if product.primary_image %}
+<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ product.primary_image.image.url }}">
 {% elif product.images.first %}
 <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ product.images.first.image.url }}">
 {% endif %}

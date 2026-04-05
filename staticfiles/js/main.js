@@ -79,24 +79,21 @@ if (checkbox && section) {
 // ===============================
 // PRODUCT IMAGE SWITCHER
 // ===============================
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("click", function (e) {
+  const thumb = e.target.closest(".thumb");
+  if (!thumb) return;
+
   const mainImage = document.getElementById("mainImage");
-  const thumbs = document.querySelectorAll(".thumb");
+  if (!mainImage) return;
 
-  if (!mainImage || thumbs.length === 0) return;
+  const newSrc = thumb.getAttribute("data-image");
+  if (!newSrc) return;
 
-  thumbs.forEach((thumb) => {
-    thumb.addEventListener("click", function () {
-      const newSrc = this.getAttribute("data-image");
-      if (!newSrc) return;
+  mainImage.src = newSrc;
+  mainImage.srcset = newSrc;
 
-      mainImage.src = newSrc;
-      mainImage.srcset = newSrc;
-
-      thumbs.forEach((t) => t.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
+  document.querySelectorAll(".thumb").forEach(t => t.classList.remove("active"));
+  thumb.classList.add("active");
 });
 
 // ===============================
