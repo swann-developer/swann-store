@@ -3382,7 +3382,7 @@
   "fields": {
     "product": 25,
     "image": "products/mulchanderi-salwar-s-8346a6.webp",
-    "thumbnail": "products/thumbs/mulchanderi-salwar-s-8346a6-t.webp",
+    
     "is_primary": true
   }
 },
@@ -3392,7 +3392,7 @@
   "fields": {
     "product": 25,
     "image": "products/mulchanderi-salwar-s-812f55.webp",
-    "thumbnail": "products/thumbs/mulchanderi-salwar-s-812f55-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3402,7 +3402,7 @@
   "fields": {
     "product": 25,
     "image": "products/mulchanderi-salwar-s-0226bc.webp",
-    "thumbnail": "products/thumbs/mulchanderi-salwar-s-0226bc-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3412,7 +3412,7 @@
   "fields": {
     "product": 26,
     "image": "products/mulchanderi-salwar-s-f91858.webp",
-    "thumbnail": "products/thumbs/mulchanderi-salwar-s-f91858-t.webp",
+    
     "is_primary": true
   }
 },
@@ -3422,7 +3422,7 @@
   "fields": {
     "product": 26,
     "image": "products/mulchanderi-salwar-s-7c7e09.webp",
-    "thumbnail": "products/thumbs/mulchanderi-salwar-s-7c7e09-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3432,7 +3432,7 @@
   "fields": {
     "product": 26,
     "image": "products/mulchanderi-salwar-s-1b09e0.webp",
-    "thumbnail": "products/thumbs/mulchanderi-salwar-s-1b09e0-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3442,7 +3442,7 @@
   "fields": {
     "product": 27,
     "image": "products/zari-threadwork-cott-30a493.webp",
-    "thumbnail": "products/thumbs/zari-threadwork-cott-30a493-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3452,7 +3452,7 @@
   "fields": {
     "product": 27,
     "image": "products/zari-threadwork-cott-b51717.webp",
-    "thumbnail": "products/thumbs/zari-threadwork-cott-b51717-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3462,7 +3462,7 @@
   "fields": {
     "product": 27,
     "image": "products/zari-threadwork-cott-bd4dca.webp",
-    "thumbnail": "products/thumbs/zari-threadwork-cott-bd4dca-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3472,7 +3472,7 @@
   "fields": {
     "product": 27,
     "image": "products/zari-threadwork-cott-347164.webp",
-    "thumbnail": "products/thumbs/zari-threadwork-cott-347164-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3482,7 +3482,7 @@
   "fields": {
     "product": 28,
     "image": "products/saage-green-chanderi-97a27a.webp",
-    "thumbnail": "products/thumbs/saage-green-chanderi-97a27a-t.webp",
+    
     "is_primary": true
   }
 },
@@ -3492,7 +3492,7 @@
   "fields": {
     "product": 29,
     "image": "products/purple-chanderi-salw-43f5e4.webp",
-    "thumbnail": "products/thumbs/purple-chanderi-salw-43f5e4-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3502,7 +3502,7 @@
   "fields": {
     "product": 29,
     "image": "products/purple-chanderi-salw-093af4.webp",
-    "thumbnail": "products/thumbs/purple-chanderi-salw-093af4-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3512,7 +3512,7 @@
   "fields": {
     "product": 29,
     "image": "products/purple-chanderi-salw-922cf8.webp",
-    "thumbnail": "products/thumbs/purple-chanderi-salw-922cf8-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3522,7 +3522,7 @@
   "fields": {
     "product": 29,
     "image": "products/purple-chanderi-salw-048e18.webp",
-    "thumbnail": "products/thumbs/purple-chanderi-salw-048e18-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3532,7 +3532,7 @@
   "fields": {
     "product": 29,
     "image": "products/purple-chanderi-salw-e163f3.webp",
-    "thumbnail": "products/thumbs/purple-chanderi-salw-e163f3-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3542,7 +3542,7 @@
   "fields": {
     "product": 29,
     "image": "products/purple-chanderi-salw-4d0af2.webp",
-    "thumbnail": "products/thumbs/purple-chanderi-salw-4d0af2-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3552,7 +3552,7 @@
   "fields": {
     "product": 31,
     "image": "products/lucknowi-black-and-w-7055ef.webp",
-    "thumbnail": "products/thumbs/lucknowi-black-and-w-7055ef-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3562,7 +3562,7 @@
   "fields": {
     "product": 31,
     "image": "products/lucknowi-black-and-w-f3315a.webp",
-    "thumbnail": "products/thumbs/lucknowi-black-and-w-f3315a-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3572,7 +3572,7 @@
   "fields": {
     "product": 31,
     "image": "products/lucknowi-black-and-w-506288.webp",
-    "thumbnail": "products/thumbs/lucknowi-black-and-w-506288-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3582,7 +3582,7 @@
   "fields": {
     "product": 31,
     "image": "products/lucknowi-black-and-w-34e136.webp",
-    "thumbnail": "products/thumbs/lucknowi-black-and-w-34e136-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3592,7 +3592,7 @@
   "fields": {
     "product": 31,
     "image": "products/lucknowi-black-and-w-57ac2b.webp",
-    "thumbnail": "products/thumbs/lucknowi-black-and-w-57ac2b-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3602,7 +3602,7 @@
   "fields": {
     "product": 32,
     "image": "products/pink-blush-3-pc-paki-c4eb19.webp",
-    "thumbnail": "products/thumbs/pink-blush-3-pc-paki-c4eb19-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3612,7 +3612,7 @@
   "fields": {
     "product": 32,
     "image": "products/pink-blush-3-pc-paki-bb5dbe.webp",
-    "thumbnail": "products/thumbs/pink-blush-3-pc-paki-bb5dbe-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3622,7 +3622,7 @@
   "fields": {
     "product": 33,
     "image": "products/peach-mulchanderi-8eb585.webp",
-    "thumbnail": "products/thumbs/peach-mulchanderi-8eb585-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3632,7 +3632,7 @@
   "fields": {
     "product": 48,
     "image": "products/roman-silk-party-wea-26d5b1.webp",
-    "thumbnail": "products/thumbs/roman-silk-party-wea-26d5b1-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3642,7 +3642,7 @@
   "fields": {
     "product": 48,
     "image": "products/roman-silk-party-wea-6d5001.webp",
-    "thumbnail": "products/thumbs/roman-silk-party-wea-6d5001-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3652,7 +3652,7 @@
   "fields": {
     "product": 48,
     "image": "products/roman-silk-party-wea-c9c5b4.webp",
-    "thumbnail": "products/thumbs/roman-silk-party-wea-c9c5b4-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3662,7 +3662,7 @@
   "fields": {
     "product": 44,
     "image": "products/embroidered-kurta-wi-ce805b.webp",
-    "thumbnail": "products/thumbs/embroidered-kurta-wi-ce805b-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3672,7 +3672,7 @@
   "fields": {
     "product": 34,
     "image": "products/lime-green-cotton-sa-d2398a.webp",
-    "thumbnail": "products/thumbs/lime-green-cotton-sa-d2398a-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3682,7 +3682,7 @@
   "fields": {
     "product": 34,
     "image": "products/lime-green-cotton-sa-a85f69.webp",
-    "thumbnail": "products/thumbs/lime-green-cotton-sa-a85f69-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3692,7 +3692,7 @@
   "fields": {
     "product": 34,
     "image": "products/lime-green-cotton-sa-ff0fc9.webp",
-    "thumbnail": "products/thumbs/lime-green-cotton-sa-ff0fc9-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3702,7 +3702,7 @@
   "fields": {
     "product": 34,
     "image": "products/lime-green-cotton-sa-a10070.webp",
-    "thumbnail": "products/thumbs/lime-green-cotton-sa-a10070-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3712,7 +3712,7 @@
   "fields": {
     "product": 35,
     "image": "products/premium-cotton-ajrak-9e01b5.webp",
-    "thumbnail": "products/thumbs/premium-cotton-ajrak-9e01b5-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3722,7 +3722,7 @@
   "fields": {
     "product": 35,
     "image": "products/premium-cotton-ajrak-f8cce6.webp",
-    "thumbnail": "products/thumbs/premium-cotton-ajrak-f8cce6-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3732,7 +3732,7 @@
   "fields": {
     "product": 35,
     "image": "products/premium-cotton-ajrak-885273.webp",
-    "thumbnail": "products/thumbs/premium-cotton-ajrak-885273-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3742,7 +3742,7 @@
   "fields": {
     "product": 36,
     "image": "products/lucknow-chikankari-3-401e18.webp",
-    "thumbnail": "products/thumbs/lucknow-chikankari-3-401e18-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3752,7 +3752,7 @@
   "fields": {
     "product": 38,
     "image": "products/lucknow-chikankari-l-4132d2.webp",
-    "thumbnail": "products/thumbs/lucknow-chikankari-l-4132d2-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3762,7 +3762,7 @@
   "fields": {
     "product": 39,
     "image": "products/lucknow-chikankari-l-3881a3.webp",
-    "thumbnail": "products/thumbs/lucknow-chikankari-l-3881a3-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3772,7 +3772,7 @@
   "fields": {
     "product": 40,
     "image": "products/premium-chikankari-p-0592f2.webp",
-    "thumbnail": "products/thumbs/premium-chikankari-p-0592f2-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3782,7 +3782,7 @@
   "fields": {
     "product": 41,
     "image": "products/premium-chikankari-p-a5c298.webp",
-    "thumbnail": "products/thumbs/premium-chikankari-p-a5c298-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3792,7 +3792,7 @@
   "fields": {
     "product": 42,
     "image": "products/premium-chikankari-p-fe3d4d.webp",
-    "thumbnail": "products/thumbs/premium-chikankari-p-fe3d4d-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3802,7 +3802,7 @@
   "fields": {
     "product": 43,
     "image": "products/premium-chikankari-p-a66be1.webp",
-    "thumbnail": "products/thumbs/premium-chikankari-p-a66be1-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3812,7 +3812,7 @@
   "fields": {
     "product": 45,
     "image": "products/cotton-straight-pala-e72864.webp",
-    "thumbnail": "products/thumbs/cotton-straight-pala-e72864-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3822,7 +3822,7 @@
   "fields": {
     "product": 45,
     "image": "products/cotton-straight-pala-34f908.webp",
-    "thumbnail": "products/thumbs/cotton-straight-pala-34f908-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3832,7 +3832,7 @@
   "fields": {
     "product": 46,
     "image": "products/cotton-kurtha_red-a21e21.webp",
-    "thumbnail": "products/thumbs/cotton-kurtha_red-a21e21-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3842,7 +3842,7 @@
   "fields": {
     "product": 46,
     "image": "products/cotton-kurtha_red-a1daf7.webp",
-    "thumbnail": "products/thumbs/cotton-kurtha_red-a1daf7-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3852,7 +3852,7 @@
   "fields": {
     "product": 47,
     "image": "products/viscose-rayon-kurti--7a77bc.webp",
-    "thumbnail": "products/thumbs/viscose-rayon-kurti--7a77bc-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3862,7 +3862,7 @@
   "fields": {
     "product": 47,
     "image": "products/viscose-rayon-kurti--f538fb.webp",
-    "thumbnail": "products/thumbs/viscose-rayon-kurti--f538fb-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3872,7 +3872,7 @@
   "fields": {
     "product": 47,
     "image": "products/viscose-rayon-kurti--6f27b8.webp",
-    "thumbnail": "products/thumbs/viscose-rayon-kurti--6f27b8-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3882,7 +3882,7 @@
   "fields": {
     "product": 47,
     "image": "products/viscose-rayon-kurti--d5ff0d.webp",
-    "thumbnail": "products/thumbs/viscose-rayon-kurti--d5ff0d-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3892,7 +3892,7 @@
   "fields": {
     "product": 49,
     "image": "products/cotton-embroidered-k-49829d.webp",
-    "thumbnail": "products/thumbs/cotton-embroidered-k-49829d-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3902,7 +3902,7 @@
   "fields": {
     "product": 49,
     "image": "products/cotton-embroidered-k-4fb4b5.webp",
-    "thumbnail": "products/thumbs/cotton-embroidered-k-4fb4b5-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3912,7 +3912,7 @@
   "fields": {
     "product": 49,
     "image": "products/cotton-embroidered-k-8b98ff.webp",
-    "thumbnail": "products/thumbs/cotton-embroidered-k-8b98ff-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3922,7 +3922,7 @@
   "fields": {
     "product": 49,
     "image": "products/cotton-embroidered-k-cc7d4b.webp",
-    "thumbnail": "products/thumbs/cotton-embroidered-k-cc7d4b-t.webp",
+    
     "is_primary": false
   }
 },
@@ -3932,7 +3932,7 @@
   "fields": {
     "product": 49,
     "image": "products/cotton-embroidered-k-1c05cb.webp",
-    "thumbnail": "products/thumbs/cotton-embroidered-k-1c05cb-t.webp",
+    
     "is_primary": false
   }
 },
