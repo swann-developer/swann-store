@@ -1126,6 +1126,24 @@ h6 {
 .product-card:hover .overlay {
    opacity: 0;
 }
+
+.privacy-policy ul li {
+   line-height: 1.8;
+}
+
+.form-control-lg::placeholder {
+   font-size: 0.8rem;
+}
+
+.form-card .btn {
+   color: #fff;
+}
+
+.form-card .btn:hover {
+   background-color: #0c0e02;
+}
+
+/* mediaquery */
 @media (min-width: 992px) {
    .navbar-brand {
       width: 10%;
@@ -1192,6 +1210,44 @@ h6 {
       object-fit: cover;
    }
 }
+
+
+   .footer-inner {
+      padding-top: 2.5rem;
+   }
+   .carousel-caption h1 {
+      font-size: 1.5rem;
+      color: #000;
+   }
+   .carousel-caption {
+      right: 1%;
+      left: 1%;
+      top: -32%;
+   }
+   .caption-text p {
+      font-size: 1rem;
+      color: #374151;
+   }
+   .product-slider .owl-nav button {
+      top: 100%;
+   }
+   .product-slider .owl-nav .owl-next {
+      right: 5%;
+   }
+   .product-slider .owl-nav .owl-prev {
+      left: 65%;
+   }
+   .owl-nav {
+      margin-top: 1.5rem;
+   }
+   .copy-right {
+      flex-direction: column;
+      align-items: center;
+   }
+   .carousel-inner {
+      height: 55vh;
+   }
+
 
 
 .search-suggestions{
