@@ -226,6 +226,21 @@ h6 {
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.product-card .off-price {
+   background-color: #fff;
+   padding: 0.3rem 0.5rem;
+   font-size: 0.8rem;
+   font-weight: 800;
+   border-radius: 10px;
+   letter-spacing: normal;
+}
+
+.product-card .shop-card-price {
+   letter-spacing: normal;
+   font-weight: 700;
+   font-size: 1.6rem;
+}
+
 .image-wrapper {
    position: relative;
    overflow: hidden;
@@ -564,6 +579,24 @@ h6 {
    line-height: 2.5rem;
    letter-spacing: 0.025em;
    font-weight: 400;
+   text-transform: uppercase;
+   position: relative;
+}
+
+.head-border-line {
+   position: relative;
+}
+
+.head-border-line::after {
+   content: '';
+   background: #788312;
+   width: 10%;
+   height: 2px;
+   position: absolute;
+   top: 3px;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
 }
 
 .pro-desc-tab .nav-link {
@@ -896,6 +929,10 @@ h6 {
    cursor: pointer;
 }
 
+.buy-btn:hover {
+   background-color: #788312;
+}
+
 .terms {
    font-size: 13px;
    color: #6b7280;
@@ -963,6 +1000,132 @@ h6 {
    font-size: 1rem;
 }
 
+.product-slider {
+   position: relative;
+}
+
+.product-slider .owl-nav button {
+   position: absolute;
+   top: 45%;
+   transform: translateY(-50%);
+   background: #e5e7d6 !important;
+   width: 45px;
+   height: 45px;
+   border-radius: 50% !important;
+   font-size: 22px !important;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s ease-in-out;
+}
+
+.product-slider .owl-nav .owl-prev {
+   left: -15px;
+}
+
+.product-slider .owl-nav .owl-next {
+   right: -15px;
+}
+
+.product-slider .owl-nav button:hover {
+   background: #788312 !important;
+   color: #fff;
+}
+
+.product-collections .popular-tag {
+   padding: 10px 15px;
+   font-size: 1.1rem;
+   background-color: rgb(22 24 0 / 54%);
+   color: #fff;
+   letter-spacing: 2px;
+   font-weight: 400;
+   width: 100%;
+}
+
+.product-collections .image-wrapper img {
+   transition: opacity 300ms ease-in;
+   opacity: 1;
+}
+
+.product-collections .image-wrapper:hover img {
+   transition: opacity 300ms ease-in;
+   opacity: 0.8;
+}
+
+.product-collections .pro-name {
+   font-size: 1.5rem;
+}
+
+.product-collections .image-wrapper img {
+   object-fit: cover;
+   object-position: top;
+   height: 100%;
+   width: 100%;
+}
+
+.product-collections .card-bottom-caption {
+   background: #9b930a;
+   color: #fff;
+}
+
+.marquee-slide {
+   color: #fff;
+   overflow: hidden;
+   white-space: nowrap;
+   font-weight: 300;
+   font-size: 1.2rem;
+}
+
+.marquee-content {
+   display: inline-block;
+   padding-left: 100%;
+   animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(-100%);
+   }
+}
+
+.categories .product-card .icon-group {
+   right: 0;
+   color: #fff;
+   left: 0;
+   padding: 0 2rem;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+
+.categories .offer-product {
+   position: absolute;
+   bottom: 5%;
+   text-align: center;
+   width: 100%;
+   color: #fff;
+   font-size: 1.5rem;
+   z-index: 1;
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background-color: rgba(12, 14, 2, 0.5);
+   z-index: 0;
+   transition: all 0.3s ease-in-out;
+}
+
+.product-card:hover .overlay {
+   opacity: 0;
+}
 @media (min-width: 992px) {
    .navbar-brand {
       width: 10%;
