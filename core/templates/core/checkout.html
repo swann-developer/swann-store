@@ -355,4 +355,12 @@ Place Order
 </div>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </main>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fbq('track', 'InitiateCheckout', {
+    value: {{ grand_total }},
+    currency: 'AED'
+  });
+});
+</script>
 {% endblock %}

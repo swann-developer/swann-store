@@ -10,7 +10,20 @@ Order Confirmation | Swann UAE
 <div class="text-center mb-4">
 
 <h2 class="mb-2">Order Placed Successfully 🎉</h2>
-
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fbq('track', 'Purchase', {
+    value: {{ order.total }},
+    currency: 'AED',
+    content_ids: [
+      {% for item in items %}
+        '{{ item.product_id }}'{% if not forloop.last %},{% endif %}
+      {% endfor %}
+    ],
+    content_type: 'product'
+  });
+});
+</script>
 <p class="text-muted">
 Thank you for shopping with Swann.
 Your order has been received.

@@ -69,7 +69,6 @@
                      <h1 class="product-title main-head text-uppercase">
                         {{ product.title }}
                      </h1>
-
                      {% if default_variant %}
                      <span class="fw-bold new-price">
                            SKU: {{ default_variant.sku }}
@@ -142,13 +141,13 @@
 
                         <div class="product-btn d-flex gap-3 align-items-center">
                            <div id="cartActionWrapper" class="w-100">
-                             <button
-                               type="submit"
-                               id="addToCartBtn"
-                               class="btn theme-btn theme-bg btn-lg mt-3 w-50"
-                             >
+                              <button
+                              type="submit"
+                              id="addToCartBtn"
+                              class="btn theme-btn theme-bg btn-lg mt-3 w-50"
+                              >
                                Add to Cart
-                             </button>
+                              </button>
 
                              <a
                                href="{% url 'cart_detail' %}"
@@ -330,4 +329,33 @@
             </div>
          </div>
       </main>
+      <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  // ViewContent
+  fbq('track', 'ViewContent', {
+    content_ids: ['{{ product.id }}'],
+    content_name: '{{ product.title|escapejs }}',
+    content_type: 'product',
+    value: {{ product.final_price }},
+    currency: 'AED'
+  });
+
+  // AddToCart
+  const addToCartBtn = document.getElementById("addToCartBtn");
+  const sizeSelect = document.getElementById("sizeSelect");
+
+  addToCartBtn.addEventListener("click", function() {
+    if (sizeSelect.value) {
+      fbq('track', 'AddToCart', {
+        content_ids: ['{{ product.id }}'],
+        content_type: 'product',
+        value: {{ product.final_price }},
+        currency: 'AED'
+      });
+    }
+  });
+
+});
+</script>
 {% endblock %}
