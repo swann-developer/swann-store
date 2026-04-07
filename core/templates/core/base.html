@@ -310,6 +310,30 @@ src="https://www.facebook.com/tr?id=1789035585398894&ev=PageView&noscript=1"
             </a>
          </div>
       </footer>
+      <div id="cookieBanner" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 15px;
+  z-index: 9999;
+  display: none;
+">
+  <div style="max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
+    
+    <p style="margin:0;font-size:14px;">
+      We use cookies to improve your experience and track analytics.
+    </p>
+
+    <div>
+      <button id="acceptCookies" class="btn btn-light btn-sm me-2">Accept</button>
+      <button id="rejectCookies" class="btn btn-outline-light btn-sm">Reject</button>
+    </div>
+
+  </div>
+</div>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
       <script
@@ -318,6 +342,31 @@ src="https://www.facebook.com/tr?id=1789035585398894&ev=PageView&noscript=1"
          crossorigin="anonymous"
       ></script>
       <script src="{% static 'js/main.js' %}"></script>
+      <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const banner = document.getElementById("cookieBanner");
+  const acceptBtn = document.getElementById("acceptCookies");
+  const rejectBtn = document.getElementById("rejectCookies");
+
+  const consent = localStorage.getItem("cookie_consent");
+
+  if (!consent) {
+    banner.style.display = "block";
+  }
+
+  acceptBtn.addEventListener("click", function() {
+    localStorage.setItem("cookie_consent", "accepted");
+    banner.style.display = "none";
+  });
+
+  rejectBtn.addEventListener("click", function() {
+    localStorage.setItem("cookie_consent", "rejected");
+    banner.style.display = "none";
+  });
+
+});
+</script>
       <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
