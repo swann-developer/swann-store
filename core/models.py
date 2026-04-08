@@ -10,16 +10,8 @@ class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(unique=True)
 
-    image = models.ImageField(
-        upload_to="categories/images/",
-        null=True,
-        blank=True,
-    )
-    icon = models.ImageField(
-        upload_to="categories/icons/",
-        null=True,
-        blank=True,
-    )
+    image = CloudinaryField("image", blank=True, null=True)
+    icon = CloudinaryField("image", blank=True, null=True)
 
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -344,7 +336,7 @@ class ContactMessage(models.Model):
 class HeroBanner(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.TextField(blank=True)
-    image = models.ImageField(upload_to="banners/")
+    image = CloudinaryField("image")
     button_text = models.CharField(max_length=50, default="Shop Now")
     button_link = models.CharField(max_length=255, blank=True)
 
@@ -381,3 +373,4 @@ class CProduct(models.Model):
 
     def __str__(self):
         return self.product.title
+

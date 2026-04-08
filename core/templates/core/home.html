@@ -1,5 +1,6 @@
 {% extends "core/base.html" %}
 {% load static %}
+{% load cloudinary %}
 {% block title %}
 Home | Swann UAE
 {% endblock %}
@@ -46,7 +47,7 @@ Home | Swann UAE
 <div class="carousel-inner">
 {% for banner in banners %}
 <div class="carousel-item {% if forloop.first %}active{% endif %}">
-    <img src="{{ banner.image.url }}" class="d-block w-100" />
+    <img src="{{ banner.image_url }}" class="d-block w-100" loading="lazy" />
 
     <div class="carousel-caption">
         <div class="caption-text">
@@ -83,8 +84,15 @@ Home | Swann UAE
             <span class="visually-hidden">Next</span>
          </button>
       </div>
+            <div class="marquee-slide theme-bg p-2">
+         <div class="marquee-content">
+             {% if announcement %}
+                 {{ announcement.text }}
+             {% endif %}
+         </div>
+      </div>
       <main>
-                 <div class="container py-5 featured-products card-carousel">
+         <div class="container py-5 featured-products card-carousel">
             <!-- ---------product image change row------------- -->
             <div class="col-12 text-center mb-5">
                <h1 class="product-title main-head">Shop Based on Occassion</h1>
@@ -103,32 +111,7 @@ Home | Swann UAE
                         </div>
                         <div class="product-info p-3">
                            <p class="text-ellipsis text-uppercase">
-                              Prayer Ready- modest
-                           </p>
-                           <!-- <div class="pricing d-flex flex-column">
-                              <span class="new-price"
-                                 ><i class="bi bi-currency-rupee"></i
-                                 >799.00</span
-                              >
-                              <span class="old-price"
-                                 ><i class="bi bi-currency-rupee"></i
-                                 >999.00</span
-                              >
-                           </div> -->
-                        </div>
-                     </a>
-                  </div>
-                  <div class="product-card shadow-sm">
-                     <a href="product-details.html">
-                        <div class="image-wrapper">
-                           <img
-                              src="{% static 'images/model-8.jpeg' %}"
-                              class="product-img default-img img-fluid"
-                           />
-                        </div>
-                        <div class="product-info p-3">
-                           <p class="text-ellipsis text-uppercase">
-                              Visiting Family- Elegant
+                              combo- ready to wear set
                            </p>
                         </div>
                      </a>
@@ -143,7 +126,7 @@ Home | Swann UAE
                         </div>
                         <div class="product-info p-3">
                            <p class="text-ellipsis text-uppercase">
-                              Evening Gathering- Dressy
+                              Purely Traditional
                            </p>
                         </div>
                      </a>
@@ -152,37 +135,17 @@ Home | Swann UAE
                      <a href="product-details.html">
                         <div class="image-wrapper">
                            <img
-                              src="images/model-1.jpeg"
+                              src="{% static 'images/model-8.jpeg' %}"
                               class="product-img default-img img-fluid"
                            />
                         </div>
                         <div class="product-info p-3">
                            <p class="text-ellipsis text-uppercase">
-                              Prayer Ready- modest
+                              Gatherings
                            </p>
                         </div>
                      </a>
                   </div>
-                  <div class="product-card shadow-sm">
-                     <a href="product-details.html">
-                        <div class="image-wrapper">
-                           <img
-                              src="images/product-1.jpeg"
-                              class="product-img default-img img-fluid"
-                           />
-                        </div>
-                        <div class="product-info p-3">
-                           <p class="text-ellipsis">
-                              Evening Gathering- Dressy
-                           </p>
-                        </div>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-12 text-center">
-                  <button type="button" class="btn theme-bg text-white mt-5">
-                     Explore All
-                  </button>
                </div>
             </div>
          </div>
@@ -195,49 +158,83 @@ Home | Swann UAE
                <div class="head-border-line"></div>
             </div>
             <div class="row g-4">
-{% for item in collections %}
-<div class="col-lg-4">
-    <div class="product-collections">
-        <div class="product-card shadow-sm">
-            <div class="image-wrapper">
+               <div class="row mt-5">
+                  {% for item in collections %}
+                  {% with product=item.product %}
+                  <div class="col-lg-3 col-6">
+                     <div class="product-card shadow-sm">
+                        <a href="{% url 'product_detail' product.category.slug product.slug %}">
+                           <div class="image-wrapper">
+                              {% with product.primary_image as primary_image %}
+                                 {% if primary_image %}
+                                    <img src="{{ product.image_url }}" class="product-img img-fluid" loading="lazy" />
+                                 {% else %}
+                                    <img
+                                       src="{% static 'images/product-placeholder.jpg' %}"
+                                       class="product-img default-img img-fluid" loading="lazy"
+                                       alt="{{ product.title }}"
+                                    />
+                                 {% endif %}
+                              {% endwith %}
 
-                {% if item.discount_label %}
-                <div class="tag-card new shadow-sm">
-                    {{ item.discount_label }}
-                </div>
-                {% endif %}
+                              <!-- TOP badges -->
+                              {% for tag in product.tags.all %}
+                                 {% if tag.slug == "new" %}
+                                    <div class="tag-card new shadow-sm">New</div>
+                                 {% elif tag.slug == "trending" %}
+                                    <div class="tag-card trending shadow-sm">Trending</div>
+                                 {% endif %}
+                              {% endfor %}
 
-                {% if item.product.primary_image %}
-                <img src="{{ item.product.primary_image.image.url }}" class="img-fluid" />
-                {% endif %}
+                              <!-- BOTTOM badges -->
+                              <div class="tag-bottom p-3 pt-0 text-start">
+                                 {% for tag in product.tags.all %}
+                                    {% if tag.slug == "instagram-popular" %}
+                                       <span class="popular-tag instagram">
+                                          <i class="bi bi-instagram"></i>
+                                          Popular on Instagram
+                                       </span>
+                                    {% elif tag.slug == "loved-on-swann" %}
+                                       <span class="popular-tag swann">
+                                          <i class="bi bi-heart-fill"></i>
+                                          Loved on swann
+                                       </span>
+                                    {% endif %}
+                                 {% endfor %}
+                              </div>
+                           </div>
 
-                <div class="tag-bottom p-3 pt-0 text-start">
-                    <div class="d-flex justify-content-between">
-                        <p class="mb-0 pro-name">{{ item.product.title }}</p>
+                           <div class="product-info p-3">
+                              <p class="text-ellipsis">{{ product.title|truncatechars:25 }}</p>
 
-                        <p class="mb-0">
-                            AED {{ item.product.final_price }}
-                        </p>
-                    </div>
-                </div>
-            </div>
+                              <div class="pricing d-flex flex-column">
+                                 <span class="new-price">
+                                    <i>AED:</i>  {{ product.final_price }}
+                                 </span>
 
-            <div class="card-bottom-caption p-2 text-center">
-                <h4 class="mb-0">
-                    {{ item.subtitle }}
-                </h4>
-            </div>
-        </div>
-    </div>
-</div>
+                                 {% if product.discount_price %}
+                                 <span class="old-price">
+                                    <i>AED:</i>  {{ product.price }}
+                                 </span>
+                                 {% endif %}
+                              </div>
+
+                              <button class="btn add-to-cart-btn mt-3">
+                                 View Product
+                              </button>
+                           </div>
+
+                        </a>
+                     </div>
+                  </div>
+{% endwith %}
+{% empty %}
+  <div class="col-12 text-center py-5">
+    <p class="text-muted mb-0">No products available.</p>
+  </div>
 {% endfor %}
-      <div class="marquee-slide theme-bg p-2">
-         <div class="marquee-content">
-             {% if announcement %}
-                 {{ announcement.text }}
-             {% endif %}
-         </div>
-      </div>
+               </div>
+
             </div>
          </div>
          <section class="categories py-5 bg-light">
@@ -252,9 +249,14 @@ Home | Swann UAE
     <div class="product-card">
         <div class="image-wrapper">
 
-            {% if category.image %}
-            <img src="{{ category.image.url }}"
-                 class="product-img img-fluid" />
+            {% if category.image_url %}
+            <img src="{{ category.image_url }}"
+                 class="product-img img-fluid"
+                 loading="lazy"
+                 alt="{{ category.name }}">
+            {% else %}
+            <img src="{% static 'images/product-placeholder.jpg' %}"
+                 class="product-img img-fluid" loading="lazy">
             {% endif %}
 
             <div class="icon-group">

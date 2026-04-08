@@ -15,6 +15,7 @@ from .models import (
     AnnouncementBar,
     HeroBanner,
 )
+from core.utils.cloudinary import cl_image
 from django.urls import reverse
 from .cart import get_or_create_cart
 from .models import CartItem
@@ -1029,6 +1030,46 @@ def home(request):
     announcement = AnnouncementBar.objects.filter(is_active=True).first()
     collections = CProduct.objects.filter(is_active=True).select_related("product__category").prefetch_related("product__images")
 
+    # attach optimized URLs
+    for item in collections:
+        img = item.product.primary_image
+        if img:
+            item.product.image_url = cl_image(
+                img.image.public_id,
+                width=500,
+                height=500,
+                crop="fill",
+                quality="auto:good",
+                fetch_format="auto",
+                dpr="auto"
+            )
+
+    for banner in banners:
+        banner.image_url = cl_image(
+            banner.image.public_id,
+            width=1400,
+            crop="scale",
+            quality="auto:good",
+            fetch_format="auto",
+            dpr="auto"
+        )
+
+        # ✅ categories
+    for category in categories:
+        if category.image:
+            category.image_url = cl_image(
+                category.image.public_id,
+                width=400,
+                height=400,
+                crop="fill",
+                quality="auto:good",
+                fetch_format="auto",
+                dpr="auto"
+            )
+        else:
+            category.image_url = None
+
+            
     return render(request, "core/home.html", {
         "banners": banners,
         "categories": categories,
