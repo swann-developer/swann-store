@@ -1,0 +1,227 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load cloudinary %}
+{% block title %}
+Shop Women's Fashion Online | Swann UAE
+{% endblock %}
+{% block content %}
+      <section class="inner-banner">
+         <div
+            class="inner-header"
+            style="background-image: url('{% static "images/vishu.png" %}')"
+         ></div>
+      </section>
+            <div class="col-12 text-center mb-5">
+               <h1 class="product-title main-head">Vishu Collection</h1>
+               <div class="head-border-line"></div>
+            </div>        
+      <main> 
+         <div class="container-fluid px-0 py-5 featured-products vishu-theme">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-12 mt-3">
+                     <div class="pro-desc-tab price-under-tab">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                           <li class="nav-item" role="presentation">
+                              <button
+                                 class="nav-link active"
+                                 id="f-tab1"
+                                 data-bs-toggle="tab"
+                                 data-bs-target="#tab1"
+                                 type="button"
+                                 role="tab"
+                                 aria-controls="home"
+                                 aria-selected="true"
+                              >
+                                 Under 100 AED
+                              </button>
+                           </li>
+                           <li class="nav-item" role="presentation">
+                              <button
+                                 class="nav-link"
+                                 id="f-tab2"
+                                 data-bs-toggle="tab"
+                                 data-bs-target="#tab2"
+                                 type="button"
+                                 role="tab"
+                                 aria-controls="profile"
+                                 aria-selected="false"
+                              >
+                                 Ready to wear for Vishu
+                              </button>
+                           </li>
+                           <li class="nav-item" role="presentation">
+                              <button
+                                 class="nav-link"
+                                 id="f-tab3"
+                                 data-bs-toggle="tab"
+                                 data-bs-target="#tab3"
+                                 type="button"
+                                 role="tab"
+                                 aria-controls="contact"
+                                 aria-selected="false"
+                              >
+                                 Best selling for Vishu
+                              </button>
+                           </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                           <div
+                              class="tab-pane fade show active"
+                              id="tab1"
+                              role="tabpanel"
+                              aria-labelledby="f-tab1"
+                           >
+                              <div class="p-3">
+                                 <div class="row mt-5">
+                                     {% for product in under_100 %}
+                                         <div class="col-lg-3 col-6">
+                                             <div class="product-card shadow-sm">
+
+                                                 <a href="{% url 'product_detail' product.category.slug product.slug %}">
+                                                     
+                                                     <div class="image-wrapper">
+                                                         {% with product.images.first as img %}
+                                                             {% if img %}
+                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" %}
+                                                             {% endif %}
+                                                         {% endwith %}
+                                                     </div>
+
+                                                     <div class="product-info p-3">
+                                                      <div class="d-flex justify-content-between align-items-start mb-2">
+                                                         <span class="new-price">AED {{ product.final_price }}</span>
+                                                      </div>                                                         
+                                                      <p class="text-ellipsis">{{ product.title }}</p>
+                                                     </div>
+
+                                                 </a>
+                                             </div>
+                                         </div>
+                                     {% empty %}
+                                         <p>No products available</p>
+                                     {% endfor %}
+                                 </div>
+                              </div>
+                           </div>
+                           <div
+                              class="tab-pane fade"
+                              id="tab2"
+                              role="tabpanel"
+                              aria-labelledby="f-tab2"
+                           >
+                              <div class="row mt-5">
+                                     {% for product in combo %}
+                                         <div class="col-lg-3 col-6">
+                                             <div class="product-card shadow-sm">
+
+                                                 <a href="{% url 'product_detail' product.category.slug product.slug %}">
+                                                     
+                                                     <div class="image-wrapper">
+                                                         {% with product.images.first as img %}
+                                                             {% if img %}
+                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" %}
+                                                             {% endif %}
+                                                         {% endwith %}
+                                                     </div>
+
+                                                     <div class="product-info p-3">
+                                                      <div class="d-flex justify-content-between align-items-start mb-2">
+                                                         <span class="new-price">AED {{ product.final_price }}</span>
+                                                      </div>                                                         
+                                                      <p class="text-ellipsis">{{ product.title }}</p>
+                                                     </div>
+
+                                                 </a>
+                                             </div>
+                                         </div>
+                                     {% empty %}
+                                         <p>No products available</p>
+                                     {% endfor %}
+                              </div>
+                           </div>
+                           <div
+                              class="tab-pane fade"
+                              id="tab3"
+                              role="tabpanel"
+                              aria-labelledby="f-tab3"
+                           >
+                              <div class="row mt-5">
+                                     {% for product in best_selling %}
+                                         <div class="col-lg-3 col-6">
+                                             <div class="product-card shadow-sm">
+
+                                                 <a href="{% url 'product_detail' product.category.slug product.slug %}">
+                                                     
+                                                     <div class="image-wrapper">
+                                                         {% with product.images.first as img %}
+                                                             {% if img %}
+                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" %}
+                                                             {% endif %}
+                                                         {% endwith %}
+                                                     </div>
+
+                                                     <div class="product-info p-3">
+                                                      <div class="d-flex justify-content-between align-items-start mb-2">
+                                                         <span class="new-price">AED {{ product.final_price }}</span>
+                                                      </div>                                                         
+                                                      <p class="text-ellipsis">{{ product.title }}</p>
+                                                     </div>
+
+                                                 </a>
+                                             </div>
+                                         </div>
+                                     {% empty %}
+                                         <p>No products available</p>
+                                     {% endfor %}
+
+                                          </div>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="container">
+            <nav aria-label="Page navigation example">
+               <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                     <a class="page-link" href="#"><small>Previous</small></a>
+                  </li>
+                  <li class="page-item">
+                     <a class="page-link active" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                     <a class="page-link" href="#"><small>Next</small></a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <section class="mt-5">
+            <div
+               class="occassional-add"
+               style="
+                  background-image:
+                     linear-gradient(to bottom, #6a842e, rgb(139 195 74 / 60%)),
+                     url(../static/images/vishu-bg.jpg);
+               "
+            >
+               <div class="add-caption">
+                  <h1 class="text-white mb-0">Celebrate Vishu in Style</h1>
+                  <p class="lead" style="color: #ffeb3b">
+                     Exclusive Offers & Festive Discounts
+                  </p>
+                  <button class="btn btn-dark mt-3 px-5">Shop Now</button>
+               </div>
+            </div>
+         </section>
+      </main>
+{% endblock %}

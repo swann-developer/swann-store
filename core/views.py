@@ -1076,3 +1076,19 @@ def home(request):
         "announcement": announcement,
         "collections": collections,
     })
+
+def vishu_specials(request):
+    products = (
+        Product.objects
+        .filter(is_active=True)
+        .prefetch_related("images", "tags", "category")
+        .distinct()
+    )
+
+    context = {
+        "under_100": products.filter(tags__slug="vishu-under100")[:8],
+        "combo": products.filter(tags__slug="vishu-combo")[:8],
+        "best_selling": products.filter(tags__slug="best-selling-vishu")[:8],
+    }
+
+    return render(request, "core/vishu-specials.html", context)

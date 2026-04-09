@@ -31,7 +31,10 @@ h6 {
 }
 
 
-
+html, body {
+   overflow-x: hidden;
+   max-width: 100%;
+}
 .carousel-inner {
    height: 90vh;
 }
@@ -220,6 +223,9 @@ h6 {
    border-radius: 0.75rem;
    overflow: hidden;
    border: 1px solid #e2e8f0;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
 }
 
 .product-card:hover {
@@ -244,15 +250,20 @@ h6 {
 .image-wrapper {
    position: relative;
    overflow: hidden;
-   height: 45vh;
+   aspect-ratio: 1 / 1;
+   height: auto;
 }
 
 .product-img {
    width: 100%;
-   display: block;
-   transition: all 0.3s ease;
-   object-fit: cover;
    height: 100%;
+   object-fit: cover;
+   object-position: center;
+   transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+   transform: scale(1.08);
 }
 
 .product-card a {
@@ -270,24 +281,8 @@ h6 {
    bottom: 0;
    right: 0;
 }
-/* .hover-img {
-   position: absolute;
-   top: 0;
-   left: 0;
-   opacity: 0;
-}
 
-.product-card:hover .hover-img {
-   opacity: 1;
-}
 
-.product-card:hover .default-img {
-   opacity: 0;
-} */
-
-.product-card:hover .default-img {
-   transform: scale(1.2);
-}
 
 .icon-group {
    position: absolute;
@@ -694,6 +689,9 @@ h6 {
 /* PRODUCT INFO */
 .product-info {
    max-width: 300px;
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
 }
 
 .price {
@@ -1143,6 +1141,138 @@ h6 {
    background-color: #0c0e02;
 }
 
+.inner-header {
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 100%;
+   height: 100%;
+   transition: transform 0.6s ease-in-out;
+   will-change: transform;
+}
+
+.inner-banner {
+   height: 500px;
+   position: relative;
+   overflow: hidden;
+}
+
+.inner-banner:hover .inner-header {
+  transform: scale(1.03); /* Subtle scale/zoom effect on hover */
+}
+
+
+
+.price-under-tab.pro-desc-tab .nav-link.active {
+   background-color: #788312;
+   color: #fff;
+
+}
+
+.price-under-tab .nav-tabs {
+  flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+  overflow-x: auto; /* Enable horizontal scrolling for too many items */
+  white-space: nowrap; /* Keep link text on one line */
+  border-bottom: none;
+   justify-content: center; /* Centers tabs in desktop */
+   gap: 10px;
+  
+  /* Optional: Custom scrollbar for better UX (webkits) */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Hide the native scrollbar for a cleaner look */
+.price-under-tab .nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure tab links behave correctly in the horizontal layout */
+.price-under-tab .nav-tabs .nav-link {
+  display: inline-block; /* Behave like inline elements for text wrapping */
+  margin-bottom: 0; /* Reset default margin */
+}
+
+/* Specific styling for your project: make tab links prominent */
+.price-under-tab .nav-tabs .nav-link {
+  padding: 10px 15px; /* Adjust padding for clean layout */
+}
+
+.occassional-add {
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   height: 400px;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.occassional-add .add-caption h1 {
+   font-size: 5rem;
+}
+
+.occassional-add .add-caption p {
+   font-size: 2.5rem;
+}
+
+.occassional-add .add-caption h1,
+.occassional-add .add-caption p {
+   font-family: 'Imperial Script', cursive;
+}
+
+/* Featured Products Section Enhancement */
+.featured-products {
+   position: relative;
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+   border-top: 1px solid #eee;
+   z-index: 1;
+}
+
+.featured-products > .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.featured-products.vishu-theme {
+   background-image: 
+         linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.40)),
+         url('../images/bg-2.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.price-under-tab {
+   background: rgba(120, 131, 18, 0.05); /* Very light version of your theme color */
+   padding: 20px;
+   border-radius: 15px;
+   margin-bottom: 20px;
+   box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+}
+
+.price-under-tab .nav-link {
+   border: 1px solid #788312;
+   color: #788312;
+   background: rgba(255,255,255,0.9);
+   border-radius: 6px;
+   font-weight: 600;
+   font-size: 0.9rem;
+   padding: 10px 18px;
+   transition: all 0.3s ease;
+}
+
+.price-under-tab .nav-link:hover,
+.price-under-tab .nav-link.active {
+   background-color: #788312;
+   color: #fff;
+}
 /* mediaquery */
 @media (min-width: 992px) {
    .navbar-brand {
@@ -1154,6 +1284,17 @@ h6 {
    .head-section {
       padding: 60px 0 40px;
       text-align: center;
+   }
+}
+
+@media (max-width: 768px) {
+   .featured-products {
+      background-attachment: scroll;
+      background-size: cover;
+   }
+
+   .featured-products.vishu-theme {
+      background-attachment: scroll;
    }
 }
 
@@ -1209,7 +1350,6 @@ h6 {
    .main-image img {
       object-fit: cover;
    }
-}
 
 
    .footer-inner {
@@ -1312,4 +1452,96 @@ border-radius:12px;
 
 .badge{
 font-size:0.75rem;
+}
+
+.wish-2026 {
+      width: 95%;
+      font-size: 2.2rem;
+      max-width: 260px;
+      padding: 10px 14px
+   }
+   .price-under-tab .nav-link {
+      white-space: nowrap;
+      font-size: 0.8rem;
+      padding: 8px 14px;
+   }
+
+  .price-under-tab .nav-link:hover {
+    background-color: #788312 !important;
+    color: #fff !important;
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+   .price-under-tab .nav-item {
+      flex: 0 0 auto;
+   }
+
+   .price-under-tab .nav-tabs {
+   display: flex;
+   flex-wrap: nowrap;
+   overflow-x: auto;
+   overflow-y: hidden;
+   width: 100%;
+   scrollbar-width: none;
+}
+   
+   /* Optional: Hide scrollbar but keep functionality */
+   .price-under-tab .nav-tabs::-webkit-scrollbar {
+      display: none;
+   }
+   .featured-products {
+      background-attachment: scroll; /* Fixed background lags on mobile browsers */
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+   }
+   
+   
+   .price-under-tab {
+      padding: 10px;
+      margin-top: 0;
+      overflow: hidden;
+   }
+   .inner-banner {
+      height: auto;
+      min-height: 250px;
+      border-radius: 0 0 40px 40px;
+   }
+
+   .inner-header {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 250px;
+   }
+}
+
+.wish-2026 {
+  font-family: 'Imperial Script', cursive;
+  font-size: 3rem;
+  color: #ffeb3b;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 320px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  line-height: 1.2;
+  white-space: normal;
+  background: rgba(0,0,0,0.25);
+  padding: 12px 20px;
+  border-radius: 24px;
+}
+
+/* Keyframes for the wish animation: fade and scale */
+@keyframes wishFadeInTransform {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7); /* Smaller and hidden */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Full size and visible */
+  }
 }
