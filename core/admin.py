@@ -100,9 +100,14 @@ class ProductAdmin(ImportExportModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     inlines = [ProductImageInline, ProductVariantInline]
 
-    list_display = ("title", "category", "price", "is_active")
+    list_display = ("title", "category", "price", "is_active", "display_order")
+    list_editable = (
+        "display_order",
+        "is_active",
+    )
 
     list_filter = ("category", "tags", "is_active")
+    ordering = ['display_order']
 
     search_fields = (
     "title",

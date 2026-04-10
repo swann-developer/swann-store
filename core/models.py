@@ -45,6 +45,7 @@ class Product(models.Model):
 )
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
+    display_order = models.PositiveIntegerField(default=0)
     description = models.TextField(blank=True, null=True)
 
     # 🔥 Product attributes (marketing-facing)
@@ -73,7 +74,7 @@ class Product(models.Model):
     )
 
     class Meta:
-        ordering = ["-created_at"]
+        ordering = ['display_order', '-id']
 
     def __str__(self):
         return self.title

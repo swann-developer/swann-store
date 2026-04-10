@@ -52,13 +52,13 @@ from django.core.mail import EmailMessage
 
 def product_list(request, category_slug=None):
     products = (
-    Product.objects
-    .filter(is_active=True, category__isnull=False)
-    .select_related("category")
-    .prefetch_related("images", "tags")
-    .distinct()
+        Product.objects
+        .filter(is_active=True, category__isnull=False)
+        .select_related("category")
+        .prefetch_related("images", "tags")
+        .order_by("display_order", "id")
+        .distinct()
     )
-
     search_query = request.GET.get("search")
 
     if search_query:
@@ -1082,13 +1082,21 @@ def vishu_specials(request):
         Product.objects
         .filter(is_active=True)
         .prefetch_related("images", "tags", "category")
+        .order_by("display_order", "id")
         .distinct()
     )
 
+    under_100_qs = products.filter(tags__slug="vishu-under100")
+
+    paginator = Paginator(under_100_qs, 8)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        "under_100": products.filter(tags__slug="vishu-under100")[:8],
+        "under_100": page_obj,
         "combo": products.filter(tags__slug="vishu-combo")[:8],
         "best_selling": products.filter(tags__slug="best-selling-vishu")[:8],
+        "page_obj": page_obj,
     }
 
     return render(request, "core/vishu-specials.html", context)
