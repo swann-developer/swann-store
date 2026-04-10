@@ -1186,15 +1186,10 @@ html, body {
   display: none;
 }
 
-/* Ensure tab links behave correctly in the horizontal layout */
 .price-under-tab .nav-tabs .nav-link {
-  display: inline-block; /* Behave like inline elements for text wrapping */
-  margin-bottom: 0; /* Reset default margin */
-}
-
-/* Specific styling for your project: make tab links prominent */
-.price-under-tab .nav-tabs .nav-link {
-  padding: 10px 15px; /* Adjust padding for clean layout */
+    padding: 10px 15px;
+    flex: 1 1 100%;
+    width: 100%;
 }
 
 .occassional-add {
@@ -1241,7 +1236,7 @@ html, body {
 
 .featured-products.vishu-theme {
    background-image: 
-         linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.40)),
+         linear-gradient(rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.70)),
          url('../images/bg-2.png');
    background-size: cover;
    background-position: center;
@@ -1504,7 +1499,7 @@ font-size:0.75rem;
    .inner-banner {
       height: auto;
       min-height: 250px;
-      border-radius: 0 0 40px 40px;
+      /*border-radius: 0 0 40px 40px;*/
    }
 
    .inner-header {
