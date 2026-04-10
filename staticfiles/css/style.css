@@ -226,6 +226,7 @@ html, body {
    display: flex;
    flex-direction: column;
    height: 100%;
+   border: 1px solid #788312;
 }
 
 .product-card:hover {
@@ -1223,8 +1224,6 @@ html, body {
 /* Featured Products Section Enhancement */
 .featured-products {
    position: relative;
-   padding-left: 0 !important;
-   padding-right: 0 !important;
    border-top: 1px solid #eee;
    z-index: 1;
 }
@@ -1252,6 +1251,7 @@ html, body {
 }
 
 .price-under-tab .nav-link {
+   margin-bottom: 0;
    border: 1px solid #788312;
    color: #788312;
    background: rgba(255,255,255,0.9);
@@ -1306,7 +1306,7 @@ html, body {
       font-size: 0.7rem;
    }
    .new-price {
-      font-size: 1rem;
+      font-size: 1.2rem;
    }
    .pricing {
       flex-direction: column;

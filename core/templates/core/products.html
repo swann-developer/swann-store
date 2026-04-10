@@ -2,7 +2,7 @@
 {% load static %}
 {% load cloudinary %}
 {% block title %}
-Shop Women's Fashion Online | Swann UAE
+Shop Women's Fashion Online | Swann Designs UAE
 {% endblock %}
 {% block content %}
       <main>
@@ -25,7 +25,7 @@ Shop Women's Fashion Online | Swann UAE
                         <span class="icon-holder">
                            <img
                               src="{% static 'images/icons/discount.png' %}"
-                              alt="All"
+                              alt="all-swann-designs"
                               class="img-fluid"
                            />
                         </span>
@@ -105,7 +105,7 @@ Shop Women's Fashion Online | Swann UAE
 
       <div class="row g-3 mt-5">
          {% for product in page_obj %}
-         <div class="col-lg-3">
+         <div class="col-lg-3 col-6">
             <div class="product-card shadow-sm">
                {% if product.category %}
 <a href="{% url 'product_detail' product.category.slug product.slug %}">
