@@ -1,0 +1,4878 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-03-11T21:23:04.381Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Mulchanderi Suit",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-03-11T21:23:14.843Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Premium Cotton Salwar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-03-11T21:23:22.609Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Rayon Kurta Pant Set",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-03-11T21:24:04.616Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Lucknowi Chikankari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-03-11T21:24:27.704Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Mulchanderi Salwar Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-03-11T21:24:27.704Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Zari Threadwork Cotton Schiffli Kurta",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-03-11T21:24:27.704Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Women's Green Rayon Kurta with Pant",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-03-11T21:24:27.704Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Sage green chanderi salwar with beautiful Zari work",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-03-11T21:24:27.704Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Sage purple chanderi salwar with beautiful Zari work",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-03-11T21:24:27.704Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Lucknowi White and Black Chikankari Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-03-11T21:24:27.704Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Lucknowi Black and White Chikankari Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-03-11T21:24:27.704Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-03-11T21:24:33.539Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-03-11T21:25:20.102Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Lucknowi Black and White Chikankari Suit - S",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-03-11T21:26:32.833Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Lucknowi Black and White Chikankari Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Wash care\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-03-11T21:51:03.528Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Lucknowi White and Black Chikankari Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Wash care\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknowi White and Black Chikankari Suit - M\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-03-11T21:53:08.122Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Sage purple chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Description\", \"Wash care\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Sage purple chanderi salwar with beautiful Zari work - L\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-03-11T21:55:49.679Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Mulchanderi Salwar Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Wash care\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit Image\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit - S\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-03-11T21:56:39.420Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Mulchanderi Salwar Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-03-12T17:23:23.660Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Eid Collection",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-03-12T17:23:50.112Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Kurtha Set",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-03-12T17:24:07.325Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "ORD9305AB29",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-03-12T17:24:31.389Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Lucknowi Black and White Chikankari Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-03-12T17:24:31.389Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Lucknowi White and Black Chikankari Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-03-12T17:24:31.389Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Sage purple chanderi salwar with beautiful Zari work",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-03-12T17:24:31.390Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Sage green chanderi salwar with beautiful Zari work",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-03-12T17:24:31.390Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Women's Green Rayon Kurta with Pant",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-03-12T17:24:31.390Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Zari Threadwork Cotton Schiffli Kurta",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-03-12T17:24:31.390Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Mulchanderi Salwar Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-03-12T17:33:49.364Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Chikankari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-03-12T17:34:29.311Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Premium Cotton Kurtha set",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Mulchanderi Salwar Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Zari Threadwork Cotton Schiffli Kurta",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Saage green chanderi salwar with beautiful Zari work",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "Saage purple chanderi salwar with beautiful Zari work",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "Lucknowi White and Black Chikankari Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "Lucknowi Black and White Chikankari Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "15",
+    "object_repr": "Pink blush 3 PC Pakistani Cotton Schiffli",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "16",
+    "object_repr": "Peach Mulchanderi",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "Lime Green Mulcotton salwar suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "18",
+    "object_repr": "Premium Cotton Ajrakh Salwar Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "21",
+    "object_repr": "Purple Hand-Embroidered Kurta with Banarasi Dupatta",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "22",
+    "object_repr": "Premium Cotton Straight, Palazzo & Printed Pants – Soft & Elegant",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "23",
+    "object_repr": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.583Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "24",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.613Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo",
+    "action_flag": 2,
+    "change_message": "update through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.613Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo",
+    "action_flag": 2,
+    "change_message": "update through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.613Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "action_flag": 2,
+    "change_message": "update through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.613Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "action_flag": 2,
+    "change_message": "update through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-03-12T17:34:38.613Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "action_flag": 2,
+    "change_message": "update through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-03-12T17:34:56.201Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "24",
+    "object_repr": "",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "23",
+    "object_repr": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "22",
+    "object_repr": "Premium Cotton Straight, Palazzo & Printed Pants – Soft & Elegant",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "21",
+    "object_repr": "Purple Hand-Embroidered Kurta with Banarasi Dupatta",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "18",
+    "object_repr": "Premium Cotton Ajrakh Salwar Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "Lime Green Mulcotton salwar suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "16",
+    "object_repr": "Peach Mulchanderi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "15",
+    "object_repr": "Pink blush 3 PC Pakistani Cotton Schiffli",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "Lucknowi Black and White Chikankari Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "Lucknowi White and Black Chikankari Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "Saage purple chanderi salwar with beautiful Zari work",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Saage green chanderi salwar with beautiful Zari work",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Zari Threadwork Cotton Schiffli Kurta",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-03-12T17:51:28.543Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Mulchanderi Salwar Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-03-12T17:56:18.108Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Party Wear",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-03-12T17:56:33.579Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Semi - Silk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-03-12T17:58:26.694Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Semi Silk",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-03-12T17:59:21.835Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Cotton Suit",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-03-12T17:59:32.485Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Semi Silk",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Chikankari",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Cotton Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Eid Collection",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Kurtha Set",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Lucknowi Chikankari",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Mulchanderi Suit",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Party Wear",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Premium Cotton Kurtha set",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Premium Cotton Salwar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Rayon Kurta Pant Set",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-03-12T18:00:38.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Semi Silk",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-03-12T18:00:55.002Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Mulchanderi Suit",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-03-12T18:01:06.187Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Premium Cotton Salwar",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-03-12T18:01:32.740Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Lucknowi Chikankari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-03-12T18:02:01.118Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "Chikankari",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-03-12T18:02:12.775Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "Eid Collection",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-03-12T18:02:24.638Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Premium Cotton Kurtha set",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-03-12T18:02:48.356Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "Cotton Suit",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-03-12T18:03:03.404Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "Kurtha Set",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-03-12T18:03:12.115Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "Party Wear",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-03-12T18:03:31.153Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "21",
+    "object_repr": "Cotton Kurta set",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-03-12T18:03:41.173Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "Semi Silk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-03-12T18:09:32.191Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "Semi Silk",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-03-12T18:09:43.125Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "23",
+    "object_repr": "Semi Silk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "26",
+    "object_repr": "Mulchanderi Salwar Suit Coffee Brown",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "27",
+    "object_repr": "Zari Threadwork Cotton Schiffli Kurta",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "28",
+    "object_repr": "Saage green chanderi salwar with beautiful Zari work",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Purple chanderi salwar with beautiful Zari work",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "30",
+    "object_repr": "Lucknowi White and Black Chikankari Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "31",
+    "object_repr": "Lucknowi Black and White Chikankari Suit_B&W",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "32",
+    "object_repr": "Pink blush 3 PC Pakistani Cotton Schiffli",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "33",
+    "object_repr": "Peach Mulchanderi",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "34",
+    "object_repr": "Lime Green cotton salwar suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "35",
+    "object_repr": "Premium Cotton Ajrakh Salwar Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "36",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "37",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Yellow",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "38",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Onion",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "39",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_White",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "40",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Lavender",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "41",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Maroon",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "42",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "43",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Teal Blue",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "44",
+    "object_repr": "Purple Hand-Embroidered Kurta with Banarasi Dupatta",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "45",
+    "object_repr": "Premium Cotton Straight, Palazzo & Printed Pants – Soft & Elegant",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.382Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "46",
+    "object_repr": "Cotton Kurtha_Red",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.384Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "47",
+    "object_repr": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.384Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "48",
+    "object_repr": "Roman Silk Party Wear Kurta – Mirror Work, Premium Fabric",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.384Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "49",
+    "object_repr": "Cotton Embroidered Kurta Pant Set",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.384Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "50",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "new through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.413Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "48",
+    "object_repr": "Roman Silk Party Wear Kurta – Mirror Work, Premium Fabric",
+    "action_flag": 2,
+    "change_message": "update through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2026-03-12T18:10:32.413Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "48",
+    "object_repr": "Roman Silk Party Wear Kurta – Mirror Work, Premium Fabric",
+    "action_flag": 2,
+    "change_message": "update through import_export"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2026-03-12T18:10:44.359Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "50",
+    "object_repr": "",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2026-03-12T18:18:39.904Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit_Lavender Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit_Lavender Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit_Lavender Image\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - L\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2026-03-12T18:18:57.752Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit_Lavender Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit_Lavender Image\", \"fields\": [\"Image\"]}}, {\"changed\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit_Lavender Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2026-03-12T18:19:59.449Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2026-03-12T18:25:03.935Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - S\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2026-03-12T18:26:03.402Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - M\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2026-03-12T18:28:23.138Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "26",
+    "object_repr": "Mulchanderi Salwar Suit Coffee Brown",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit Coffee Brown Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit Coffee Brown Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Mulchanderi Salwar Suit Coffee Brown Image\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit Coffee Brown - L\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2026-03-12T18:31:37.412Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "27",
+    "object_repr": "Zari Threadwork Cotton Schiffli Kurta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Zari Threadwork Cotton Schiffli Kurta Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Zari Threadwork Cotton Schiffli Kurta Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Zari Threadwork Cotton Schiffli Kurta Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Zari Threadwork Cotton Schiffli Kurta Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2026-03-12T18:34:15.522Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "28",
+    "object_repr": "Saage green chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Description\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Saage green chanderi salwar with beautiful Zari work Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2026-03-12T18:36:05.963Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Purple chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Purple chanderi salwar with beautiful Zari work Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Purple chanderi salwar with beautiful Zari work Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Purple chanderi salwar with beautiful Zari work Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2026-03-12T18:36:22.507Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Purple chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Purple chanderi salwar with beautiful Zari work Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Purple chanderi salwar with beautiful Zari work Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Purple chanderi salwar with beautiful Zari work Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2026-03-12T18:39:59.731Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "31",
+    "object_repr": "Lucknowi Black and White Chikankari Suit_B&W",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit_B&W Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit_B&W Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit_B&W Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit_B&W Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknowi Black and White Chikankari Suit_B&W Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2026-03-12T18:45:28.881Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "32",
+    "object_repr": "Pink blush 3 PC Pakistani Cotton Schiffli",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Pink blush 3 PC Pakistani Cotton Schiffli Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Pink blush 3 PC Pakistani Cotton Schiffli Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2026-03-12T18:46:19.547Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "33",
+    "object_repr": "Peach Mulchanderi",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Peach Mulchanderi Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2026-03-12T18:46:36.744Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "30",
+    "object_repr": "Lucknowi White and Black Chikankari Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2026-03-12T19:07:18.984Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "48",
+    "object_repr": "Roman Silk Party Wear Kurta – Mirror Work, Premium Fabric",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Color\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2026-03-12T19:08:13.847Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "48",
+    "object_repr": "Roman Silk Party Wear Kurta – Mirror Work, Premium Fabric",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Roman Silk Party Wear Kurta \\u2013 Mirror Work, Premium Fabric Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Roman Silk Party Wear Kurta \\u2013 Mirror Work, Premium Fabric Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Roman Silk Party Wear Kurta \\u2013 Mirror Work, Premium Fabric Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2026-03-12T19:22:51.049Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Popular on Instagram",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2026-03-12T19:23:13.693Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Purple chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2026-03-12T19:24:01.668Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "instagram-popular",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2026-03-12T19:24:26.899Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "loved-on-swann",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2026-03-12T19:24:43.673Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Purple chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2026-03-12T19:25:22.192Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Purple chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2026-03-12T19:41:14.263Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "44",
+    "object_repr": "Purple Hand-Embroidered Kurta with Banarasi Dupatta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2026-03-12T19:41:41.622Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "44",
+    "object_repr": "Purple Hand-Embroidered Kurta with Banarasi Dupatta",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Purple Hand-Embroidered Kurta with Banarasi Dupatta Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2026-03-13T10:01:20.389Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "33",
+    "object_repr": "Peach Mulchanderi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product image\", \"object\": \"Peach Mulchanderi Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2026-03-13T10:02:41.458Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "34",
+    "object_repr": "Lime Green cotton salwar suit",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Lime Green cotton salwar suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lime Green cotton salwar suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lime Green cotton salwar suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lime Green cotton salwar suit Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2026-03-13T10:03:45.727Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "35",
+    "object_repr": "Premium Cotton Ajrakh Salwar Suit",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Premium Cotton Ajrakh Salwar Suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Premium Cotton Ajrakh Salwar Suit Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Premium Cotton Ajrakh Salwar Suit Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2026-03-13T10:06:02.033Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "36",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2026-03-13T10:06:42.323Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "37",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Yellow",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2026-03-13T10:07:16.612Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "38",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Onion",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo_Onion Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2026-03-13T10:07:38.548Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "39",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_White",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo_White Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2026-03-13T10:09:13.796Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "40",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Fabric\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Lavender Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2026-03-13T10:09:37.408Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "41",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Maroon",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Fabric\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Maroon Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2026-03-13T10:11:03.832Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "42",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Fabric\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2026-03-13T10:11:31.368Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "43",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Teal Blue",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Fabric\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Teal Blue Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2026-03-13T10:13:49.699Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "45",
+    "object_repr": "Premium Cotton Straight, Palazzo & Printed Pants – Soft & Elegant",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Premium Cotton Straight, Palazzo & Printed Pants \\u2013 Soft & Elegant Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Premium Cotton Straight, Palazzo & Printed Pants \\u2013 Soft & Elegant Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2026-03-13T10:14:13.744Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "46",
+    "object_repr": "Cotton Kurtha_Red",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\", \"Style\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Cotton Kurtha_Red Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Cotton Kurtha_Red Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2026-03-13T10:16:53.245Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "47",
+    "object_repr": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}, {\"added\": {\"name\": \"product image\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2026-03-13T10:18:09.948Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "49",
+    "object_repr": "Cotton Embroidered Kurta Pant Set",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product image\", \"object\": \"Cotton Embroidered Kurta Pant Set Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Cotton Embroidered Kurta Pant Set Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Cotton Embroidered Kurta Pant Set Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Cotton Embroidered Kurta Pant Set Image\"}}, {\"added\": {\"name\": \"product image\", \"object\": \"Cotton Embroidered Kurta Pant Set Image\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2026-03-13T10:19:24.854Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "37",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Yellow",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2026-03-13T10:35:34.832Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2026-03-13T10:50:13.774Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - L\", \"fields\": [\"Stock qty\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - S\", \"fields\": [\"Stock qty\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - M\", \"fields\": [\"Stock qty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2026-03-13T10:51:04.680Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - S\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2026-03-13T10:52:11.194Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Mulchanderi Salwar Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - XXL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit_Lavender - XXXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2026-03-13T10:56:36.055Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "26",
+    "object_repr": "Mulchanderi Salwar Suit Coffee Brown",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit Coffee Brown - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit Coffee Brown - XXL\"}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Mulchanderi Salwar Suit Coffee Brown - L\", \"fields\": [\"Stock qty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2026-03-13T10:58:30.313Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "27",
+    "object_repr": "Zari Threadwork Cotton Schiffli Kurta",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product variant\", \"object\": \"Zari Threadwork Cotton Schiffli Kurta - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Zari Threadwork Cotton Schiffli Kurta - XXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2026-03-13T10:59:41.487Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "27",
+    "object_repr": "Zari Threadwork Cotton Schiffli Kurta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2026-03-13T11:01:06.046Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "28",
+    "object_repr": "Saage green chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Saage green chanderi salwar with beautiful Zari work - XL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2026-03-13T11:02:46.963Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "29",
+    "object_repr": "Purple chanderi salwar with beautiful Zari work",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Purple chanderi salwar with beautiful Zari work - XL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2026-03-13T11:04:54.518Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "30",
+    "object_repr": "Lucknowi White and Black Chikankari Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknowi White and Black Chikankari Suit - XXL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknowi White and Black Chikankari Suit - XXXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2026-03-13T11:07:33.313Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "31",
+    "object_repr": "Lucknowi Black and White Chikankari Suit_B&W",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknowi Black and White Chikankari Suit_B&W - M\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknowi Black and White Chikankari Suit_B&W - XXL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknowi Black and White Chikankari Suit_B&W - XXXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2026-03-13T11:09:23.299Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "32",
+    "object_repr": "Pink blush 3 PC Pakistani Cotton Schiffli",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Pink blush 3 PC Pakistani Cotton Schiffli - XL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2026-03-13T11:12:28.068Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "33",
+    "object_repr": "Peach Mulchanderi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Peach Mulchanderi - M\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Peach Mulchanderi - L\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Peach Mulchanderi - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Peach Mulchanderi - XXL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Peach Mulchanderi - XXXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2026-03-13T11:14:55.503Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "34",
+    "object_repr": "Lime Green cotton salwar suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lime Green cotton salwar suit - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lime Green cotton salwar suit - XXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2026-03-13T11:17:02.977Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "35",
+    "object_repr": "Premium Cotton Ajrakh Salwar Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Cotton Ajrakh Salwar Suit - L\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Cotton Ajrakh Salwar Suit - XL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2026-03-13T11:20:21.246Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "36",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo - XXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2026-03-13T11:21:51.196Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "37",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Yellow",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo_Yellow - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo_Yellow - XXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2026-03-13T11:23:19.343Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "38",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Onion",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo_Onion - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo_Onion - XXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2026-03-13T11:25:14.117Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "39",
+    "object_repr": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_White",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Lucknow Chikankari 3-Piece Set \\u2013 Long Kurta & Palazzo_White - XL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2026-03-13T12:18:41.512Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "40",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Lavender - L\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Lavender - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Lavender - XXL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Lavender - XXXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2026-03-13T12:19:10.353Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "40",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Lavender",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Lavender - XL\", \"fields\": [\"Stock qty\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Lavender - XXL\", \"fields\": [\"Stock qty\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Lavender - XXXL\", \"fields\": [\"Stock qty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2026-03-13T12:21:25.744Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "41",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Maroon",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Maroon - XL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2026-03-13T12:23:07.108Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "42",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit - XL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2026-03-13T12:25:12.665Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "43",
+    "object_repr": "Premium Chikankari Pure Cotton 3-Piece Suit_Teal Blue",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Teal Blue - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Chikankari Pure Cotton 3-Piece Suit_Teal Blue - XXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2026-03-13T12:27:08.375Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "44",
+    "object_repr": "Purple Hand-Embroidered Kurta with Banarasi Dupatta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Purple Hand-Embroidered Kurta with Banarasi Dupatta - M\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Purple Hand-Embroidered Kurta with Banarasi Dupatta - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Purple Hand-Embroidered Kurta with Banarasi Dupatta - XXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2026-03-13T12:29:13.214Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "45",
+    "object_repr": "Premium Cotton Straight, Palazzo & Printed Pants – Soft & Elegant",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Cotton Straight, Palazzo & Printed Pants \\u2013 Soft & Elegant - M\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Cotton Straight, Palazzo & Printed Pants \\u2013 Soft & Elegant - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Premium Cotton Straight, Palazzo & Printed Pants \\u2013 Soft & Elegant - XXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2026-03-13T12:30:55.158Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "46",
+    "object_repr": "Cotton Kurtha_Red",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Cotton Kurtha_Red - M\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Cotton Kurtha_Red - L\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2026-03-13T12:34:08.649Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "47",
+    "object_repr": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing - M\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing - L\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing - XXL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing - XXXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2026-03-13T12:34:41.337Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "47",
+    "object_repr": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 196,
+  "fields": {
+    "action_time": "2026-03-13T12:37:13.630Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "48",
+    "object_repr": "Roman Silk Party Wear Kurta – Mirror Work, Premium Fabric",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Roman Silk Party Wear Kurta \\u2013 Mirror Work, Premium Fabric - XXXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 197,
+  "fields": {
+    "action_time": "2026-03-13T12:40:10.573Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "49",
+    "object_repr": "Cotton Embroidered Kurta Pant Set",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Wash care\", \"Return rules\", \"Additional information\"]}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Cotton Embroidered Kurta Pant Set - M\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Cotton Embroidered Kurta Pant Set - L\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Cotton Embroidered Kurta Pant Set - XL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Cotton Embroidered Kurta Pant Set - XXL\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Cotton Embroidered Kurta Pant Set - XXXL\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 198,
+  "fields": {
+    "action_time": "2026-03-13T14:16:24.219Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "45",
+    "object_repr": "Premium Cotton Straight, Palazzo & Printed Pants – Soft & Elegant",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 199,
+  "fields": {
+    "action_time": "2026-03-13T14:17:20.725Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "46",
+    "object_repr": "Cotton Kurtha Red Umbrella Kurta",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 200,
+  "fields": {
+    "action_time": "2026-03-13T18:09:51.203Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "48",
+    "object_repr": "Roman Silk Party Wear Kurta – Mirror Work, Premium Fabric",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 201,
+  "fields": {
+    "action_time": "2026-03-13T19:27:11.001Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "47",
+    "object_repr": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product image\", \"object\": \"Viscose Rayon Kurti with Palazzo Pant \\u2013 Floral Embroidery & Lace Detailing Image\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$vPVsfg5XLPhwA3tfuMEEiH$MiM1RnpLi25C8K4GX3CCYgJOhsFLho55OsgoWauT9U0=",
+    "last_login": "2026-03-13T19:23:45.557Z",
+    "is_superuser": true,
+    "username": "neeraj",
+    "first_name": "",
+    "last_name": "",
+    "email": "neeraj@swann.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-11T21:18:36.852Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dupq9mcyasi7rmgm6y46bu2jvg28s4em",
+  "fields": {
+    "session_data": ".eJxVjsFSxCAQRP8l13WpgRACOXr35p0amMFEY0gF1ovlv8uWsUqP06-7pz87j7c6-1vhwy_UTZ3sHv5qAeMbb3dAr7i9ZBHzVo8liLtFnLSIp0y8Pp7efwUzlrmlDfU6EOmECUEFnZzp5ahsskgyEZugpELDjoYGDHFkhEEpa2PUA2ErzXX3H3wsaeG2J-Fa-Efc57xx-3FxcnQwGgPOwBlYsVRfeKuNK1DmCv1Vymclpx4mGMXgBm31BdrxG8Fa-X2vpZvg6xsSFVqu:1w0Rgo:J7rvNxOt46MB8u5p-3hz1hDgTe1KMGGqDfe4sg8-oC0",
+    "expire_date": "2026-03-25T22:06:02.937Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l8hzaceia66fwfpu49xky0bonteddvtv",
+  "fields": {
+    "session_data": ".eJxVjsFSxCAQRP8l13WpgcAQOHr35p2awGCiMaQC68Xy382WsUqv_fr1zGcX6NamcKu8hzl1vpPdw99spPjG6x2kV1pfiohlbfs8intFnLSKp5J4eTy7_wYmqtNhk4mgKMVoNDCh1kNvUnLOWssD9nHMwKhyosFZh5mzGiFbqXMCMDjYY7S0LXzwPueZj38yLZV_wm0qKx83Lk5aBxYRHMIpLFRbqLy2gytQeIX-Kvtn6by2vh-E0dKguwB4-FWoNX7fWu08fH0DuyhaHw:1w18UN:HRYEXmou81inCwJ2X0jiiI49ndJLaAYHmS-oDgp72ns",
+    "expire_date": "2026-03-27T19:48:03.668Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 12,
+  "fields": {
+    "name": "Mulchanderi Suit",
+    "slug": "mulchanderi-suit",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:00:54.994Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 13,
+  "fields": {
+    "name": "Premium Cotton Salwar",
+    "slug": "premium-cotton-salwar",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:01:06.178Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 14,
+  "fields": {
+    "name": "Lucknowi Chikankari",
+    "slug": "lucknowi-chikankari",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:01:32.734Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 15,
+  "fields": {
+    "name": "Chikankari",
+    "slug": "chikankari",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:02:01.113Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 16,
+  "fields": {
+    "name": "Eid Collection",
+    "slug": "eid-collection",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:02:12.770Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 17,
+  "fields": {
+    "name": "Premium Cotton Kurtha set",
+    "slug": "premium-cotton-kurtha-set",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:02:24.632Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 18,
+  "fields": {
+    "name": "Cotton Suit",
+    "slug": "cotton-suit",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:02:48.351Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 19,
+  "fields": {
+    "name": "Kurtha Set",
+    "slug": "kurtha-set",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:03:03.397Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 20,
+  "fields": {
+    "name": "Party Wear",
+    "slug": "party-wear",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:03:12.110Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 21,
+  "fields": {
+    "name": "Cotton Kurta set",
+    "slug": "cotton-kurta-set",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:03:31.146Z"
+  }
+},
+{
+  "model": "core.category",
+  "pk": 23,
+  "fields": {
+    "name": "Semi Silk",
+    "slug": "semi-silk",
+    "image": "",
+    "icon": "",
+    "is_active": true,
+    "created_at": "2026-03-12T18:09:43.118Z"
+  }
+},
+{
+  "model": "core.producttag",
+  "pk": 1,
+  "fields": {
+    "name": "instagram-popular",
+    "slug": "popular-on-instagram",
+    "is_active": true,
+    "created_at": "2026-03-12T19:22:51.041Z"
+  }
+},
+{
+  "model": "core.producttag",
+  "pk": 2,
+  "fields": {
+    "name": "loved-on-swann",
+    "slug": "loved-on-swann",
+    "is_active": true,
+    "created_at": "2026-03-12T19:24:26.892Z"
+  }
+},
+{
+  "model": "core.product",
+  "pk": 25,
+  "fields": {
+    "category": 12,
+    "title": "Mulchanderi Salwar Suit_Lavender",
+    "slug": "mulchanderi-salwar-suit_lavender",
+    "description": "Elegant and graceful Mul Chanderi salwar suit designed for a classy and sophisticated look 💛\r\n🌿 Soft & lightweight Mul Chanderi fabric\r\n✨ Hand embroidery with sequin detailed yoke\r\n🤍 Crochet lace detailed neck & sleeves\r\n🎀 Beautiful gathering detailing\r\n👗 Flattering A-line pattern\r\n🧵 Comes with comfortable lining\r\nPerfect for festive wear, small functions, office wear & special occasions 🌸\r\nStylish, breathable and super comfortable for all-day wear",
+    "fabric": "Mulchanderi",
+    "length": "Calf",
+    "style": "Hand Emb + Sequin Yoke, Crochet Lace N&S, Gathering Detail, A-Line, With Lining",
+    "color": "Lavender",
+    "wash_care": "",
+    "return_rules": "",
+    "additional_information": "",
+    "price": "155.00",
+    "discount_price": "110.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.175Z",
+    "updated_at": "2026-03-13T10:52:11.187Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 26,
+  "fields": {
+    "category": 12,
+    "title": "Mulchanderi Salwar Suit Coffee Brown",
+    "slug": "mulchanderi-salwar-suit-coffee-brown",
+    "description": "Elegant and graceful Mul Chanderi salwar suit designed for a classy and sophisticated look 💛\r\n🌿 Soft & lightweight Mul Chanderi fabric\r\n✨ Hand embroidery with sequin detailed yoke\r\n🤍 Crochet lace detailed neck & sleeves\r\n🎀 Beautiful gathering detailing\r\n👗 Flattering A-line pattern\r\n🧵 Comes with comfortable lining\r\nPerfect for festive wear, small functions, office wear & special occasions 🌸\r\nStylish, breathable and super comfortable for all-day wear",
+    "fabric": "Mulchanderi",
+    "length": "Calf",
+    "style": "Hand Emb + Sequin Yoke, Crochet Lace N&S, Gathering Detail, A-Line, With Lining",
+    "color": "Coffee Brown",
+    "wash_care": "\"Gentle hand wash separately\r\n* Use mild detergent\r\n* Do not bleach\r\n* Do not soak for long\r\n* Dry in shade\r\n* Low heat iron (inside out)\r\n* Dry clean recommended for first wash\"",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "",
+    "price": "155.00",
+    "discount_price": "110.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.181Z",
+    "updated_at": "2026-03-13T10:56:36.047Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 27,
+  "fields": {
+    "category": 13,
+    "title": "Zari Threadwork Cotton Schiffli Kurta",
+    "slug": "zari-threadwork-cotton-schiffli-kurta",
+    "description": "Cotton Schiffli Kurta Set ✨\r\nA beautiful blend of elegance and comfort 💛\r\n🌿 Premium cotton Schiffli kurta\r\n✨ Delicate zari threadwork detailing\r\n👖 Solid matching pants\r\n🤍 Lace bordered dupatta for a graceful finish\r\nSoft, breathable & perfect for daily wear, office wear, small functions and festive occasions 🌸\r\nLightweight, classy and easy to carry all day long.",
+    "fabric": "Cotton schiffli",
+    "length": "Calf",
+    "style": "Straight-cut kurtha set",
+    "color": "Green",
+    "wash_care": "\"Gentle hand wash separately\r\n* Use mild detergent\r\n* Do not bleach\r\n* Do not soak for long\r\n* Dry in shade\r\n* Low heat iron (inside out)\r\n* Dry clean recommended for first wash\"",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : V",
+    "price": "175.00",
+    "discount_price": "155.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.185Z",
+    "updated_at": "2026-03-13T10:59:41.478Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 28,
+  "fields": {
+    "category": 12,
+    "title": "Saage green chanderi salwar with beautiful Zari work",
+    "slug": "saage-green-chanderi-salwar-with",
+    "description": "Sage Green Chanderi Salwar Suit ✨\r\nExperience elegance and comfort with this beautiful sage green Mul Chanderi salwar suit 💚\r\n🌿 Premium Mul Chanderi Fabric – soft, lightweight, and breathable\r\n✨ Hand-Embroidered Detailing – adds a delicate and luxurious touch\r\n👗 Flattering A-Line Silhouette – drapes gracefully on all body types\r\n🤍 Coordinated Salwar – ensures comfort and ease of movement\r\n🎀 Perfect for Festive & Casual Occasions – ideal for traditional gatherings, office functions, and celebrations\r\nA timeless ethnic ensemble that blends sophistication with everyday wearability.",
+    "fabric": "Chanderi Silk",
+    "length": "Calf",
+    "style": "Ethnic and Traditional Wear",
+    "color": "Green",
+    "wash_care": "\"Gentle hand wash separately\r\n* Use mild detergent\r\n* Do not bleach\r\n* Do not soak for long\r\n* Dry in shade\r\n* Low heat iron (inside out)\r\n* Dry clean recommended for first wash\"",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : V",
+    "price": "140.00",
+    "discount_price": "105.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.187Z",
+    "updated_at": "2026-03-13T11:01:06.040Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 29,
+  "fields": {
+    "category": 12,
+    "title": "Purple chanderi salwar with beautiful Zari work",
+    "slug": "purple-chanderi-salwar-with-beautiful-zari-work",
+    "description": "Purple Chanderi Salwar Suit ✨\r\nExperience elegance and comfort with this beautiful sage green Mul Chanderi salwar suit 💚\r\n🌿 Premium Mul Chanderi Fabric – soft, lightweight, and breathable\r\n✨ Hand-Embroidered Detailing – adds a delicate and luxurious touch\r\n👗 Flattering A-Line Silhouette – drapes gracefully on all body types\r\n🤍 Coordinated Salwar – ensures comfort and ease of movement\r\n🎀 Perfect for Festive & Casual Occasions – ideal for traditional gatherings, office functions, and celebrations\r\nA timeless ethnic ensemble that blends sophistication with everyday wearability.",
+    "fabric": "Chanderi Silk",
+    "length": "Calf",
+    "style": "Ethnic and Traditional Wear",
+    "color": "Purple",
+    "wash_care": "\"Gentle hand wash separately\r\n* Use mild detergent\r\n* Do not bleach\r\n* Do not soak for long\r\n* Dry in shade\r\n* Low heat iron (inside out)\r\n* Dry clean recommended for first wash\"",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : V",
+    "price": "140.00",
+    "discount_price": "105.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.190Z",
+    "updated_at": "2026-03-13T11:02:46.958Z",
+    "tags": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "core.product",
+  "pk": 30,
+  "fields": {
+    "category": 14,
+    "title": "Lucknowi White and Black Chikankari Suit",
+    "slug": "lucknowi-white-and-black-chikankari-suit",
+    "description": "Elegant, soft, and hand-crafted for a timeless look 🤍🖤\r\n🌿 Premium Modal Fabric – soft, breathable & luxurious\r\n✨ Hand-Embroidered Chikankari Work – intricate and classic\r\n👗 Coordinated Kurti Set – stylish and comfortable\r\n🎀 Flattering Silhouette – perfect for daily wear, office, or festive occasions\r\nShort form:\r\nPremium White & Black Modal ✨ Hand-Embroidered Chikankari Kurti Set",
+    "fabric": "Premium Modal",
+    "length": "Calf",
+    "style": "Modal Nyra cut kurthi",
+    "color": "White and Black",
+    "wash_care": "\"Gentle hand wash separately\r\n* Use mild detergent\r\n* Do not bleach\r\n* Do not soak for long\r\n* Dry in shade\r\n* Low heat iron (inside out)\r\n* Dry clean recommended for first wash\"",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "155.00",
+    "discount_price": "115.00",
+    "is_active": false,
+    "created_at": "2026-03-12T18:10:32.193Z",
+    "updated_at": "2026-03-13T11:04:54.511Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 31,
+  "fields": {
+    "category": 14,
+    "title": "Lucknowi Black and White Chikankari Suit_B&W",
+    "slug": "lucknowi-black-and-white-chikankari-suit_bw",
+    "description": "Elegant Black & White Chikankari 3-Piece Suit crafted from soft, breathable rayon fabric. Features delicate hand embroidery on a straight cut kurta, paired with comfortable bottoms and a matching dupatta. Lightweight, stylish, and perfect for festive occasions or casual gatherings.",
+    "fabric": "Rayon",
+    "length": "Calf",
+    "style": "Straight Cut Kurta • Matching Bottoms • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "Black and White",
+    "wash_care": "\"Gentle hand wash separately\r\n* Use mild detergent\r\n* Do not bleach\r\n* Do not soak for long\r\n* Dry in shade\r\n* Low heat iron (inside out)\r\n* Dry clean recommended for first wash\"",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "155.00",
+    "discount_price": "115.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.196Z",
+    "updated_at": "2026-03-13T11:07:33.307Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 32,
+  "fields": {
+    "category": 13,
+    "title": "Pink blush 3 PC Pakistani Cotton Schiffli",
+    "slug": "pink-blush-3-pc-pakistani-cotton-schiffli",
+    "description": "Elegant Pink Blush Pakistani Schiffli Kurta Set with Dupatta.\r\nFeaturing delicate Schiffli embroidery, this pastel outfit offers a soft, graceful, and classy festive look",
+    "fabric": "Cotton schiffli",
+    "length": "Short",
+    "style": "A - line",
+    "color": "White and Pink",
+    "wash_care": "\"Gentle hand wash separately\r\n* Use mild detergent\r\n* Do not bleach\r\n* Do not soak for long\r\n* Dry in shade\r\n* Low heat iron (inside out)\r\n* Dry clean recommended for first wash\"",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : V",
+    "price": "170.00",
+    "discount_price": "125.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.201Z",
+    "updated_at": "2026-03-13T11:09:23.291Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 33,
+  "fields": {
+    "category": 12,
+    "title": "Peach Mulchanderi",
+    "slug": "peach-mulchanderi",
+    "description": "Elegant Peach Mul Chanderi Salwar Suit made from soft and lightweight fabric for all-day comfort. The beautiful pastel shade gives a graceful and classy ethnic look, perfect for festive occasions and gatherings",
+    "fabric": "Premium Mulchanderi",
+    "length": "Calf",
+    "style": "A - line straight cut",
+    "color": "Peach",
+    "wash_care": "\"Gentle hand wash separately\r\n* Use mild detergent\r\n* Do not bleach\r\n* Do not soak for long\r\n* Dry in shade\r\n* Low heat iron (inside out)\r\n* Dry clean recommended for first wash\"",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : V",
+    "price": "170.00",
+    "discount_price": "115.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.204Z",
+    "updated_at": "2026-03-13T11:12:28.061Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 34,
+  "fields": {
+    "category": 13,
+    "title": "Lime Green cotton salwar suit",
+    "slug": "lime-green-cotton-salwar-suit",
+    "description": "Fresh and vibrant Lime Green Mul Cotton Salwar Suit crafted from soft, breathable fabric. Perfect for casual outings or festive occasions, its lightweight and comfortable design adds a cheerful and graceful touch to your ethnic wardrobe",
+    "fabric": "Premium Cotton",
+    "length": "42-46 inch",
+    "style": "Straight Cut • Comfortable • Casual & Festive • Pastel Bright",
+    "color": "Lime Green",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "165.00",
+    "discount_price": "105.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.207Z",
+    "updated_at": "2026-03-13T11:14:55.499Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 35,
+  "fields": {
+    "category": 13,
+    "title": "Premium Cotton Ajrakh Salwar Suit",
+    "slug": "premium-cotton-ajrakh-salwar-suit",
+    "description": "Experience the charm of traditional prints with this Premium Cotton Ajrakh Salwar Suit. Made from soft, breathable cotton, it combines comfort with timeless ethnic elegance—perfect for festive occasions, casual wear, or day-to-day style",
+    "fabric": "Premium Cotton",
+    "length": "46 inch",
+    "style": "Straight Cut • Comfortable • Traditional • Festive & Casual",
+    "color": "Indigo Blue",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "185.00",
+    "discount_price": "140.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.214Z",
+    "updated_at": "2026-03-13T11:17:02.969Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 36,
+  "fields": {
+    "category": 15,
+    "title": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo",
+    "slug": "lucknow-chikankari-3-piece-set-long-kurta-palazzo",
+    "description": "Graceful Lucknow Chikankari 3-Piece Set crafted from soft, breathable rayon fabric. Features a lengthy embroidered kurta, paired with a comfortable palazzo pant and a matching dupatta. Perfect for festive occasions, casual gatherings, or stylish ethnic wear",
+    "fabric": "Rayon",
+    "length": "Calf",
+    "style": "Long Kurta • Palazzo Pant • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "Pink",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "165.00",
+    "discount_price": "120.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.217Z",
+    "updated_at": "2026-03-13T11:20:21.239Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 37,
+  "fields": {
+    "category": 15,
+    "title": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Yellow",
+    "slug": "lucknow-chikankar-long-kurta-palazzo_yellow",
+    "description": "Graceful Lucknow Chikankari 3-Piece Set crafted from soft, breathable rayon fabric. Features a lengthy embroidered kurta, paired with a comfortable palazzo pant and a matching dupatta. Perfect for festive occasions, casual gatherings, or stylish ethnic wear",
+    "fabric": "Rayon",
+    "length": "Calf",
+    "style": "Long Kurta • Palazzo Pant • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "Yellow",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "165.00",
+    "discount_price": "120.00",
+    "is_active": false,
+    "created_at": "2026-03-12T18:10:32.220Z",
+    "updated_at": "2026-03-13T11:21:51.190Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 38,
+  "fields": {
+    "category": 15,
+    "title": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_Onion",
+    "slug": "lucknow-chikankari-long-kurta-palazzo_onion",
+    "description": "Graceful Lucknow Chikankari 3-Piece Set crafted from soft, breathable rayon fabric. Features a lengthy embroidered kurta, paired with a comfortable palazzo pant and a matching dupatta. Perfect for festive occasions, casual gatherings, or stylish ethnic wear",
+    "fabric": "Rayon",
+    "length": "Calf",
+    "style": "Long Kurta • Palazzo Pant • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "Onion",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "165.00",
+    "discount_price": "120.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.222Z",
+    "updated_at": "2026-03-13T11:23:19.339Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 39,
+  "fields": {
+    "category": 15,
+    "title": "Lucknow Chikankari 3-Piece Set – Long Kurta & Palazzo_White",
+    "slug": "lucknow-chikankari-long-kurta-palazzo_white",
+    "description": "Graceful Lucknow Chikankari 3-Piece Set crafted from soft, breathable rayon fabric. Features a lengthy embroidered kurta, paired with a comfortable palazzo pant and a matching dupatta. Perfect for festive occasions, casual gatherings, or stylish ethnic wear",
+    "fabric": "Rayon",
+    "length": "Calf",
+    "style": "Long Kurta • Palazzo Pant • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "White",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "165.00",
+    "discount_price": "120.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.225Z",
+    "updated_at": "2026-03-13T11:25:14.111Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 40,
+  "fields": {
+    "category": 15,
+    "title": "Premium Chikankari Pure Cotton 3-Piece Suit_Lavender",
+    "slug": "premium-chikankari-pure-cotton-suit_lavender",
+    "description": "Elegant Premium Chikankari 3-Piece Suit crafted from pure, soft cotton fabric. Features a delicately embroidered straight cut kurta, stretchable bottoms, and a matching dupatta for a comfortable and graceful ethnic look—perfect for festive occasions or casual gatherings",
+    "fabric": "Cotton",
+    "length": "Calf",
+    "style": "Straight Cut Kurta • Stretchable Pants • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "Lavender",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "145.00",
+    "discount_price": "115.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.228Z",
+    "updated_at": "2026-03-13T12:19:10.340Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 41,
+  "fields": {
+    "category": 15,
+    "title": "Premium Chikankari Pure Cotton 3-Piece Suit_Maroon",
+    "slug": "premium-chikankari-pure-cotton-suit_maroon",
+    "description": "Elegant Premium Chikankari 3-Piece Suit crafted from pure, soft cotton fabric. Features a delicately embroidered straight cut kurta, stretchable bottoms, and a matching dupatta for a comfortable and graceful ethnic look—perfect for festive occasions or casual gatherings",
+    "fabric": "Cotton",
+    "length": "Calf",
+    "style": "Straight Cut Kurta • Stretchable Pants • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "Maroon",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "145.00",
+    "discount_price": "115.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.232Z",
+    "updated_at": "2026-03-13T12:21:25.738Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 42,
+  "fields": {
+    "category": 15,
+    "title": "Premium Chikankari Pure Cotton 3-Piece Suit",
+    "slug": "premium-chikankari-pure-cotton-3-piece-suit",
+    "description": "Elegant Premium Chikankari 3-Piece Suit crafted from pure, soft cotton fabric. Features a delicately embroidered straight cut kurta, stretchable bottoms, and a matching dupatta for a comfortable and graceful ethnic look—perfect for festive occasions or casual gatherings",
+    "fabric": "Cotton",
+    "length": "Calf",
+    "style": "Straight Cut Kurta • Stretchable Pants • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "Choclate",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "145.00",
+    "discount_price": "115.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.237Z",
+    "updated_at": "2026-03-13T12:23:07.102Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 43,
+  "fields": {
+    "category": 15,
+    "title": "Premium Chikankari Pure Cotton 3-Piece Suit_Teal Blue",
+    "slug": "premium-chikankari-pure-cotton-teal-blue",
+    "description": "Elegant Premium Chikankari 3-Piece Suit crafted from pure, soft cotton fabric. Features a delicately embroidered straight cut kurta, stretchable bottoms, and a matching dupatta for a comfortable and graceful ethnic look—perfect for festive occasions or casual gatherings",
+    "fabric": "Cotton",
+    "length": "Calf",
+    "style": "Straight Cut Kurta • Stretchable Pants • Traditional • Elegant • Lightweight & Comfortable",
+    "color": "Teal Blue",
+    "wash_care": "Hand wash recommended • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "145.00",
+    "discount_price": "115.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.240Z",
+    "updated_at": "2026-03-13T12:25:12.657Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 44,
+  "fields": {
+    "category": 16,
+    "title": "Purple Hand-Embroidered Kurta with Banarasi Dupatta",
+    "slug": "embroidered-kurta-with-banarasi-dupatta",
+    "description": "Step into elegance with this boutique-worthy purple kurta crafted from soft crushed fabric and adorned with delicate hand embroidery. Paired with a luxurious Banarasi dupatta, this set offers a sophisticated and timeless ethnic look—perfect for festive occasions, parties, or special celebrations",
+    "fabric": "Crushed Fabric",
+    "length": "46 Inch",
+    "style": "A-Line Kurta • Hand-Embroidered • Banarasi Dupatta • Elegant • Lightweight & Comfortable",
+    "color": "Purple",
+    "wash_care": "Dry clean recommended to preserve embroidery and fabric quality",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "170.00",
+    "discount_price": "110.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.244Z",
+    "updated_at": "2026-03-13T12:27:08.356Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 45,
+  "fields": {
+    "category": 17,
+    "title": "Premium Cotton Straight, Palazzo & Printed Pants – Soft & Elegant",
+    "slug": "cotton-straight-palazzo-printed-pants-soft-elegant",
+    "description": "Upgrade your wardrobe with our premium cotton pants collection. Crafted from soft, breathable fabric, these pants are perfect for both formal and casual wear. Choose from straight long pants, palazzo pants, or printed pants—all designed for comfort, elegance, and style. A premium, in-demand collection for everyday chic and festive occasions",
+    "fabric": "Cotton",
+    "length": "Calf",
+    "style": "Straight Pants • Palazzo Pants • Printed Pants • Elegant • Lightweight & Comfortable • Premium Soft Fabric",
+    "color": "Navy blue and white",
+    "wash_care": "Hand wash or gentle machine wash • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "170.00",
+    "discount_price": "100.00",
+    "is_active": false,
+    "created_at": "2026-03-12T18:10:32.247Z",
+    "updated_at": "2026-03-13T14:16:24.215Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 46,
+  "fields": {
+    "category": 18,
+    "title": "Cotton Kurtha Red Umbrella Kurta",
+    "slug": "cotton-kurtha-red",
+    "description": "Elegant Cotton Umbrella Kurta\r\nFlow into comfort and style with this long umbrella-style cotton kurta. Crafted from soft, breathable cotton, it features a flared silhouette that adds graceful movement and a flattering fit. Perfect for casual outings, festive gatherings, or office wear, this kurta combines tradition with modern elegance",
+    "fabric": "Cotton",
+    "length": "Full",
+    "style": "Long umbrella flare kurtaPerfect for: Casual, festive, or semi-formal occasionsComfortable & stylish for all-day wear",
+    "color": "Red",
+    "wash_care": "Hand wash or gentle machine wash • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : ROUND",
+    "price": "70.00",
+    "discount_price": "40.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.249Z",
+    "updated_at": "2026-03-13T14:17:20.720Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 47,
+  "fields": {
+    "category": 19,
+    "title": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "slug": "viscose-rayon-kurti-palazzo-pant-floral-embroidery",
+    "description": "Chic and elegant Viscose Rayon Kurti paired with comfortable palazzo pants. Made from premium German rayon fabric, this set features beautiful floral embroidery on the front and delicate lace detailing for a feminine, stylish look. Perfect for festive occasions, casual gatherings, or semi-formal events",
+    "fabric": "Viscose Rayon",
+    "length": "Calf",
+    "style": "Shirt Collar Kurti • Palazzo Pant • Floral Embroidery • Lace Detailing • Lightweight & Comfortable • Elegant",
+    "color": "Emerald Green",
+    "wash_care": "Hand wash or gentle machine wash • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : SHIRT COLLAR",
+    "price": "160.00",
+    "discount_price": "105.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.252Z",
+    "updated_at": "2026-03-13T19:27:10.365Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 48,
+  "fields": {
+    "category": 20,
+    "title": "Roman Silk Party Wear Kurta – Mirror Work, Premium Fabric",
+    "slug": "roman-silk-party-wear-kurta-mi",
+    "description": "Make a statement with this Roman Silk Kurta crafted from premium, heavy fabric. Featuring delicate mirror work and a simple yet elegant design, it’s perfect for parties, festive occasions, and special events. Lightweight comfort meets luxurious style in this timeless ethnic piece",
+    "fabric": "Roman Silk",
+    "length": "46 inch",
+    "style": "Straight / A-Line Kurta • Mirror Work • Premium Fabric • Elegant & Festive • Party Wear",
+    "color": "Black",
+    "wash_care": "Hand wash or gentle machine wash • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : LEAF",
+    "price": "185.00",
+    "discount_price": "110.00",
+    "is_active": false,
+    "created_at": "2026-03-12T18:10:32.254Z",
+    "updated_at": "2026-03-13T18:09:51.195Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.product",
+  "pk": 49,
+  "fields": {
+    "category": 21,
+    "title": "Cotton Embroidered Kurta Pant Set",
+    "slug": "cotton-embroidered-kurta-pant-set",
+    "description": "Elevate your style with this 100% cotton kurta pant set featuring intricate embroidery, a stylish shirt collar, and lace-detailed 3/4 sleeves. Paired with a matching pant, it’s comfortable, breathable, and perfect for casual outings, office wear, or small festive occasions",
+    "fabric": "Cotton",
+    "length": "40 Inch",
+    "style": "Blend tradition with modern elegance in this 100% cotton kurta pant set",
+    "color": "Green",
+    "wash_care": "Hand wash or gentle machine wash • Mild detergent • Do not bleach • Dry in shade • Low heat iron",
+    "return_rules": "Returns:\r\nUnboxing Video Requirement: Customers must record a clear, continuous unboxing video while opening the package. This video is mandatory to process any return, replacement, or refund request. Requests submitted without an unboxing video will not be eligible for return or refund.\r\n\r\nItems may be returned within 7 days of delivery if they meet the following conditions:\r\n\r\n1. The item is unused and in original condition\r\n2. Original packaging and tags are intact\r\n3. The item was not purchased as a final sale item\r\n4. Non-Returnable Items\r\n\r\nReturns may not be accepted for:\r\n\r\n1. Used or damaged items caused by the customer\r\n2. Items without original packaging or tags\r\n\r\nRefunds:\r\n\r\n1. Once the returned item is received and inspected, we will notify you regarding the approval of the refund.\r\nIf approved, refunds will be issued to the original payment method within a reasonable processing time.\r\nShipping fees are non-refundable unless the return is due to an incorrect or defective item.\r\n\r\n\r\nDelivery Time:\r\n\r\nOrders are usually delivered within 4–7 business days, depending on the delivery location. Delays may occur during holidays, high-volume sale periods, or due to courier issues.",
+    "additional_information": "NECK : V",
+    "price": "110.00",
+    "discount_price": "75.00",
+    "is_active": true,
+    "created_at": "2026-03-12T18:10:32.265Z",
+    "updated_at": "2026-03-13T12:40:10.566Z",
+    "tags": []
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 8,
+  "fields": {
+    "product": 25,
+    "image": "products/mulchanderi-salwar-s-8346a6.webp",
+    
+    "is_primary": true
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 9,
+  "fields": {
+    "product": 25,
+    "image": "products/mulchanderi-salwar-s-812f55.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 10,
+  "fields": {
+    "product": 25,
+    "image": "products/mulchanderi-salwar-s-0226bc.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 11,
+  "fields": {
+    "product": 26,
+    "image": "products/mulchanderi-salwar-s-f91858.webp",
+    
+    "is_primary": true
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 12,
+  "fields": {
+    "product": 26,
+    "image": "products/mulchanderi-salwar-s-7c7e09.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 13,
+  "fields": {
+    "product": 26,
+    "image": "products/mulchanderi-salwar-s-1b09e0.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 14,
+  "fields": {
+    "product": 27,
+    "image": "products/zari-threadwork-cott-30a493.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 15,
+  "fields": {
+    "product": 27,
+    "image": "products/zari-threadwork-cott-b51717.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 16,
+  "fields": {
+    "product": 27,
+    "image": "products/zari-threadwork-cott-bd4dca.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 17,
+  "fields": {
+    "product": 27,
+    "image": "products/zari-threadwork-cott-347164.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 18,
+  "fields": {
+    "product": 28,
+    "image": "products/saage-green-chanderi-97a27a.webp",
+    
+    "is_primary": true
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 19,
+  "fields": {
+    "product": 29,
+    "image": "products/purple-chanderi-salw-43f5e4.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 20,
+  "fields": {
+    "product": 29,
+    "image": "products/purple-chanderi-salw-093af4.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 21,
+  "fields": {
+    "product": 29,
+    "image": "products/purple-chanderi-salw-922cf8.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 22,
+  "fields": {
+    "product": 29,
+    "image": "products/purple-chanderi-salw-048e18.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 23,
+  "fields": {
+    "product": 29,
+    "image": "products/purple-chanderi-salw-e163f3.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 24,
+  "fields": {
+    "product": 29,
+    "image": "products/purple-chanderi-salw-4d0af2.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 25,
+  "fields": {
+    "product": 31,
+    "image": "products/lucknowi-black-and-w-7055ef.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 26,
+  "fields": {
+    "product": 31,
+    "image": "products/lucknowi-black-and-w-f3315a.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 27,
+  "fields": {
+    "product": 31,
+    "image": "products/lucknowi-black-and-w-506288.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 28,
+  "fields": {
+    "product": 31,
+    "image": "products/lucknowi-black-and-w-34e136.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 29,
+  "fields": {
+    "product": 31,
+    "image": "products/lucknowi-black-and-w-57ac2b.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 30,
+  "fields": {
+    "product": 32,
+    "image": "products/pink-blush-3-pc-paki-c4eb19.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 31,
+  "fields": {
+    "product": 32,
+    "image": "products/pink-blush-3-pc-paki-bb5dbe.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 32,
+  "fields": {
+    "product": 33,
+    "image": "products/peach-mulchanderi-8eb585.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 33,
+  "fields": {
+    "product": 48,
+    "image": "products/roman-silk-party-wea-26d5b1.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 34,
+  "fields": {
+    "product": 48,
+    "image": "products/roman-silk-party-wea-6d5001.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 35,
+  "fields": {
+    "product": 48,
+    "image": "products/roman-silk-party-wea-c9c5b4.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 36,
+  "fields": {
+    "product": 44,
+    "image": "products/embroidered-kurta-wi-ce805b.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 37,
+  "fields": {
+    "product": 34,
+    "image": "products/lime-green-cotton-sa-d2398a.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 38,
+  "fields": {
+    "product": 34,
+    "image": "products/lime-green-cotton-sa-a85f69.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 39,
+  "fields": {
+    "product": 34,
+    "image": "products/lime-green-cotton-sa-ff0fc9.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 40,
+  "fields": {
+    "product": 34,
+    "image": "products/lime-green-cotton-sa-a10070.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 41,
+  "fields": {
+    "product": 35,
+    "image": "products/premium-cotton-ajrak-9e01b5.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 42,
+  "fields": {
+    "product": 35,
+    "image": "products/premium-cotton-ajrak-f8cce6.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 43,
+  "fields": {
+    "product": 35,
+    "image": "products/premium-cotton-ajrak-885273.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 44,
+  "fields": {
+    "product": 36,
+    "image": "products/lucknow-chikankari-3-401e18.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 45,
+  "fields": {
+    "product": 38,
+    "image": "products/lucknow-chikankari-l-4132d2.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 46,
+  "fields": {
+    "product": 39,
+    "image": "products/lucknow-chikankari-l-3881a3.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 47,
+  "fields": {
+    "product": 40,
+    "image": "products/premium-chikankari-p-0592f2.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 48,
+  "fields": {
+    "product": 41,
+    "image": "products/premium-chikankari-p-a5c298.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 49,
+  "fields": {
+    "product": 42,
+    "image": "products/premium-chikankari-p-fe3d4d.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 50,
+  "fields": {
+    "product": 43,
+    "image": "products/premium-chikankari-p-a66be1.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 51,
+  "fields": {
+    "product": 45,
+    "image": "products/cotton-straight-pala-e72864.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 52,
+  "fields": {
+    "product": 45,
+    "image": "products/cotton-straight-pala-34f908.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 53,
+  "fields": {
+    "product": 46,
+    "image": "products/cotton-kurtha_red-a21e21.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 54,
+  "fields": {
+    "product": 46,
+    "image": "products/cotton-kurtha_red-a1daf7.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 55,
+  "fields": {
+    "product": 47,
+    "image": "products/viscose-rayon-kurti--7a77bc.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 56,
+  "fields": {
+    "product": 47,
+    "image": "products/viscose-rayon-kurti--f538fb.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 57,
+  "fields": {
+    "product": 47,
+    "image": "products/viscose-rayon-kurti--6f27b8.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 58,
+  "fields": {
+    "product": 47,
+    "image": "products/viscose-rayon-kurti--d5ff0d.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 59,
+  "fields": {
+    "product": 49,
+    "image": "products/cotton-embroidered-k-49829d.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 60,
+  "fields": {
+    "product": 49,
+    "image": "products/cotton-embroidered-k-4fb4b5.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 61,
+  "fields": {
+    "product": 49,
+    "image": "products/cotton-embroidered-k-8b98ff.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 62,
+  "fields": {
+    "product": 49,
+    "image": "products/cotton-embroidered-k-cc7d4b.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productimage",
+  "pk": 63,
+  "fields": {
+    "product": 49,
+    "image": "products/cotton-embroidered-k-1c05cb.webp",
+    
+    "is_primary": false
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 5,
+  "fields": {
+    "product": 25,
+    "size": "L",
+    "sku": "MSSL-L",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 7,
+  "fields": {
+    "product": 25,
+    "size": "M",
+    "sku": "MSSL-M",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 8,
+  "fields": {
+    "product": 26,
+    "size": "L",
+    "sku": "MSSB-L",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 9,
+  "fields": {
+    "product": 25,
+    "size": "XL",
+    "sku": "MSSL-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 10,
+  "fields": {
+    "product": 25,
+    "size": "XXL",
+    "sku": "MSSL-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 11,
+  "fields": {
+    "product": 25,
+    "size": "XXXL",
+    "sku": "MSSL-XXXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 12,
+  "fields": {
+    "product": 26,
+    "size": "XL",
+    "sku": "MSSB-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 13,
+  "fields": {
+    "product": 26,
+    "size": "XXL",
+    "sku": "MSSB-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 14,
+  "fields": {
+    "product": 27,
+    "size": "XL",
+    "sku": "ZTCSK-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 15,
+  "fields": {
+    "product": 27,
+    "size": "XXL",
+    "sku": "ZTCSXK",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 16,
+  "fields": {
+    "product": 28,
+    "size": "XL",
+    "sku": "SGCSWBZW-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 17,
+  "fields": {
+    "product": 29,
+    "size": "XL",
+    "sku": "PCSWBZW",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 18,
+  "fields": {
+    "product": 30,
+    "size": "XXL",
+    "sku": "LWABCS-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 19,
+  "fields": {
+    "product": 30,
+    "size": "XXXL",
+    "sku": "LWABCS-XXXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 20,
+  "fields": {
+    "product": 31,
+    "size": "M",
+    "sku": "LBAWCS-M",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 21,
+  "fields": {
+    "product": 31,
+    "size": "XXL",
+    "sku": "LBAWCS-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 22,
+  "fields": {
+    "product": 31,
+    "size": "XXXL",
+    "sku": "LBAWCS-XXXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 23,
+  "fields": {
+    "product": 32,
+    "size": "XL",
+    "sku": "PB3PCPCS-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 24,
+  "fields": {
+    "product": 33,
+    "size": "M",
+    "sku": "PM-M",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 25,
+  "fields": {
+    "product": 33,
+    "size": "L",
+    "sku": "PM-L",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 26,
+  "fields": {
+    "product": 33,
+    "size": "XL",
+    "sku": "PM-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 27,
+  "fields": {
+    "product": 33,
+    "size": "XXL",
+    "sku": "PM-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 28,
+  "fields": {
+    "product": 33,
+    "size": "XXXL",
+    "sku": "PM-XXXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 29,
+  "fields": {
+    "product": 34,
+    "size": "XL",
+    "sku": "LGCSS-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 30,
+  "fields": {
+    "product": 34,
+    "size": "XXL",
+    "sku": "LGCSS-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 31,
+  "fields": {
+    "product": 35,
+    "size": "L",
+    "sku": "PCASS-L",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 32,
+  "fields": {
+    "product": 35,
+    "size": "XL",
+    "sku": "PCASS-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 33,
+  "fields": {
+    "product": 36,
+    "size": "XL",
+    "sku": "LC3PSLKP-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 34,
+  "fields": {
+    "product": 36,
+    "size": "XXL",
+    "sku": "LC3PSLKP-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 35,
+  "fields": {
+    "product": 37,
+    "size": "XL",
+    "sku": "LC3PSLKPY-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 36,
+  "fields": {
+    "product": 37,
+    "size": "XXL",
+    "sku": "LC3PSLKPY-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 37,
+  "fields": {
+    "product": 38,
+    "size": "XL",
+    "sku": "LC3PSLKP0-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 38,
+  "fields": {
+    "product": 38,
+    "size": "XXL",
+    "sku": "LC3PSLKP0-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 39,
+  "fields": {
+    "product": 39,
+    "size": "XL",
+    "sku": "LC3PSLKPW-XL",
+    "stock_qty": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 40,
+  "fields": {
+    "product": 40,
+    "size": "L",
+    "sku": "PSPC3PSL-L",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 41,
+  "fields": {
+    "product": 40,
+    "size": "XL",
+    "sku": "PSPC3PSL-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 42,
+  "fields": {
+    "product": 40,
+    "size": "XXL",
+    "sku": "PSPC3PSL-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 43,
+  "fields": {
+    "product": 40,
+    "size": "XXXL",
+    "sku": "PSPC3PSL-XXXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 44,
+  "fields": {
+    "product": 41,
+    "size": "XL",
+    "sku": "PSPC3PSM-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 45,
+  "fields": {
+    "product": 42,
+    "size": "XL",
+    "sku": "PCPC3PS-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 46,
+  "fields": {
+    "product": 43,
+    "size": "XL",
+    "sku": "PCPC3PSTB-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 47,
+  "fields": {
+    "product": 43,
+    "size": "XXL",
+    "sku": "PCPC3PSTB-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 48,
+  "fields": {
+    "product": 44,
+    "size": "M",
+    "sku": "PHEKWBD-M",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 49,
+  "fields": {
+    "product": 44,
+    "size": "XL",
+    "sku": "PHEKWBD-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 50,
+  "fields": {
+    "product": 44,
+    "size": "XXL",
+    "sku": "PHEKWBD-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 51,
+  "fields": {
+    "product": 45,
+    "size": "M",
+    "sku": "PCSPPPSE-M",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 52,
+  "fields": {
+    "product": 45,
+    "size": "XL",
+    "sku": "PCSPPPSE-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 53,
+  "fields": {
+    "product": 45,
+    "size": "XXL",
+    "sku": "PCSPPPSE-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 54,
+  "fields": {
+    "product": 46,
+    "size": "M",
+    "sku": "CKR-M",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 55,
+  "fields": {
+    "product": 46,
+    "size": "L",
+    "sku": "CKR-L",
+    "stock_qty": 9,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 56,
+  "fields": {
+    "product": 47,
+    "size": "M",
+    "sku": "VRKWPPFELD-M",
+    "stock_qty": 9,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 57,
+  "fields": {
+    "product": 47,
+    "size": "L",
+    "sku": "VRKWPPFELD-L",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 58,
+  "fields": {
+    "product": 47,
+    "size": "XL",
+    "sku": "VRKWPPFELD-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 59,
+  "fields": {
+    "product": 47,
+    "size": "XXL",
+    "sku": "VRKWPPFELD-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 60,
+  "fields": {
+    "product": 47,
+    "size": "XXXL",
+    "sku": "VRKWPPFELD-XXXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 61,
+  "fields": {
+    "product": 48,
+    "size": "XXXL",
+    "sku": "RSPWKMWPF-XXXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 62,
+  "fields": {
+    "product": 49,
+    "size": "M",
+    "sku": "CEKPS-M",
+    "stock_qty": 6,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 63,
+  "fields": {
+    "product": 49,
+    "size": "L",
+    "sku": "CEKPS-L",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 64,
+  "fields": {
+    "product": 49,
+    "size": "XL",
+    "sku": "CEKPS-XL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 65,
+  "fields": {
+    "product": 49,
+    "size": "XXL",
+    "sku": "CEKPS-XXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.productvariant",
+  "pk": 66,
+  "fields": {
+    "product": 49,
+    "size": "XXXL",
+    "sku": "CEKPS-XXXL",
+    "stock_qty": 10,
+    "is_active": true
+  }
+},
+{
+  "model": "core.cart",
+  "pk": 1,
+  "fields": {
+    "session_key": "dupq9mcyasi7rmgm6y46bu2jvg28s4em",
+    "created_at": "2026-03-11T21:26:37.479Z"
+  }
+},
+{
+  "model": "core.cart",
+  "pk": 2,
+  "fields": {
+    "session_key": "8ra2ges1e30khorw8e3mednl6zn5wgs0",
+    "created_at": "2026-03-12T18:20:19.169Z"
+  }
+},
+{
+  "model": "core.cart",
+  "pk": 3,
+  "fields": {
+    "session_key": "l8hzaceia66fwfpu49xky0bonteddvtv",
+    "created_at": "2026-03-13T19:23:45.613Z"
+  }
+},
+{
+  "model": "core.order",
+  "pk": 2,
+  "fields": {
+    "order_number": "ORD30CA21F6",
+    "first_name": "NRJ",
+    "last_name": "neeraj",
+    "email": "nrjjpcloud@gmail.com",
+    "phone": "7907660960",
+    "area": "DG",
+    "landmark": "DFG",
+    "po_box": "DFG",
+    "emirate": "FDGDF",
+    "vat_amount": "5.50",
+    "subtotal": "155.00",
+    "product_discount": "45.00",
+    "coupon_discount": "0.00",
+    "shipping_cost": "7.50",
+    "total": "123.00",
+    "coupon_code": null,
+    "order_status": "pending",
+    "payment_method": "cod",
+    "payment_status": "pending",
+    "created_at": "2026-03-12T18:23:41.441Z"
+  }
+},
+{
+  "model": "core.order",
+  "pk": 3,
+  "fields": {
+    "order_number": "ORD30389595",
+    "first_name": "bcx",
+    "last_name": "xbc",
+    "email": "nrjjpcloud@gmail.com",
+    "phone": "7907660960",
+    "area": "saf",
+    "landmark": "fs",
+    "po_box": "afs",
+    "emirate": "fa",
+    "vat_amount": "2.00",
+    "subtotal": "70.00",
+    "product_discount": "30.00",
+    "coupon_discount": "0.00",
+    "shipping_cost": "7.50",
+    "total": "49.50",
+    "coupon_code": null,
+    "order_status": "pending",
+    "payment_method": "cod",
+    "payment_status": "pending",
+    "created_at": "2026-03-13T18:35:54.328Z"
+  }
+},
+{
+  "model": "core.order",
+  "pk": 4,
+  "fields": {
+    "order_number": "ORD857D2AB6",
+    "first_name": "NRJ",
+    "last_name": "neeraj",
+    "email": "nrjkjp@ybl",
+    "phone": "7907660960",
+    "area": "cv",
+    "landmark": "cb",
+    "po_box": "cb",
+    "emirate": "cb",
+    "vat_amount": "3.75",
+    "subtotal": "110.00",
+    "product_discount": "35.00",
+    "coupon_discount": "0.00",
+    "shipping_cost": "7.50",
+    "total": "86.25",
+    "coupon_code": null,
+    "order_status": "pending",
+    "payment_method": "cod",
+    "payment_status": "pending",
+    "created_at": "2026-03-13T19:24:46.179Z"
+  }
+},
+{
+  "model": "core.order",
+  "pk": 5,
+  "fields": {
+    "order_number": "ORDD32D4EAF",
+    "first_name": "NRJ",
+    "last_name": "Neeraj",
+    "email": "nrjjpcloud@gmail.com",
+    "phone": "7907660960",
+    "area": "ds",
+    "landmark": "fdg",
+    "po_box": "hgf",
+    "emirate": "ghfg",
+    "vat_amount": "9.00",
+    "subtotal": "270.00",
+    "product_discount": "90.00",
+    "coupon_discount": "0.00",
+    "shipping_cost": "7.50",
+    "total": "196.50",
+    "coupon_code": null,
+    "order_status": "pending",
+    "payment_method": "cod",
+    "payment_status": "pending",
+    "created_at": "2026-03-13T19:46:47.968Z"
+  }
+},
+{
+  "model": "core.order",
+  "pk": 6,
+  "fields": {
+    "order_number": "ORD102774F2",
+    "first_name": " vc",
+    "last_name": "c",
+    "email": "nrjjpcloud@gmail.com",
+    "phone": "7907660960",
+    "area": "cvn",
+    "landmark": "nvc",
+    "po_box": "vcn",
+    "emirate": "vnc",
+    "vat_amount": "7.50",
+    "subtotal": "220.00",
+    "product_discount": "70.00",
+    "coupon_discount": "0.00",
+    "shipping_cost": "7.50",
+    "total": "165.00",
+    "coupon_code": null,
+    "order_status": "pending",
+    "payment_method": "cod",
+    "payment_status": "pending",
+    "created_at": "2026-03-13T19:48:03.586Z"
+  }
+},
+{
+  "model": "core.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 2,
+    "product": 25,
+    "variant": 5,
+    "product_title": "Mulchanderi Salwar Suit_Lavender",
+    "sku": "MSSL-L",
+    "size": "L",
+    "price": "110.00",
+    "quantity": 1,
+    "line_total": "110.00"
+  }
+},
+{
+  "model": "core.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 3,
+    "product": 46,
+    "variant": 55,
+    "product_title": "Cotton Kurtha Red Umbrella Kurta",
+    "sku": "CKR-L",
+    "size": "L",
+    "price": "40.00",
+    "quantity": 1,
+    "line_total": "40.00"
+  }
+},
+{
+  "model": "core.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 4,
+    "product": 49,
+    "variant": 62,
+    "product_title": "Cotton Embroidered Kurta Pant Set",
+    "sku": "CEKPS-M",
+    "size": "M",
+    "price": "75.00",
+    "quantity": 1,
+    "line_total": "75.00"
+  }
+},
+{
+  "model": "core.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 5,
+    "product": 49,
+    "variant": 62,
+    "product_title": "Cotton Embroidered Kurta Pant Set",
+    "sku": "CEKPS-M",
+    "size": "M",
+    "price": "75.00",
+    "quantity": 1,
+    "line_total": "75.00"
+  }
+},
+{
+  "model": "core.orderitem",
+  "pk": 6,
+  "fields": {
+    "order": 5,
+    "product": 47,
+    "variant": 56,
+    "product_title": "Viscose Rayon Kurti with Palazzo Pant – Floral Embroidery & Lace Detailing",
+    "sku": "VRKWPPFELD-M",
+    "size": "M",
+    "price": "105.00",
+    "quantity": 1,
+    "line_total": "105.00"
+  }
+},
+{
+  "model": "core.orderitem",
+  "pk": 7,
+  "fields": {
+    "order": 6,
+    "product": 49,
+    "variant": 62,
+    "product_title": "Cotton Embroidered Kurta Pant Set",
+    "sku": "CEKPS-M",
+    "size": "M",
+    "price": "75.00",
+    "quantity": 2,
+    "line_total": "150.00"
+  }
+},
+{
+  "model": "core.contactmessage",
+  "pk": 1,
+  "fields": {
+    "name": "Swann",
+    "email": "swann.developer@gmail.com",
+    "phone": "7907660960",
+    "message": "xcgxg",
+    "created_at": "2026-03-11T22:10:01.356Z",
+    "is_read": false
+  }
+},
+{
+  "model": "core.contactmessage",
+  "pk": 2,
+  "fields": {
+    "name": "Swann",
+    "email": "swann.developer@gmail.com",
+    "phone": "7907660960",
+    "message": "xcgxg",
+    "created_at": "2026-03-11T22:10:06.667Z",
+    "is_read": false
+  }
+}
+]
