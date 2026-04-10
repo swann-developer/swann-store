@@ -226,6 +226,7 @@ html, body {
    display: flex;
    flex-direction: column;
    height: 100%;
+   border: 1px solid #788312;
 }
 
 .product-card:hover {
@@ -1223,8 +1224,6 @@ html, body {
 /* Featured Products Section Enhancement */
 .featured-products {
    position: relative;
-   padding-left: 0 !important;
-   padding-right: 0 !important;
    border-top: 1px solid #eee;
    z-index: 1;
 }
@@ -1245,7 +1244,6 @@ html, body {
 }
 
 .price-under-tab {
-   background: rgba(120, 131, 18, 0.05); /* Very light version of your theme color */
    padding: 20px;
    border-radius: 15px;
    margin-bottom: 20px;
@@ -1253,6 +1251,7 @@ html, body {
 }
 
 .price-under-tab .nav-link {
+   margin-bottom: 0;
    border: 1px solid #788312;
    color: #788312;
    background: rgba(255,255,255,0.9);
@@ -1307,7 +1306,7 @@ html, body {
       font-size: 0.7rem;
    }
    .new-price {
-      font-size: 1rem;
+      font-size: 1.2rem;
    }
    .pricing {
       flex-direction: column;
@@ -1468,12 +1467,12 @@ font-size:0.75rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
    .price-under-tab .nav-item {
-      flex: 0 0 auto;
+      flex: 0 0 100%;
    }
 
    .price-under-tab .nav-tabs {
    display: flex;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
    overflow-x: auto;
    overflow-y: hidden;
    width: 100%;

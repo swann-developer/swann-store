@@ -1245,7 +1245,6 @@ html, body {
 }
 
 .price-under-tab {
-   background: rgba(120, 131, 18, 0.05); /* Very light version of your theme color */
    padding: 20px;
    border-radius: 15px;
    margin-bottom: 20px;
@@ -1468,12 +1467,12 @@ font-size:0.75rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
    .price-under-tab .nav-item {
-      flex: 0 0 auto;
+      flex: 0 0 100%;
    }
 
    .price-under-tab .nav-tabs {
    display: flex;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
    overflow-x: auto;
    overflow-y: hidden;
    width: 100%;

@@ -103,9 +103,9 @@ Shop Women's Fashion Online | Swann UAE
          </div>
       </div>
 
-      <div class="row mt-5">
+      <div class="row g-3 mt-5">
          {% for product in page_obj %}
-         <div class="col-lg-3 col-6">
+         <div class="col-lg-3">
             <div class="product-card shadow-sm">
                {% if product.category %}
 <a href="{% url 'product_detail' product.category.slug product.slug %}">
@@ -195,8 +195,8 @@ Shop Women's Fashion Online | Swann UAE
             {% endif %}
 
             {% for num in page_obj.paginator.page_range %}
-            <li class="page-item {% if page_obj.number == num %}active{% endif %}">
-               <a class="page-link"
+            <li class="page-item">
+               <a class="page-link {% if page_obj.number == num %}active{% endif %}"
                   href="?page={{ num }}{% if current_category %}&category={{ current_category }}{% endif %}{% if current_sort %}&sort={{ current_sort }}{% endif %}">
                   {{ num }}
                </a>

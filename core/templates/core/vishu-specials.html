@@ -72,9 +72,9 @@ Shop Women's Fashion Online | Swann UAE
                               aria-labelledby="f-tab1"
                            >
                               <div class="p-3">
-                                 <div class="row mt-5">
+                                 <div class="row g-3 mt-5">
                                      {% for product in under_100 %}
-                                         <div class="col-lg-3 col-6">
+                                         <div class="col-lg-3">
                                              <div class="product-card shadow-sm">
 
                                                  <a href="{% url 'product_detail' product.category.slug product.slug %}">
@@ -82,7 +82,7 @@ Shop Women's Fashion Online | Swann UAE
                                                      <div class="image-wrapper">
                                                          {% with product.images.first as img %}
                                                              {% if img %}
-                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" %}
+                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" class="product-img default-img img-fluid" %}
                                                              {% endif %}
                                                          {% endwith %}
                                                      </div>
@@ -109,7 +109,7 @@ Shop Women's Fashion Online | Swann UAE
                               role="tabpanel"
                               aria-labelledby="f-tab2"
                            >
-                              <div class="row mt-5">
+                              <div class="row g-3 mt-5">
                                      {% for product in combo %}
                                          <div class="col-lg-3 col-6">
                                              <div class="product-card shadow-sm">
@@ -119,7 +119,7 @@ Shop Women's Fashion Online | Swann UAE
                                                      <div class="image-wrapper">
                                                          {% with product.images.first as img %}
                                                              {% if img %}
-                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" %}
+                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" class="product-img default-img img-fluid" %}
                                                              {% endif %}
                                                          {% endwith %}
                                                      </div>
@@ -145,7 +145,7 @@ Shop Women's Fashion Online | Swann UAE
                               role="tabpanel"
                               aria-labelledby="f-tab3"
                            >
-                              <div class="row mt-5">
+                              <div class="row g-3 mt-5">
                                      {% for product in best_selling %}
                                          <div class="col-lg-3 col-6">
                                              <div class="product-card shadow-sm">
@@ -155,7 +155,7 @@ Shop Women's Fashion Online | Swann UAE
                                                      <div class="image-wrapper">
                                                          {% with product.images.first as img %}
                                                              {% if img %}
-                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" %}
+                                                                 {% cloudinary img.image.public_id width=400 height=400 crop="fill" quality="auto" fetch_format="auto" class="product-img default-img img-fluid" %}
                                                              {% endif %}
                                                          {% endwith %}
                                                      </div>
@@ -201,8 +201,8 @@ Shop Women's Fashion Online | Swann UAE
                {% endif %}
 
                {% for num in page_obj.paginator.page_range %}
-               <li class="page-item {% if page_obj.number == num %}active{% endif %}">
-                  <a class="page-link"
+               <li class="page-item">
+                  <a class="page-link {% if page_obj.number == num %}active{% endif %}"
                      href="?page={{ num }}{% if current_category %}&category={{ current_category }}{% endif %}{% if current_sort %}&sort={{ current_sort }}{% endif %}">
                      {{ num }}
                   </a>
