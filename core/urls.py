@@ -17,13 +17,14 @@ contact,
 search_suggestions,
 update_cart_quantity,
 home,
-vishu_specials,
+
 )
 from .views import stripe_webhook, run_retry_payments, payment_cancel
 urlpatterns = [
     # product listing
-    path("home-2/", home, name="home"),
-    path("", product_list, name="product_list"),
+    # path("", vishu_specials, name="vishu_specials"),
+    path("home/", home, name="home"),
+    path("shop/", product_list, name="product_list"),
     path("products/<slug:category_slug>/", product_list, name="product_list_by_category"),
 
     # product detail (SEO friendly)
@@ -52,5 +53,5 @@ urlpatterns = [
     path("stripe/webhook/", stripe_webhook, name="stripe_webhook"),
     path("cron/retry-payments/", run_retry_payments),
     path("payment-cancel/<int:order_id>/", payment_cancel, name="payment_cancel"),
-    path("vishu/", vishu_specials, name="vishu_specials"),
+    
 ]

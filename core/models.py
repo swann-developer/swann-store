@@ -131,7 +131,7 @@ class ProductImage(models.Model):
         elif self.is_primary:
             self.product.images.exclude(pk=self.pk).update(is_primary=False)
 
-    class Meta:   # ✅ NOW CORRECT
+    class Meta:
         constraints = [
             models.UniqueConstraint(
                 fields=["product"],

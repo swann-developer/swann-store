@@ -323,7 +323,7 @@ def checkout_view(request):
 
     shipping = Decimal("7.50")
 
-    # ✅ VAT AFTER SHIPPING
+    #  VAT AFTER SHIPPING
     vat = (taxable_amount + shipping) * Decimal("0.05")
 
     grand_total = taxable_amount + shipping + vat
@@ -525,7 +525,7 @@ def place_order(request):
 
     shipping = Decimal("7.50")
 
-    # ✅ VAT AFTER SHIPPING
+    #  VAT AFTER SHIPPING
     vat = (taxable + shipping) * Decimal("0.05")
 
     grand_total = taxable + shipping + vat
@@ -633,7 +633,7 @@ def place_order(request):
             "quantity": quantity,
         })
 
-    # ✅ ADD SHIPPING AS LINE ITEM
+    #  ADD SHIPPING AS LINE ITEM
     if shipping > 0:
         line_items.append({
             "price_data": {
@@ -646,7 +646,7 @@ def place_order(request):
             "quantity": 1,
         })
 
-    # ✅ ADD VAT AS LINE ITEM
+    #  ADD VAT AS LINE ITEM
     if vat > 0:
         line_items.append({
             "price_data": {
@@ -707,7 +707,7 @@ def order_success(request, order_id):
 
     order = get_object_or_404(Order, id=order_id)
 
-    # ✅ FIX: ensure payment status is updated (fallback if webhook is slow)
+    #  FIX: ensure payment status is updated (fallback if webhook is slow)
     if order.payment_method == "online" and order.payment_status != "paid" and order.stripe_session_id:
         try:
             stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -729,7 +729,7 @@ def order_success(request, order_id):
     request.session["otp_verified"] = False
     request.session.pop("otp_phone", None)
 
-    # ✅ clear cart after success (correct place)
+    #  clear cart after success (correct place)
     cart = get_or_create_cart(request)
     CartItem.objects.filter(cart=cart).delete()
 
@@ -901,7 +901,7 @@ def stripe_webhook(request):
     except Exception:
         return HttpResponse(status=400)
 
-    # ✅ PAYMENT SUCCESS
+    #  PAYMENT SUCCESS
     if event["type"] == "checkout.session.completed":
 
         session = event["data"]["object"]
@@ -923,8 +923,8 @@ def stripe_webhook(request):
         order.order_status = "confirmed"
         order.save()
 
-        # ✅ clear cart AFTER payment success
-        # ✅ clear only current user's cart
+        #  clear cart AFTER payment success
+        #  clear only current user's cart
         cart = None
 
         # try to find cart via session (if available)
@@ -936,7 +936,7 @@ def stripe_webhook(request):
 
         if cart:
             CartItem.objects.filter(cart=cart).delete()
-        # ✅ SEND EMAIL
+        #  SEND EMAIL
         subject = f"Order Confirmed - {order.order_number}"
 
         message = f"""
@@ -988,7 +988,7 @@ def stripe_webhook(request):
             order.payment_status = "failed"
             order.save()
 
-            # ✅ RESTORE STOCK
+            #  RESTORE STOCK
             for item in order.orderitem_set.all():
                 item.variant.stock_qty = F("stock_qty") + item.quantity
                 item.variant.save()
@@ -1025,9 +1025,13 @@ def payment_cancel(request, order_id):
 
 
 def home(request):
-    banners = HeroBanner.objects.filter(is_active=True)
-    categories = Category.objects.filter(is_active=True)[:8]
-    announcement = AnnouncementBar.objects.filter(is_active=True).first()
+    products = (
+        Product.objects
+        .filter(is_active=True)
+        .prefetch_related("images", "tags", "category")
+        .order_by("display_order", "id")
+        .distinct()
+    )
     collections = CProduct.objects.filter(is_active=True).select_related("product__category").prefetch_related("product__images")
 
     # attach optimized URLs
@@ -1043,18 +1047,12 @@ def home(request):
                 fetch_format="auto",
                 dpr="auto"
             )
+    categories = Category.objects.all()
+    new_arrivals = products.filter(tags__slug="new-arrivals")
 
-    for banner in banners:
-        banner.image_url = cl_image(
-            banner.image.public_id,
-            width=1400,
-            crop="scale",
-            quality="auto:good",
-            fetch_format="auto",
-            dpr="auto"
-        )
-
-        # ✅ categories
+    paginator = Paginator(new_arrivals, 8)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
     for category in categories:
         if category.image:
             category.image_url = cl_image(
@@ -1069,34 +1067,13 @@ def home(request):
         else:
             category.image_url = None
 
-            
-    return render(request, "core/home.html", {
-        "banners": banners,
-        "categories": categories,
-        "announcement": announcement,
-        "collections": collections,
-    })
-
-def vishu_specials(request):
-    products = (
-        Product.objects
-        .filter(is_active=True)
-        .prefetch_related("images", "tags", "category")
-        .order_by("display_order", "id")
-        .distinct()
-    )
-
-    under_100_qs = products.filter(tags__slug="vishu-under100")
-
-    paginator = Paginator(under_100_qs, 8)
-    page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
-
     context = {
-        "under_100": page_obj,
-        "combo": products.filter(tags__slug="vishu-combo")[:8],
-        "best_selling": products.filter(tags__slug="best-selling-vishu")[:8],
+        "new_arrivals": page_obj,
+        "combo": products.filter(tags__slug="combo")[:8],
+        "offers": products.filter(tags__slug="offers")[:8],
         "page_obj": page_obj,
+        "categories": categories,
+        "collections": collections,
     }
 
-    return render(request, "core/vishu-specials.html", context)
+    return render(request, "core/home.html", context)
