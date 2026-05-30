@@ -719,22 +719,3 @@ $(document).ready(function () {
       }
    });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("toggleProductsBtn");
-    const wrapper = document.getElementById("limitedStockWrapper");
-
-    if (!btn || !wrapper) return;
-
-    btn.addEventListener("click", function () {
-
-        wrapper.classList.toggle("expanded");
-
-        if (wrapper.classList.contains("expanded")) {
-            btn.innerText = "Show Less";
-        } else {
-            btn.innerText = "View More";
-        }
-
-    });
-});

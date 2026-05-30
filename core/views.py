@@ -1047,7 +1047,13 @@ def home(request):
                 fetch_format="auto",
                 dpr="auto"
             )
-    categories = Category.objects.all()
+    categories = Category.objects.filter(
+        is_active=True
+    ).exclude(
+        image=""
+    ).exclude(
+        image__isnull=True
+    )
     new_arrivals = products.filter(tags__slug="new-arrivals")
 
     paginator = Paginator(new_arrivals, 8)

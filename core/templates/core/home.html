@@ -5,24 +5,99 @@
 Shop Women's Fashion Online | Swann UAE
 {% endblock %}
 {% block content %}
-      <section class="inner-banner">
+      <div
+         id="carouselExampleCaptions"
+         class="carousel slide"
+         data-bs-ride="carousel"
+      >
+         <div class="carousel-indicators">
+            <button
+               type="button"
+               data-bs-target="#carouselExampleCaptions"
+               data-bs-slide-to="0"
+               class="active"
+               aria-current="true"
+               aria-label="Slide 1"
+            ></button>
+            <button
+               type="button"
+               data-bs-target="#carouselExampleCaptions"
+               data-bs-slide-to="1"
+               aria-label="Slide 2"
+            ></button>
+            <button
+               type="button"
+               data-bs-target="#carouselExampleCaptions"
+               data-bs-slide-to="2"
+               aria-label="Slide 3"
+            ></button>
+            <button
+               type="button"
+               data-bs-target="#carouselExampleCaptions"
+               data-bs-slide-to="3"
+               aria-label="Slide 4"
+            ></button>
+            <button
+               type="button"
+               data-bs-target="#carouselExampleCaptions"
+               data-bs-slide-to="4"
+               aria-label="Slide 5"
+            ></button>
+         </div>
+<div class="carousel-inner">
+   <div class="carousel-item active">
+      <img src="{% static 'images/banner.jpeg' %}" class="d-block w-100" loading="lazy" />
+
+         <div class="carousel-caption">
+            <div class="caption-text">
+               <h3>Wear Confidence. Wear Swann.</h3>
+               <p>Elegant pieces crafted to celebrate your everyday moments.</p>
+
+               <a href="{% url 'product_list' %}"
+                  class="btn hero-btn px-lg-5 text-white shadow mt-lg-4">
+                  Discover More
+               </a>
+        </div>
+    </div>
+</div>
+</div>
+         <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+         >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+         >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
+      </div>
+
+<!--       <section class="inner-banner">
          <div
             class="inner-header"
             style="background-image: url('{% static "images/banner.jpeg" %}')"
          >
             <div class="carousel-caption">
                  <div class="caption-text">
-                     <h3>Title</h3>
-                     <p>banner.subtitle</p>
+                     <h3>Wear Confidence. Wear Swann.</h3>
+                     <p>Elegant pieces crafted to celebrate your everyday moments.</p>
                      <a href="{% url 'product_list' %}"
                         class="btn btn-dark px-lg-5 text-white shadow mt-lg-4">
-                        Shop Now
+                        Discover More
                      </a>
                  </div>
              </div>
          </div>
-         <!-- <span class="banner-text">Happy Vishu🌼</span> -->
-      </section>
+      </section> -->
       <div class="marquee-slide theme-bg p-3">
          <div class="marquee-content">
             DELIVERY ACROSS UAE WITHIN 7 DAYS
@@ -116,6 +191,7 @@ Shop Women's Fashion Online | Swann UAE
     <p class="text-muted mb-0">No products available.</p>
   </div>
 {% endfor %}
+
                </div>
          </div>
                         <div class="col-12 text-center">
@@ -364,19 +440,17 @@ Shop Women's Fashion Online | Swann UAE
                </div>
                <div class="row g-4">
 {% for category in categories %}
+{% if category.image and category.image.public_id %}
 <div class="col-lg-3">
     <div class="product-card">
         <div class="image-wrapper">
 
             {% if category.image_url %}
-            <img src="{{ category.image_url }}"
-                 class="product-img img-fluid"
-                 loading="lazy"
-                 alt="{{ category.name }}">
-            {% else %}
-            <img src="{% static 'images/product-placeholder.jpg' %}"
-                 class="product-img img-fluid" loading="lazy">
-            {% endif %}
+               <img src="{{ category.image_url }}"
+                    class="product-img img-fluid"
+                    loading="lazy"
+                    alt="{{ category.name }}">
+               {% endif %}
 
             <div class="icon-group">
                 <p class="mb-0">{{ category.name }}</p>
@@ -388,6 +462,7 @@ Shop Women's Fashion Online | Swann UAE
         </div>
     </div>
 </div>
+{% endif %}
 {% endfor %}
                </div>
             </div>
