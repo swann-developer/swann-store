@@ -1418,6 +1418,24 @@ html, body {
    .carousel-inner {
       height: 55vh;
    }
+   .carousel-caption .caption-text h3 { 
+      font-size:2rem
+   }
+
+   .marquee-slide
+   {
+    padding: 0.5rem !important;
+   }
+
+   .shop-collections
+   {
+      padding-top:2rem:
+   }
+
+   .product-info
+   {
+      padding: 0.5rem !important;
+   }
 
 
 
@@ -1455,7 +1473,7 @@ html, body {
 .search-box{
     position:absolute;
     top:40px;
-    right:0;
+    right:-70px;
     width:260px;
     background:#fff;
     padding:10px;
