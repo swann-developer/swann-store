@@ -77,13 +77,7 @@ Shop Women's Fashion Online | Swann Designs UAE
                      class="form-select shadow-none"
                      onchange="window.location.href=this.value"
                   >
-                     <option
-                        value="?sort=latest{% if current_category %}&category={{ current_category }}{% endif %}"
-                        {% if current_sort == "latest" or not current_sort %}selected{% endif %}
-                     >
-                        Sort by Latest
-                     </option>
-
+                     
                      <option
                         value="?sort=price_low{% if current_category %}&category={{ current_category }}{% endif %}"
                         {% if current_sort == "price_low" %}selected{% endif %}
@@ -97,6 +91,13 @@ Shop Women's Fashion Online | Swann Designs UAE
                      >
                         Price: High to Low
                      </option>
+                     <option
+                        value="?sort=latest{% if current_category %}&category={{ current_category }}{% endif %}"
+                        {% if current_sort == "latest" or not current_sort %}selected{% endif %}
+                     >
+                        Sort by Latest
+                     </option>
+
                   </select>
                </div>
             </div>
