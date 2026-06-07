@@ -1419,7 +1419,8 @@ html, body {
       height: 55vh;
    }
    .carousel-caption .caption-text h3 { 
-      font-size:2rem
+      font-size:2rem;
+      color: #d3cef0;
    }
 
    .marquee-slide
