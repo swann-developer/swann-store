@@ -113,138 +113,6 @@ Shop Women's Fashion Online | Swann UAE
       <main>
          <div></div>
             <div class="container shop-collections py-lg-5">
-            <div class="col-12 text-center mb-5">
-               <h1 class="product-title main-head">Selling Fast-Limited Stocks</h1>
-               <div class="head-border-line"></div>
-            </div>
-            <div class="row g-4 mt-5" id="limitedStockWrapper">
-                  {% for item in collections %}
-                  {% with product=item.product %}
-                  <div class="col-lg-3 col-6 product-item {% if forloop.counter > 8 %}hidden-product{% endif %}">
-                     <div class="product-card shadow-sm">
-                        <a href="{% url 'product_detail' product.category.slug product.slug %}">
-                           <div class="image-wrapper">
-                              {% with product.primary_image as primary_image %}
-                                 {% if primary_image %}
-                                    <img src="{{ product.image_url }}" class="product-img img-fluid" loading="lazy" />
-                                 {% else %}
-                                    <img
-                                       src="{% static 'images/product-placeholder.jpg' %}"
-                                       class="product-img default-img img-fluid" loading="lazy"
-                                       alt="{{ product.title }}"
-                                    />
-                                 {% endif %}
-                              {% endwith %}
-
-                              <!-- TOP badges -->
-                              
-                                    {% with variant=product.variants.first %}
-   {% if variant and variant.stock_qty > 0 and variant.stock_qty <= 5 %}
-      <div class="tag-card new shadow-sm">
-         Only {{ variant.stock_qty }} left
-      </div>
-   {% endif %}
-{% endwith %}
-                                    
-                              <!-- BOTTOM badges -->
-<!--                               <div class="tag-bottom p-3 pt-0 text-start">
-                                
-                                       <span class="popular-tag instagram">
-                                          <i class="bi bi-instagram"></i>
-                                          Popular on Instagram
-                                       </span>
-                                    
-                                       <span class="popular-tag swann">
-                                          <i class="bi bi-heart-fill"></i>
-                                          Loved on swann
-                                       </span>
-                                 
-                              </div> -->
-                           </div>
-
-                           <div class="product-info p-3">
-                              <p class="text-ellipsis">{{ product.title|truncatechars:25 }}</p>
-
-                              <div class="pricing d-flex flex-column">
-                                 <span class="new-price">
-                                    <i>AED:</i>  {{ product.final_price }}
-                                 </span>
-
-                                 {% if product.discount_price %}
-                                 <span class="old-price">
-                                    <i>AED:</i>  {{ product.price }}
-                                 </span>
-                                 {% endif %}
-                              </div>
-
-                              <button class="btn add-to-cart-btn mt-3">
-                                 View Product
-                              </button>
-                           </div>
-
-                        </a>
-                     </div>
-                  </div>
-{% endwith %}
-{% empty %}
-  <div class="col-12 text-center py-5">
-    <p class="text-muted mb-0">No products available.</p>
-  </div>
-{% endfor %}
-
-               </div>
-         </div>
-                        <div class="col-12 text-center">
-               </div>
-               
-                  <div class="container py-5">
-               <div class="row">
-                  <div class="col-lg-4">
-                     <div class="footer-box">
-                        <div class="d-flex flex-column align-items-center">
-                           <div
-                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
-                           >
-                              <i class="bi bi-truck"></i>
-                           </div>
-                           <h5>Fast Delivery</h5>
-                           <p class="text-muted mb-0">
-                              Deliver Products On Time
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4">
-                     <div class="footer-box">
-                        <div class="d-flex flex-column align-items-center">
-                           <div
-                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
-                           >
-                              <i class="bi bi-headset"></i>
-                           </div>
-                           <h5>Quick Support</h5>
-                           <p class="text-muted mb-0">Get help anytime</p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4">
-                     <div class="footer-box">
-                        <div class="d-flex flex-column align-items-center">
-                           <div
-                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
-                           >
-                              <i class="bi bi-patch-check-fill"></i>
-                           </div>
-                           <h5>Trusted By Customers</h5>
-                           <p class="text-muted mb-0">
-                              500+ happy customers
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
          <div class="container-fluid px-0 py-5 featured-products vishu-theme">
             <div class="col-12 text-center mb-5">
                <h1 class="product-title main-head">Exclusive For Famfest Season 3</h1>
@@ -432,6 +300,138 @@ Shop Women's Fashion Online | Swann UAE
                </div>
             </div>
          </div>
+                     <div class="col-12 text-center mb-5">
+               <h1 class="product-title main-head">Selling Fast-Limited Stocks</h1>
+               <div class="head-border-line"></div>
+            </div>
+            <div class="row g-4 mt-5" id="limitedStockWrapper">
+                  {% for item in collections %}
+                  {% with product=item.product %}
+                  <div class="col-lg-3 col-6 product-item {% if forloop.counter > 8 %}hidden-product{% endif %}">
+                     <div class="product-card shadow-sm">
+                        <a href="{% url 'product_detail' product.category.slug product.slug %}">
+                           <div class="image-wrapper">
+                              {% with product.primary_image as primary_image %}
+                                 {% if primary_image %}
+                                    <img src="{{ product.image_url }}" class="product-img img-fluid" loading="lazy" />
+                                 {% else %}
+                                    <img
+                                       src="{% static 'images/product-placeholder.jpg' %}"
+                                       class="product-img default-img img-fluid" loading="lazy"
+                                       alt="{{ product.title }}"
+                                    />
+                                 {% endif %}
+                              {% endwith %}
+
+                              <!-- TOP badges -->
+                              
+                                    {% with variant=product.variants.first %}
+   {% if variant and variant.stock_qty > 0 and variant.stock_qty <= 5 %}
+      <div class="tag-card new shadow-sm">
+         Only {{ variant.stock_qty }} left
+      </div>
+   {% endif %}
+{% endwith %}
+                                    
+                              <!-- BOTTOM badges -->
+<!--                               <div class="tag-bottom p-3 pt-0 text-start">
+                                
+                                       <span class="popular-tag instagram">
+                                          <i class="bi bi-instagram"></i>
+                                          Popular on Instagram
+                                       </span>
+                                    
+                                       <span class="popular-tag swann">
+                                          <i class="bi bi-heart-fill"></i>
+                                          Loved on swann
+                                       </span>
+                                 
+                              </div> -->
+                           </div>
+
+                           <div class="product-info p-3">
+                              <p class="text-ellipsis">{{ product.title|truncatechars:25 }}</p>
+
+                              <div class="pricing d-flex flex-column">
+                                 <span class="new-price">
+                                    <i>AED:</i>  {{ product.final_price }}
+                                 </span>
+
+                                 {% if product.discount_price %}
+                                 <span class="old-price">
+                                    <i>AED:</i>  {{ product.price }}
+                                 </span>
+                                 {% endif %}
+                              </div>
+
+                              <button class="btn add-to-cart-btn mt-3">
+                                 View Product
+                              </button>
+                           </div>
+
+                        </a>
+                     </div>
+                  </div>
+{% endwith %}
+{% empty %}
+  <div class="col-12 text-center py-5">
+    <p class="text-muted mb-0">No products available.</p>
+  </div>
+{% endfor %}
+
+               </div>
+         </div>
+                        <div class="col-12 text-center">
+               </div>
+               
+                  <div class="container py-5">
+               <div class="row">
+                  <div class="col-lg-4">
+                     <div class="footer-box">
+                        <div class="d-flex flex-column align-items-center">
+                           <div
+                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
+                           >
+                              <i class="bi bi-truck"></i>
+                           </div>
+                           <h5>Fast Delivery</h5>
+                           <p class="text-muted mb-0">
+                              Deliver Products On Time
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="footer-box">
+                        <div class="d-flex flex-column align-items-center">
+                           <div
+                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
+                           >
+                              <i class="bi bi-headset"></i>
+                           </div>
+                           <h5>Quick Support</h5>
+                           <p class="text-muted mb-0">Get help anytime</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="footer-box">
+                        <div class="d-flex flex-column align-items-center">
+                           <div
+                              class="icon-box mb-3 d-flex justify-content-center align-items-center"
+                           >
+                              <i class="bi bi-patch-check-fill"></i>
+                           </div>
+                           <h5>Trusted By Customers</h5>
+                           <p class="text-muted mb-0">
+                              500+ happy customers
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
          <section class="categories py-5 bg-light">
             <div class="container">
                <div class="col-12 text-center mb-5">
