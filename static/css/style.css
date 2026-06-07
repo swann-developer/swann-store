@@ -1596,3 +1596,21 @@ font-size:0.75rem;
   }
 }
 
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 60;
+
+    background: #e53935;
+    color: #fff;
+
+    padding: 6px 10px;
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}

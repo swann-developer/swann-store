@@ -149,6 +149,11 @@ Shop Women's Fashion Online | Swann Designs UAE
                            {% endif %}
                         {% endfor %}
                      </div>
+                     {% if product.discount_percent %}
+<div class="discount-badge">
+    🔥{{ product.discount_percent }}% OFF
+</div>
+{% endif %}
                   </div>
 
                   <div class="product-info p-3">
