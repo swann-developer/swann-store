@@ -160,6 +160,11 @@ Shop Women's Fashion Online | Swann UAE
                            {% endif %}
                         {% endfor %}
                      </div>
+                     {% if product.discount_percent %}
+<div class="discount-badge">
+    🔥{{ product.discount_percent }}% OFF
+</div>
+{% endif %}
                                     
                               <!-- BOTTOM badges -->
 <!--                               <div class="tag-bottom p-3 pt-0 text-start">
