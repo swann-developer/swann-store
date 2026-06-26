@@ -138,13 +138,13 @@ Shop Women's Fashion Online | Swann UAE
 
                               <!-- TOP badges -->
                               
-                                    {% with variant=product.variants.first %}
+<!--                                     {% with variant=product.variants.first %}
    {% if variant and variant.stock_qty > 0 and variant.stock_qty <= 5 %}
       <div class="tag-card new shadow-sm">
          Only {{ variant.stock_qty }} left
       </div>
    {% endif %}
-{% endwith %}
+{% endwith %} -->
                      <div class="tag-bottom p-3 pt-0 text-start">
                         {% for tag in product.tags.all %}
                            {% if tag.slug == "instagram-popular" %}
