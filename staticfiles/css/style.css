@@ -374,6 +374,8 @@ html, body {
 .tag-card.new {
    color: #fff;
    background-color: #ff7451;
+    right: 10%;
+    top: 30%;
 }
 
 .popular-tag {
