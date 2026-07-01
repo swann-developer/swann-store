@@ -16,7 +16,6 @@ download_invoice,
 contact,
 search_suggestions,
 update_cart_quantity,
-home,
 
 )
 from .views import stripe_webhook, run_retry_payments, payment_cancel
