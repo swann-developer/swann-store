@@ -23,8 +23,8 @@ from .views import stripe_webhook, run_retry_payments, payment_cancel
 urlpatterns = [
     # product listing
     # path("", vishu_specials, name="vishu_specials"),
-    path("", home, name="home"),
-    path("shop/", product_list, name="product_list"),
+    # path("", home, name="home"),
+    path("", product_list, name="product_list"),
     path("products/<slug:category_slug>/", product_list, name="product_list_by_category"),
 
     # product detail (SEO friendly)

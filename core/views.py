@@ -1024,62 +1024,62 @@ def payment_cancel(request, order_id):
     return redirect("checkout")
 
 
-def home(request):
-    products = (
-        Product.objects
-        .filter(is_active=True)
-        .prefetch_related("images", "tags", "category")
-        .order_by("display_order", "id")
-        .distinct()
-    )
-    collections = CProduct.objects.filter(is_active=True).select_related("product__category").prefetch_related("product__images")
+# def home(request):
+#     products = (
+#         Product.objects
+#         .filter(is_active=True)
+#         .prefetch_related("images", "tags", "category")
+#         .order_by("display_order", "id")
+#         .distinct()
+#     )
+#     collections = CProduct.objects.filter(is_active=True).select_related("product__category").prefetch_related("product__images")
 
-    # attach optimized URLs
-    for item in collections:
-        img = item.product.primary_image
-        if img:
-            item.product.image_url = cl_image(
-                img.image.public_id,
-                width=500,
-                height=500,
-                crop="fill",
-                quality="auto:good",
-                fetch_format="auto",
-                dpr="auto"
-            )
-    categories = Category.objects.filter(
-        is_active=True
-    ).exclude(
-        image=""
-    ).exclude(
-        image__isnull=True
-    )
-    new_arrivals = products.filter(tags__slug="new-arrivals")
+#     # attach optimized URLs
+#     for item in collections:
+#         img = item.product.primary_image
+#         if img:
+#             item.product.image_url = cl_image(
+#                 img.image.public_id,
+#                 width=500,
+#                 height=500,
+#                 crop="fill",
+#                 quality="auto:good",
+#                 fetch_format="auto",
+#                 dpr="auto"
+#             )
+#     categories = Category.objects.filter(
+#         is_active=True
+#     ).exclude(
+#         image=""
+#     ).exclude(
+#         image__isnull=True
+#     )
+#     new_arrivals = products.filter(tags__slug="new-arrivals")
 
-    paginator = Paginator(new_arrivals, 8)
-    page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
-    for category in categories:
-        if category.image:
-            category.image_url = cl_image(
-                category.image.public_id,
-                width=400,
-                height=400,
-                crop="fill",
-                quality="auto:good",
-                fetch_format="auto",
-                dpr="auto"
-            )
-        else:
-            category.image_url = None
+#     paginator = Paginator(new_arrivals, 8)
+#     page_number = request.GET.get("page")
+#     page_obj = paginator.get_page(page_number)
+#     for category in categories:
+#         if category.image:
+#             category.image_url = cl_image(
+#                 category.image.public_id,
+#                 width=400,
+#                 height=400,
+#                 crop="fill",
+#                 quality="auto:good",
+#                 fetch_format="auto",
+#                 dpr="auto"
+#             )
+#         else:
+#             category.image_url = None
 
-    context = {
-        "new_arrivals": page_obj,
-        "combo": products.filter(tags__slug="combo")[:8],
-        "offers": products.filter(tags__slug="offers")[:8],
-        "page_obj": page_obj,
-        "categories": categories,
-        "collections": collections,
-    }
+#     context = {
+#         "new_arrivals": page_obj,
+#         "combo": products.filter(tags__slug="combo")[:8],
+#         "offers": products.filter(tags__slug="offers")[:8],
+#         "page_obj": page_obj,
+#         "categories": categories,
+#         "collections": collections,
+#     }
 
-    return render(request, "core/home.html", context)
+#     return render(request, "core/home.html", context)
